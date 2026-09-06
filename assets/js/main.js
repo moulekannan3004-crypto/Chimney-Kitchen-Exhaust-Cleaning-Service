@@ -1,6 +1,22 @@
-/* Main Vanilla JavaScript for Chimney & Kitchen Exhaust Cleaning Service */
+/* Global Mobile Menu Toggle Handler */
+window.toggleMobileMenu = (open) => {
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (!mobileMenuBtn || !mobileMenu) return;
 
-document.addEventListener('DOMContentLoaded', () => {
+  const isCurrentlyHidden = mobileMenu.classList.contains('hidden');
+  const shouldShow = open !== undefined ? Boolean(open) : isCurrentlyHidden;
+
+  if (shouldShow) {
+    mobileMenu.classList.remove('hidden');
+    mobileMenuBtn.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+  } else {
+    mobileMenu.classList.add('hidden');
+    mobileMenuBtn.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+  }
+};
+
+const initApp = () => {
   // 1. Theme Toggle Management (Light / Dark)
   const initTheme = () => {
     const savedTheme = localStorage.getItem('theme');
@@ -67,8 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+    if (!mobileMenuBtn.getAttribute('onclick')) {
+      mobileMenuBtn.addEventListener('click', () => window.toggleMobileMenu());
+    }
+
+    mobileMenu.querySelectorAll('a, button:not(.theme-toggle-btn)').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (e.target.closest('button[onclick*="toggle"]')) return;
+        window.toggleMobileMenu(false);
+      });
     });
   }
 
@@ -199,9 +222,11 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.id = 'booking-modal';
       modal.className = 'fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4';
       modal.innerHTML = `
-        <div class="card-theme max-w-lg w-full p-8 rounded-3xl relative shadow-2xl border border-slate-700">
-          <button onclick="closeBookingModal()" class="absolute top-4 right-4 rtl:right-auto rtl:left-4 text-slate-400 hover:text-white text-2xl font-bold">✕</button>
-          <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Book Service Inspection</h3>
+        <div class="card-theme max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-3xl relative shadow-2xl border border-slate-700">
+          <button onclick="closeBookingModal()" aria-label="Close Modal" class="absolute top-4 right-4 rtl:right-auto rtl:left-4 w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition flex items-center justify-center cursor-pointer shadow-sm z-20">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+          <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2">Book Service Inspection</h3>
           <p class="text-xs text-slate-500 mb-6">Select your service date and contact details for instant confirmation.</p>
 
           <form id="modal-booking-form" class="space-y-4">
@@ -209,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Full Name</label>
               <input type="text" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
             </div>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Phone Number</label>
                 <input type="tel" required placeholder="(555) 000-0000" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
@@ -229,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <option value="NFPA 96 Safety Inspection">NFPA 96 Safety Inspection ($129)</option>
               </select>
             </div>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Preferred Date</label>
                 <input type="date" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
@@ -243,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </select>
               </div>
             </div>
-            <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition">Confirm Service Request</button>
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition cursor-pointer">Confirm Service Request</button>
           </form>
         </div>
       `;
@@ -305,7 +330,10 @@ document.addEventListener('DOMContentLoaded', () => {
         <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
         </svg>
-        <span id="toast-message" class="font-medium">${message}</span>
+        <span id="toast-message" class="font-medium mr-2">${message}</span>
+        <button onclick="this.parentElement.classList.remove('show')" aria-label="Close Toast" class="ml-auto opacity-70 hover:opacity-100 transition p-1 cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
       `;
       document.body.appendChild(toast);
     } else {
@@ -378,7 +406,9 @@ document.addEventListener('DOMContentLoaded', () => {
       lightbox.className = 'fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden items-center justify-center p-4 cursor-pointer';
       lightbox.innerHTML = `
         <div class="relative max-w-4xl w-full bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 p-2 cursor-default" onclick="event.stopPropagation()">
-          <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute top-4 right-4 z-20 w-11 h-11 rounded-full bg-orange-600 hover:bg-orange-700 text-white flex items-center justify-center font-black text-xl shadow-lg transition transform hover:scale-110 cursor-pointer">✕</button>
+          <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute top-4 right-4 z-20 w-11 h-11 rounded-full bg-orange-600 hover:bg-orange-700 text-white flex items-center justify-center font-black text-xl shadow-lg transition transform hover:scale-110 cursor-pointer">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
           <img id="lightbox-img" src="" alt="Full view" class="w-full max-h-[75vh] object-contain rounded-2xl" />
           <div class="p-4 text-center">
             <h4 id="lightbox-title" class="text-lg font-bold text-white"></h4>
@@ -666,7 +696,14 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   initServiceDetailsPage();
-});
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
+
 
 
 

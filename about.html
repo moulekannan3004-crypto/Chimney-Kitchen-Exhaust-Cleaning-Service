@@ -72,21 +72,44 @@
           </button>
         </div>
 
-        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300">
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300">
           <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-4 pb-6 space-y-3">
-      <a href="index.html" class="block font-medium text-slate-600">Home 1</a>
-      <a href="home2.html" class="block text-slate-600">Home 2</a>
-      <a href="about.html" class="block font-semibold text-blue-600">About Us</a>
-      <a href="services.html" class="block text-slate-600">Services</a>
-      <a href="pricing.html" class="block text-slate-600">Pricing</a>
-      <a href="gallery.html" class="block text-slate-600">Gallery</a>
-      <a href="contact.html" class="block text-slate-600">Contact</a>
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-4 pb-6 space-y-3 shadow-2xl">
+      <a href="index.html" class="block font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1">Home 1 (General)</a>
+      <a href="home2.html" class="block font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1">Home 2 (Commercial)</a>
+      <a href="about.html" class="block font-bold text-blue-600 dark:text-blue-400 py-1">About Us</a>
+      <a href="services.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Services</a>
+      <a href="service-details.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Service Details</a>
+      <a href="pricing.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Pricing</a>
+      <a href="gallery.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Before & After Gallery</a>
+      <a href="blog.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Blog</a>
+      <a href="contact.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Contact Us</a>
+
+      <div class="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-3">
+        <button onclick="openBookingModal()" class="w-full py-3 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer">
+          <span>🔥</span>
+          <span>Book Inspection</span>
+        </button>
+
+        <a href="login.html" class="w-full py-2.5 rounded-xl bg-slate-900 text-white dark:bg-slate-800 border border-slate-700 font-bold text-xs flex items-center justify-center space-x-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Login Portal</span>
+        </a>
+
+        <div class="grid grid-cols-2 gap-2 pt-1">
+          <button onclick="toggleTheme()" class="text-xs font-bold py-2 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center space-x-1.5 cursor-pointer">
+            <span>Toggle Theme</span>
+          </button>
+          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-xs font-bold py-2 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center cursor-pointer">
+            🌐 RTL
+          </button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -639,9 +662,11 @@
 
     <!-- BOOKING MODAL -->
   <div id="booking-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="card-theme max-w-lg w-full p-8 rounded-3xl relative shadow-2xl border border-slate-700">
-      <button onclick="closeBookingModal()" class="absolute top-4 right-4 rtl:right-auto rtl:left-4 text-slate-400 hover:text-white text-2xl font-bold">✕</button>
-      <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Book Service Inspection</h3>
+    <div class="card-theme max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-3xl relative shadow-2xl border border-slate-700">
+      <button onclick="closeBookingModal()" aria-label="Close Modal" class="absolute top-4 right-4 rtl:right-auto rtl:left-4 w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition flex items-center justify-center cursor-pointer shadow-sm z-20">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2">Book Service Inspection</h3>
       <p class="text-xs text-slate-500 mb-6">Select your service date and contact details for instant confirmation.</p>
 
       <form id="modal-booking-form" class="space-y-4">
@@ -649,7 +674,7 @@
           <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Full Name</label>
           <input type="text" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
         </div>
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Phone Number</label>
             <input type="tel" required placeholder="(555) 000-0000" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
@@ -669,7 +694,7 @@
             <option value="NFPA 96 Safety Inspection">NFPA 96 Safety Inspection ($129)</option>
           </select>
         </div>
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Preferred Date</label>
             <input type="date" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
@@ -683,7 +708,7 @@
             </select>
           </div>
         </div>
-        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition">Confirm Service Request</button>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition cursor-pointer">Confirm Service Request</button>
       </form>
     </div>
   </div>
