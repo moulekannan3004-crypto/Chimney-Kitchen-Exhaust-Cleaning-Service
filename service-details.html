@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chimney Deep Cleaning - Service Details | ProClean</title>
+  <!-- Custom Favicon Icon Logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { colors: { brand: { 500: '#3b82f6', 600: '#2563eb' } } } }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200 antialiased min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="assets/images/favicon.svg" alt="ProClean Logo" class="w-10 h-10 rounded-xl shadow-lg object-contain" />
+          <div>
+            <span class="text-2xl font-black text-slate-900 dark:text-white">ProClean</span>
+            <span class="block text-[10px] font-semibold text-slate-500 dark:text-slate-400 tracking-wider uppercase">Exhaust & Chimney Care</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center space-x-6 rtl:space-x-reverse font-medium text-sm text-slate-700 dark:text-slate-200">
+          <!-- Home Dropdown Navigation Link -->
+          <div class="relative group dropdown-model-container">
+            <button onclick="toggleDropdownModel('home-nav-dropdown')" class="nav-link flex items-center space-x-1 rtl:space-x-reverse font-medium text-sm text-slate-700 dark:text-slate-200 py-2">
+              <span class="whitespace-nowrap">Home</span>
+              <span class="text-xs">▾</span>
+            </button>
+            <div id="home-nav-dropdown" class="dropdown-model-menu hidden group-hover:block absolute left-0 rtl:left-auto rtl:right-0 mt-1 w-64 rounded-2xl bg-white dark:bg-slate-900 shadow-2xl border border-slate-200 dark:border-slate-800 py-2 z-50 text-slate-900 dark:text-white">
+              <a href="index.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-slate-800 flex items-center space-x-2 rtl:space-x-reverse">
+                <span class="text-blue-600">🏠</span>
+                <span>Home 1 – General Landing</span>
+              </a>
+              <a href="home2.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-orange-50 dark:hover:bg-slate-800 flex items-center space-x-2 rtl:space-x-reverse">
+                <span class="text-orange-500">🏢</span>
+                <span>Home 2 – Commercial Landing</span>
+              </a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link whitespace-nowrap">About Us</a>
+          <a href="services.html" class="nav-link whitespace-nowrap">Services</a>
+          <a href="pricing.html" class="nav-link whitespace-nowrap">Pricing</a>
+          <a href="gallery.html" class="nav-link whitespace-nowrap">Gallery</a>
+          <a href="blog.html" class="nav-link whitespace-nowrap">Blog</a>
+          <a href="contact.html" class="nav-link whitespace-nowrap">Contact</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center space-x-3 rtl:space-x-reverse">
+          <a href="login.html" class="group relative px-4 py-2 rounded-full bg-slate-900 text-white dark:bg-slate-800/90 border border-slate-700/80 hover:border-blue-500/50 shadow-sm hover:shadow-md transition-all duration-300 text-xs font-bold flex items-center space-x-2 rtl:space-x-reverse">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <svg class="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
+            <span>Login Portal</span>
+          </a>
+          <button onclick="toggleTheme()" aria-label="Toggle theme" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm">
+            <svg class="sun-icon w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="moon-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          </button>
+          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-xs font-bold px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm">🌐 RTL</button>
+          <button onclick="openBookingModal('Chimney Deep Cleaning')" class="px-5 py-2 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg hover:shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span>🔥</span>
+            <span>Book This Service</span>
+          </button>
+        </div>
+
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="relative py-16 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div>
+          <span id="sd-hero-tag" class="px-3 py-1 bg-blue-600/30 text-blue-400 border border-blue-500/30 text-xs font-bold rounded-full uppercase tracking-wider">Deep Cleaning Specification</span>
+          <h1 id="sd-hero-title" class="text-3xl sm:text-5xl font-black mt-3">Chimney Deep Cleaning & Flue Sanitization</h1>
+          <p id="sd-hero-desc" class="text-slate-300 text-base mt-2 max-w-2xl">
+            Complete motorized rotary wire brushing, HEPA soot containment, food-grade chemical degreasing, and dual-lens scope inspection.
+          </p>
+        </div>
+        <div class="bg-slate-800 border border-slate-700 p-6 rounded-2xl text-center min-w-[240px]">
+          <span class="text-xs text-slate-400 uppercase font-semibold">Standard Service Rate</span>
+          <p id="sd-hero-price" class="text-4xl font-extrabold text-blue-400 mt-1">$149</p>
+          <p id="sd-hero-time" class="text-xs text-slate-400">Takes approx 60-90 minutes</p>
+          <button onclick="openBookingModal('Chimney Deep Cleaning')" class="sd-book-trigger w-full mt-4 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 font-bold text-sm text-white shadow-lg transition">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN DETAILS & CONTENT -->
+  <section class="py-20 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
+      
+      <!-- Left 2 Columns: Description, Process & Benefits -->
+      <div class="lg:col-span-2 space-y-12">
+        
+        <!-- Image Banner -->
+        <img id="sd-main-img" src="https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=1200&q=80" alt="Chimney Deep Cleaning Process" class="rounded-2xl shadow-xl w-full h-[380px] object-cover" />
+
+        <!-- Description -->
+        <div class="space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Service Overview & Fire Prevention</h2>
+          <p id="sd-overview-p1" class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            Accumulated cooking oils, creosote, and carbonized soot inside home chimneys pose severe indoor air pollution and persistent fire hazards. Standard surface wiping leaves interior duct walls lined with sticky, highly flammable sludge.
+          </p>
+          <p id="sd-overview-p2" class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            Our certified technicians utilize industrial motorized rotary wire brushes and food-grade chemical foam to scrub every interior flue inch down to pristine metal. All dislodged particles are captured instantly by HEPA sealed negative-air vacuum units, ensuring your kitchen remains 100% spotless.
+          </p>
+        </div>
+
+        <!-- Key Benefits -->
+        <div class="space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Key Service Benefits</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="card-theme p-4 rounded-xl flex items-start space-x-3 rtl:space-x-reverse">
+              <span class="text-emerald-500 font-bold text-lg">✓</span>
+              <div>
+                <h4 id="sd-b1-t" class="font-bold text-slate-900 dark:text-white text-sm">100% Smoke Elimination</h4>
+                <p id="sd-b1-d" class="text-xs text-slate-500">Stops smoke from spilling back into cooking areas.</p>
+              </div>
+            </div>
+
+            <div class="card-theme p-4 rounded-xl flex items-start space-x-3 rtl:space-x-reverse">
+              <span class="text-emerald-500 font-bold text-lg">✓</span>
+              <div>
+                <h4 id="sd-b2-t" class="font-bold text-slate-900 dark:text-white text-sm">Zero Oil Dripping</h4>
+                <p id="sd-b2-d" class="text-xs text-slate-500">Prevents yellow grease drops on stovetops & pans.</p>
+              </div>
+            </div>
+
+            <div class="card-theme p-4 rounded-xl flex items-start space-x-3 rtl:space-x-reverse">
+              <span class="text-emerald-500 font-bold text-lg">✓</span>
+              <div>
+                <h4 id="sd-b3-t" class="font-bold text-slate-900 dark:text-white text-sm">45% Suction Power Boost</h4>
+                <p id="sd-b3-d" class="text-xs text-slate-500">Restores fan turbine motor efficiency.</p>
+              </div>
+            </div>
+
+            <div class="card-theme p-4 rounded-xl flex items-start space-x-3 rtl:space-x-reverse">
+              <span class="text-emerald-500 font-bold text-lg">✓</span>
+              <div>
+                <h4 id="sd-b4-t" class="font-bold text-slate-900 dark:text-white text-sm">Odor Removal</h4>
+                <p id="sd-b4-d" class="text-xs text-slate-500">Eliminates burnt oil & pungent garlic smells.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5-Step Cleaning Process -->
+        <div class="space-y-6">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Our 5-Stage Cleaning Process</h2>
+          <div class="space-y-4">
+            
+            <div class="card-theme p-6 rounded-2xl flex items-start space-x-4 rtl:space-x-reverse">
+              <span class="w-8 h-8 rounded-full bg-blue-600 text-white flex-shrink-0 flex items-center justify-center font-bold text-sm">1</span>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white">Kitchen Shielding & Prep</h4>
+                <p class="text-xs text-slate-500 mt-1">We drape heavy protective plastic sheets over all surrounding countertops, hobs, and flooring.</p>
+              </div>
+            </div>
+
+            <div class="card-theme p-6 rounded-2xl flex items-start space-x-4 rtl:space-x-reverse">
+              <span class="w-8 h-8 rounded-full bg-blue-600 text-white flex-shrink-0 flex items-center justify-center font-bold text-sm">2</span>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white">Dual-Lens Video Inspection</h4>
+                <p class="text-xs text-slate-500 mt-1">Camera scope is inserted into internal flue pipes to locate blockages and creosote depth.</p>
+              </div>
+            </div>
+
+            <div class="card-theme p-6 rounded-2xl flex items-start space-x-4 rtl:space-x-reverse">
+              <span class="w-8 h-8 rounded-full bg-blue-600 text-white flex-shrink-0 flex items-center justify-center font-bold text-sm">3</span>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white">Rotary Motorized Wire Scrubbing</h4>
+                <p class="text-xs text-slate-500 mt-1">Flexible shaft motorized poly/wire brushes clean 360 degrees of internal ductwork.</p>
+              </div>
+            </div>
+
+            <div class="card-theme p-6 rounded-2xl flex items-start space-x-4 rtl:space-x-reverse">
+              <span class="w-8 h-8 rounded-full bg-blue-600 text-white flex-shrink-0 flex items-center justify-center font-bold text-sm">4</span>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white">Chemical Foam & Ultrasonic Dip</h4>
+                <p class="text-xs text-slate-500 mt-1">Biodegradable chemical foam breaks down oxidized oil; filters submerged in ultrasonic tank.</p>
+              </div>
+            </div>
+
+            <div class="card-theme p-6 rounded-2xl flex items-start space-x-4 rtl:space-x-reverse">
+              <span class="w-8 h-8 rounded-full bg-blue-600 text-white flex-shrink-0 flex items-center justify-center font-bold text-sm">5</span>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white">HEPA Extraction & Stainless Polish</h4>
+                <p class="text-xs text-slate-500 mt-1">Industrial vacuum removes all residue; exterior stainless hood polished back to mirror finish.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- FAQs -->
+        <div class="space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Frequently Asked Questions</h2>
+          <div class="space-y-3">
+            
+            <div class="card-theme rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+              <button onclick="toggleFAQ('sd-faq-1')" class="w-full p-4 text-left rtl:text-right flex items-center justify-between focus:outline-none group">
+                <span class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">
+                  How long does a deep chimney cleaning session take?
+                </span>
+                <div id="sd-faq-1-icon" class="faq-icon text-xs text-slate-500 transition-transform duration-300 ml-2 rtl:mr-2 rtl:ml-0">▾</div>
+              </button>
+              <div id="sd-faq-1" class="faq-answer hidden px-4 pb-4 text-xs text-slate-500 leading-relaxed border-t border-slate-100 dark:border-slate-800 pt-2 bg-slate-50/50 dark:bg-slate-950/40">
+                A standard residential deep clean takes between 60 and 90 minutes.
+              </div>
+            </div>
+
+            <div class="card-theme rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+              <button onclick="toggleFAQ('sd-faq-2')" class="w-full p-4 text-left rtl:text-right flex items-center justify-between focus:outline-none group">
+                <span class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">
+                  Will there be soot mess in my kitchen?
+                </span>
+                <div id="sd-faq-2-icon" class="faq-icon text-xs text-slate-500 transition-transform duration-300 ml-2 rtl:mr-2 rtl:ml-0">▾</div>
+              </button>
+              <div id="sd-faq-2" class="faq-answer hidden px-4 pb-4 text-xs text-slate-500 leading-relaxed border-t border-slate-100 dark:border-slate-800 pt-2 bg-slate-50/50 dark:bg-slate-950/40">
+                No. HEPA suction containment units prevent any airborne dust from escaping into your house.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column Sidebar: Quick Booking & Price Table -->
+      <div class="space-y-8">
+        
+        <div class="card-theme p-6 rounded-2xl space-y-4 border-2 border-blue-600">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Book This Service</h3>
+          <p class="text-xs text-slate-500">Select date and time slot for immediate technician confirmation.</p>
+
+          <form id="contact-form" class="space-y-3">
+            <div>
+              <label class="block text-xs font-bold mb-1">Full Name</label>
+              <input type="text" required placeholder="John Doe" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold mb-1">Phone Number</label>
+              <input type="tel" required placeholder="(555) 000-0000" class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold mb-1">Service Date</label>
+              <input type="date" required class="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs" />
+            </div>
+            <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow transition">Request Appointment</button>
+          </form>
+        </div>
+
+        <div class="card-theme p-6 rounded-2xl space-y-4">
+          <h4 class="font-bold text-slate-900 dark:text-white text-base">Service Package Pricing</h4>
+          <div class="space-y-3 text-xs">
+            <div class="flex justify-between py-2 border-b border-slate-200 dark:border-slate-800">
+              <span>Essential Sweep</span>
+              <span class="font-bold text-slate-900 dark:text-white">$99</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-200 dark:border-slate-800 font-bold text-blue-600">
+              <span>Deep Sanitization</span>
+              <span>$149</span>
+            </div>
+            <div class="flex justify-between py-2">
+              <span>Annual Care Plan (2 Visits)</span>
+              <span class="font-bold text-slate-900 dark:text-white">$249</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-10 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- 4 COLUMNS GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-14 items-start">
+        
+        <!-- COLUMN 1: BRAND & SOCIAL -->
+        <div class="space-y-4 text-left rtl:text-right">
+          <div class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="assets/images/favicon.svg" alt="ProClean Logo" class="w-9 h-9 rounded-xl shadow-lg object-contain bg-orange-500/10 p-1 border border-orange-500/20" />
+            <span class="text-xl font-black text-white tracking-wider">PROCLEAN<span class="text-orange-500">.EXHAUST</span></span>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-400">
+            Certified chimney sweep & commercial exhaust hood cleaning service protecting homes and businesses across the region.
+          </p>
+          <!-- Social Media Pills -->
+          <div class="flex items-center space-x-2.5 rtl:space-x-reverse pt-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: NAVIGATION -->
+        <div class="text-left rtl:text-right">
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">NAVIGATION</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="text-slate-400 hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="text-slate-400 hover:text-white transition">About Us</a></li>
+            <li><a href="services.html" class="text-slate-400 hover:text-white transition">Services</a></li>
+            <li><a href="pricing.html" class="text-slate-400 hover:text-white transition">Pricing Tiers</a></li>
+            <li><a href="blog.html" class="text-slate-400 hover:text-white transition">Blog & Journal</a></li>
+            <li><a href="contact.html" class="text-slate-400 hover:text-white transition">Contact Sales</a></li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 3: SERVICE SLA -->
+        <div class="text-left rtl:text-right">
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">SERVICE SLA</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><span class="text-orange-400 font-bold">24h Express</span> Dispatch SLA</li>
+            <li><span class="text-emerald-400 font-bold">100% NFPA 96</span> Fire Code Inspection</li>
+            <li><span class="text-blue-400 font-bold">Certified Degreasing</span> Guarantee</li>
+            <li><span class="text-amber-400 font-bold">5 Star Rated</span> Technician Team</li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 4: EMERGENCY DISPATCH -->
+        <div class="text-left rtl:text-right">
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">EMERGENCY DISPATCH</h4>
+          <div class="space-y-2 text-xs mb-5">
+            <a href="mailto:dispatch@proclean-exhaust.com" class="flex items-center space-x-2 rtl:space-x-reverse text-slate-300 hover:text-white transition">
+              <svg class="w-4 h-4 text-orange-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span class="truncate">dispatch@proclean-exhaust.com</span>
+            </a>
+            <a href="tel:8005553473" class="flex items-center space-x-2 rtl:space-x-reverse text-slate-300 hover:text-white transition">
+              <svg class="w-4 h-4 text-orange-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <span>+1 (800) 555-FIRE</span>
+            </a>
+          </div>
+
+          <button onclick="openBookingModal()" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold text-xs tracking-wide shadow-lg shadow-orange-500/20 transition">
+            Connect Dispatch Team
+          </button>
+        </div>
+
+      </div>
+
+      <!-- BOTTOM COPYRIGHT BAR -->
+      <div class="pt-8 border-t border-slate-900 text-center">
+        <p class="text-xs text-slate-500">© 2026 ProClean Exhaust Cleaning Inc. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING ACTION BUTTON (FAB ICON) -->
+  <button onclick="openBookingModal()" aria-label="Book Quick Inspection" class="fab-btn p-4 rounded-full bg-gradient-to-r from-orange-500 to-blue-600 text-white shadow-2xl hover:scale-110 transition transform flex items-center justify-center space-x-2 rtl:space-x-reverse group">
+    <span class="text-xl">🔥</span>
+    <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap text-xs font-bold px-1">Book Inspection</span>
+  </button>
+
+    <!-- BOOKING MODAL -->
+  <div id="booking-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="card-theme max-w-lg w-full p-8 rounded-3xl relative shadow-2xl border border-slate-700">
+      <button onclick="closeBookingModal()" class="absolute top-4 right-4 rtl:right-auto rtl:left-4 text-slate-400 hover:text-white text-2xl font-bold">✕</button>
+      <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Book Service Inspection</h3>
+      <p class="text-xs text-slate-500 mb-6">Select your service date and contact details for instant confirmation.</p>
+
+      <form id="modal-booking-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Full Name</label>
+          <input type="text" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Phone Number</label>
+            <input type="tel" required placeholder="(555) 000-0000" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
+            <input type="email" required placeholder="john@example.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Service Type</label>
+          <select id="modal-service-select" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none">
+            <option value="Chimney Deep Cleaning">Chimney Deep Cleaning ($149)</option>
+            <option value="Commercial Hood & Duct Cleaning">Commercial Hood & Duct Cleaning ($299)</option>
+            <option value="Filter Replacement & Degreasing">Filter Replacement & Degreasing ($79)</option>
+            <option value="Electrostatic Precipitator (ESP) Servicing">Electrostatic Precipitator (ESP) Servicing ($349)</option>
+            <option value="NFPA 96 Safety Inspection">NFPA 96 Safety Inspection ($129)</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Preferred Date</label>
+            <input type="date" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Time Slot</label>
+            <select class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none">
+              <option>Morning (8am - 12pm)</option>
+              <option>Afternoon (12pm - 4pm)</option>
+              <option>Overnight Off-Hours (Commercial)</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition">Confirm Service Request</button>
+      </form>
+    </div>
+  </div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

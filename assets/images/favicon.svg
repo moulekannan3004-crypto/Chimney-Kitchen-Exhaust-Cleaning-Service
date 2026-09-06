@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient: Blue to Orange/Amber -->
+    <linearGradient id="bgGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+
+    <!-- Flame Main Body Gradient -->
+    <linearGradient id="flameMain" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="60%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+
+    <!-- Flame Inner Core Gradient -->
+    <linearGradient id="flameInner" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fef08a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded Square Container -->
+  <rect width="512" height="512" rx="140" fill="url(#bgGrad)"/>
+
+  <!-- Outer Flame Layer -->
+  <path d="M256 90 C256 90, 340 180, 340 280 C340 355, 300 405, 256 405 C212 405, 172 355, 172 280 C172 180, 256 90, 256 90 Z" fill="url(#flameMain)"/>
+
+  <!-- Flame Wing Layer -->
+  <path d="M235 150 C235 150, 305 220, 305 295 C305 345, 275 385, 235 385 C215 385, 195 365, 195 330 C195 250, 235 150, 235 150 Z" fill="#f97316" opacity="0.8"/>
+
+  <!-- Inner Bright Core -->
+  <path d="M256 220 C256 220, 300 270, 300 320 C300 360, 280 385, 256 385 C232 385, 212 360, 212 320 C212 270, 256 220, 256 220 Z" fill="url(#flameInner)"/>
+</svg>

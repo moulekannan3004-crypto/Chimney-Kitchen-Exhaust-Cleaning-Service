@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProClean | Chimney & Kitchen Exhaust Cleaning Service</title>
+  <!-- Custom Favicon Icon Logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            fire: {
+              500: '#f97316',
+              600: '#ea580c',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200 antialiased min-h-screen flex flex-col">
+
+  <!-- TOP HEADER & NAVBAR -->
+  <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group shrink-0">
+          <div class="p-0.5 rounded-2xl bg-gradient-to-tr from-orange-500 to-blue-600 shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
+            <img src="assets/images/favicon.svg" alt="ProClean Logo" class="w-9 h-9 rounded-[14px] bg-slate-900 object-contain p-1" />
+          </div>
+          <div>
+            <span class="text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center">ProClean <span class="text-orange-500 text-xs ml-1">★</span></span>
+            <span class="block text-[9px] font-extrabold text-slate-400 dark:text-slate-400 tracking-widest uppercase">Exhaust & Chimney Care</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-3.5 xl:space-x-6 rtl:space-x-reverse font-medium text-sm text-slate-700 dark:text-slate-200 shrink-0">
+          <!-- Home Dropdown Navigation Link -->
+          <div class="relative group dropdown-model-container">
+            <button onclick="toggleDropdownModel('home-nav-dropdown')" class="nav-link active flex items-center space-x-1 rtl:space-x-reverse font-bold text-sm text-blue-600 dark:text-blue-400 py-2">
+              <span class="whitespace-nowrap">Home 1</span>
+              <span class="text-xs">▾</span>
+            </button>
+            <div id="home-nav-dropdown" class="dropdown-model-menu hidden group-hover:block absolute left-0 rtl:left-auto rtl:right-0 mt-1 w-64 rounded-2xl bg-white dark:bg-slate-900 shadow-2xl border border-slate-200 dark:border-slate-800 py-2 z-50 text-slate-900 dark:text-white">
+              <a href="index.html" class="block px-4 py-2.5 text-xs font-bold text-blue-600 bg-blue-50 dark:bg-slate-800/60 flex items-center space-x-2 rtl:space-x-reverse">
+                <span>🏠</span>
+                <span>Home 1 – General Landing</span>
+              </a>
+              <a href="home2.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-orange-50 dark:hover:bg-slate-800 flex items-center space-x-2 rtl:space-x-reverse">
+                <span class="text-orange-500">🏢</span>
+                <span>Home 2 – Commercial Landing</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="about.html" class="nav-link whitespace-nowrap">About Us</a>
+          <a href="services.html" class="nav-link whitespace-nowrap">Services</a>
+          <a href="pricing.html" class="nav-link whitespace-nowrap">Pricing</a>
+          <a href="gallery.html" class="nav-link whitespace-nowrap">Gallery</a>
+          <a href="blog.html" class="nav-link whitespace-nowrap">Blog</a>
+          <a href="contact.html" class="nav-link whitespace-nowrap">Contact</a>
+        </nav>
+
+        <!-- Right Action Controls -->
+        <div class="hidden sm:flex items-center space-x-2.5 rtl:space-x-reverse shrink-0">
+          <!-- Unique Login Portal Button -->
+          <a href="login.html" class="group relative px-4 py-2 rounded-full bg-slate-900 text-white dark:bg-slate-800/90 border border-slate-700/80 hover:border-blue-500/50 shadow-sm hover:shadow-md transition-all duration-300 text-xs font-bold flex items-center space-x-2 rtl:space-x-reverse">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <svg class="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
+            <span>Login Portal</span>
+          </a>
+
+          <!-- Dark Mode Toggle Button -->
+          <button onclick="toggleTheme()" aria-label="Toggle dark mode" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm">
+            <svg class="sun-icon w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="moon-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          </button>
+
+          <!-- RTL Layout Toggle Button -->
+          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-xs font-bold px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm">
+            🌐 RTL
+          </button>
+
+          <!-- Quick Booking Button -->
+          <button onclick="openBookingModal()" class="px-5 py-2 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg hover:shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span>🔥</span>
+            <span>Book Inspection</span>
+          </button>
+        </div>
+
+        <!-- Mobile Drawer Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-4 pb-6 space-y-3">
+      <a href="index.html" class="block font-semibold text-blue-600 dark:text-blue-400">Home 1 (General)</a>
+      <a href="home2.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600">Home 2 (Commercial)</a>
+      <a href="about.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600">About Us</a>
+      <a href="services.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600">Services</a>
+      <a href="service-details.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600">Service Details</a>
+      <a href="pricing.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600">Pricing</a>
+      <a href="gallery.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600">Before & After Gallery</a>
+      <a href="blog.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600">Blog</a>
+      <a href="contact.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600">Contact Us</a>
+      <a href="login.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600">Login</a>
+      <a href="register.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600">Register</a>
+      
+      <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <button onclick="toggleTheme()" class="text-xs font-semibold px-3 py-2 rounded-lg bg-slate-100 dark:bg-slate-800">Toggle Dark/Light</button>
+        <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-xs font-semibold px-3 py-2 rounded-lg bg-slate-100 dark:bg-slate-800">🌐 RTL</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative py-20 lg:py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-950 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div class="space-y-6 text-center lg:text-left rtl:lg:text-right">
+          <span class="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold border border-blue-400/30 uppercase tracking-widest">
+            <span>🔥 NFPA 96 & Fire Safety Certified</span>
+          </span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+            Smoke-Free Kitchens & <span class="bg-gradient-to-r from-orange-400 to-amber-300 bg-clip-text text-transparent">Fire-Safe Exhausts</span>
+          </h1>
+          <p class="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0">
+            Professional motorized chimney degreasing, commercial hood cleaning, and vertical riser duct maintenance for homes and commercial kitchens.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+            <button onclick="openBookingModal()" class="px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-base shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1">
+              Book Instant Inspection
+            </button>
+            <a href="services.html" class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-base border border-white/20 backdrop-blur-md transition">
+              Explore All Services
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="pt-8 border-t border-slate-700/60 grid grid-cols-3 gap-4 text-center">
+            <div>
+              <p class="text-3xl font-extrabold text-white">4,800+</p>
+              <p class="text-xs text-slate-400">Kitchens Cleaned</p>
+            </div>
+            <div>
+              <p class="text-3xl font-extrabold text-orange-400">100%</p>
+              <p class="text-xs text-slate-400">Fire Code Compliant</p>
+            </div>
+            <div>
+              <p class="text-3xl font-extrabold text-blue-400">4.9 ★</p>
+              <p class="text-xs text-slate-400">Customer Rating</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Image Container (Normal Straight Image) -->
+        <div class="relative">
+          <div class="absolute -inset-2 bg-gradient-to-r from-orange-500 to-blue-600 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80" alt="Kitchen Exhaust Cleaning" class="w-full h-[440px] object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div class="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-white/10 flex items-center justify-between text-white shadow-lg">
+              <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                <div class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></div>
+                <span class="text-sm font-medium">Technicians On-Call 24/7</span>
+              </div>
+              <span class="text-xs font-bold text-orange-400 bg-orange-500/20 px-3 py-1 rounded-full">Same Day Service Available</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SMOKE-FREE KITCHEN BENEFITS (UNIQUE MODERN CARDS) -->
+  <section class="py-24 bg-slate-50/50 dark:bg-slate-900/60 relative overflow-hidden">
+    <!-- Ambient Background Lighting -->
+    <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-orange-500/10 dark:bg-orange-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 text-xs font-extrabold uppercase tracking-widest border border-orange-500/20 shadow-sm">
+          <span>🔥 Safety & Air Quality Impact</span>
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+          Why a Clean Exhaust System Matters
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
+          Unmaintained kitchen chimneys and exhaust hoods trap flammable oil grease, choking indoor airflow and creating severe structural fire hazards.
+        </p>
+      </div>
+
+      <!-- 4 Unique High-End Feature Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Card 1: 100% Smoke Elimination -->
+        <div class="group relative bg-white dark:bg-slate-800/90 rounded-3xl p-8 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-t-3xl"></div>
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <div class="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-3xl shadow-inner group-hover:scale-110 transition-transform duration-300">
+                💨
+              </div>
+              <span class="text-[10px] font-black tracking-wider uppercase text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/80 px-2.5 py-1 rounded-full border border-blue-200 dark:border-blue-800/60">
+                -99.8% Smoke
+              </span>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              100% Smoke Elimination
+            </h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Prevents smoke backdraft into cooking areas, keeping walls, ceilings, and indoor air clean.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400">
+            <span>Airflow Velocity</span>
+            <span class="text-blue-600 dark:text-blue-400 font-extrabold">Optimal ⚡</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Fire Prevention -->
+        <div class="group relative bg-white dark:bg-slate-800/90 rounded-3xl p-8 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-orange-500 to-amber-500 rounded-t-3xl"></div>
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <div class="w-14 h-14 rounded-2xl bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400 flex items-center justify-center text-3xl shadow-inner group-hover:scale-110 transition-transform duration-300">
+                🔥
+              </div>
+              <span class="text-[10px] font-black tracking-wider uppercase text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950/80 px-2.5 py-1 rounded-full border border-orange-200 dark:border-orange-800/60">
+                Zero Risk
+              </span>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">
+              Fire Prevention
+            </h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Removes dangerous creosote and solidified oil buildup inside vertical duct risers to eliminate flash fires.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400">
+            <span>Creosote Fuel</span>
+            <span class="text-orange-500 font-extrabold">0% Buildup</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Motor Lifespan Extension -->
+        <div class="group relative bg-white dark:bg-slate-800/90 rounded-3xl p-8 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-t-3xl"></div>
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <div class="w-14 h-14 rounded-2xl bg-emerald-50 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-3xl shadow-inner group-hover:scale-110 transition-transform duration-300">
+                ⚡
+              </div>
+              <span class="text-[10px] font-black tracking-wider uppercase text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-2.5 py-1 rounded-full border border-emerald-200 dark:border-emerald-800/60">
+                +45% Efficiency
+              </span>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-emerald-500 transition-colors">
+              Motor Extension
+            </h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Unburdening heavy oil buildup from fan impellers lowers electrical current draw and motor strain.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400">
+            <span>Power Savings</span>
+            <span class="text-emerald-500 font-extrabold">Up to 30%</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Hygiene Compliance -->
+        <div class="group relative bg-white dark:bg-slate-800/90 rounded-3xl p-8 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-t-3xl"></div>
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 flex items-center justify-center text-3xl shadow-inner group-hover:scale-110 transition-transform duration-300">
+                🛡️
+              </div>
+              <span class="text-[10px] font-black tracking-wider uppercase text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-950/80 px-2.5 py-1 rounded-full border border-purple-200 dark:border-purple-800/60">
+                NFPA 96 Passed
+              </span>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-purple-500 transition-colors">
+              Hygiene Compliance
+            </h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Passes municipal health inspector and insurance fire code audits with official NFPA documentation.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400">
+            <span>Audit Guarantee</span>
+            <span class="text-purple-500 font-extrabold">100% Pass</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Interactive Insight Callout Bar -->
+      <div class="mt-12 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center space-x-4 rtl:space-x-reverse text-left rtl:text-right">
+          <div class="w-12 h-12 rounded-2xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl flex-shrink-0 border border-orange-500/30">
+            ⚠️
+          </div>
+          <div>
+            <p class="text-sm font-extrabold text-white">Did You Know?</p>
+            <p class="text-xs text-slate-300 mt-0.5">Over 70% of commercial kitchen fires originate from accumulated grease inside uncleaned exhaust ducts.</p>
+          </div>
+        </div>
+        <button onclick="openBookingModal('Free Exhaust Safety Audit')" class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold text-xs uppercase tracking-wider shadow-lg hover:shadow-orange-500/20 transition-all flex-shrink-0 flex items-center space-x-2 rtl:space-x-reverse">
+          <span>Schedule Free Safety Audit</span>
+          <span>→</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="py-20 bg-slate-50 dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Core Specializations</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
+            Comprehensive Cleaning Solutions
+          </h2>
+        </div>
+        <a href="services.html" class="mt-4 md:mt-0 text-blue-600 dark:text-blue-400 font-bold hover:underline flex items-center space-x-2 rtl:space-x-reverse">
+          <span>View All Services</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Service Card 1 -->
+        <div class="card-theme rounded-2xl overflow-hidden group">
+          <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=800&q=80" alt="Chimney Deep Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Residential</span>
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Chimney Deep Cleaning</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              Rotary brushing, HEPA vacuum soot extraction, glass door degreasing, and damper calibration for home chimneys.
+            </p>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-800">
+              <span class="text-lg font-bold text-blue-600 dark:text-blue-400">From $149</span>
+              <a href="service-details.html?service=chimney" class="text-xs font-bold px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white transition">Read Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="card-theme rounded-2xl overflow-hidden group">
+          <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Exhaust Duct Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <span class="absolute top-4 left-4 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Commercial</span>
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Exhaust Duct Cleaning</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              Bare-metal scraping, 3000 PSI hot pressure jetting, and rooftop fan housing degreasing for commercial kitchens.
+            </p>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-800">
+              <span class="text-lg font-bold text-blue-600 dark:text-blue-400">From $299</span>
+              <a href="service-details.html?service=exhaust-duct" class="text-xs font-bold px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white transition">Read Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="card-theme rounded-2xl overflow-hidden group">
+          <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Filter Replacement" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Maintenance</span>
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Filter Replacement & Degreasing</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              Ultrasonic dip-tank filter soaking, custom stainless steel baffle filter fabrication, and charcoal odor upgrades.
+            </p>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-800">
+              <span class="text-lg font-bold text-blue-600 dark:text-blue-400">From $79</span>
+              <a href="service-details.html?service=filter-replacement" class="text-xs font-bold px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white transition">Read Details</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS (UNIQUE 4-STAGE CONNECTED TIMELINE) -->
+  <section class="py-24 bg-white dark:bg-slate-900 relative overflow-hidden">
+    <!-- Ambient Background Lights -->
+    <div class="absolute top-1/3 left-10 w-80 h-80 bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-80 h-80 bg-emerald-500/10 dark:bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+        <span class="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-extrabold uppercase tracking-widest border border-blue-500/20 shadow-sm">
+          <span>⚡ Guaranteed 4-Stage Bare-Metal Method</span>
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+          How Our Cleaning Process Works
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
+          From camera inspection to official NFPA fire code compliance tagging, our systematic 4-stage process guarantees 100% grease removal.
+        </p>
+      </div>
+
+      <!-- Connected Step Cards Grid -->
+      <div class="relative">
+        
+        <!-- Connecting Glowing Progress Line (Desktop) -->
+        <div class="hidden lg:block absolute top-1/2 left-16 right-16 h-1 -translate-y-10 bg-gradient-to-r from-blue-500 via-orange-500 via-amber-500 to-emerald-500 rounded-full opacity-30 z-0"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+          
+          <!-- Step 1: Camera Inspection -->
+          <div class="group relative bg-slate-50 dark:bg-slate-800/90 rounded-3xl p-7 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white font-black text-xl flex items-center justify-center shadow-lg shadow-blue-600/30 group-hover:scale-110 transition-transform">
+                  01
+                </div>
+                <span class="text-[10px] font-black tracking-wider uppercase text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-950/80 px-2.5 py-1 rounded-full border border-blue-200 dark:border-blue-800/60">
+                  Phase 01 • Scope
+                </span>
+              </div>
+              <div class="pt-2">
+                <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center space-x-2 rtl:space-x-reverse">
+                  <span>📷</span>
+                  <span>Camera Inspection</span>
+                </h3>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                  Dual-lens scope insertion to measure creosote depth, assess airflow resistance, and log initial blockage footage.
+                </p>
+              </div>
+            </div>
+            <div class="pt-5 mt-5 border-t border-slate-200/80 dark:border-slate-700/60 flex items-center justify-between text-[11px] font-bold text-slate-500 dark:text-slate-400">
+              <span>Depth Audit</span>
+              <span class="text-blue-600 dark:text-blue-400 font-extrabold">0-50mm Logged</span>
+            </div>
+          </div>
+
+          <!-- Step 2: Chemical Foam Soak -->
+          <div class="group relative bg-slate-50 dark:bg-slate-800/90 rounded-3xl p-7 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-14 h-14 rounded-2xl bg-orange-500 text-white font-black text-xl flex items-center justify-center shadow-lg shadow-orange-500/30 group-hover:scale-110 transition-transform">
+                  02
+                </div>
+                <span class="text-[10px] font-black tracking-wider uppercase text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/80 px-2.5 py-1 rounded-full border border-orange-200 dark:border-orange-800/60">
+                  Phase 02 • Degrease
+                </span>
+              </div>
+              <div class="pt-2">
+                <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors flex items-center space-x-2 rtl:space-x-reverse">
+                  <span>🧪</span>
+                  <span>Chemical Foam Soak</span>
+                </h3>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                  Food-grade, biodegradable heavy degreasing active foam breaks down oxidized grease and hardened carbonized oil layers.
+                </p>
+              </div>
+            </div>
+            <div class="pt-5 mt-5 border-t border-slate-200/80 dark:border-slate-700/60 flex items-center justify-between text-[11px] font-bold text-slate-500 dark:text-slate-400">
+              <span>Dwell Time</span>
+              <span class="text-orange-500 font-extrabold">20 Mins Deep Soak</span>
+            </div>
+          </div>
+
+          <!-- Step 3: Motorized Scrubbing -->
+          <div class="group relative bg-slate-50 dark:bg-slate-800/90 rounded-3xl p-7 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white font-black text-xl flex items-center justify-center shadow-lg shadow-amber-500/30 group-hover:scale-110 transition-transform">
+                  03
+                </div>
+                <span class="text-[10px] font-black tracking-wider uppercase text-amber-600 dark:text-amber-400 bg-amber-100 dark:bg-amber-950/80 px-2.5 py-1 rounded-full border border-amber-200 dark:border-amber-800/60">
+                  Phase 03 • Hydrojet
+                </span>
+              </div>
+              <div class="pt-2">
+                <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-amber-500 transition-colors flex items-center space-x-2 rtl:space-x-reverse">
+                  <span>⚙️</span>
+                  <span>Motorized Scrubbing</span>
+                </h3>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                  360-degree rotary wire brushes and 3000 PSI high-temperature thermal pressure wash interior duct walls down to bare metal.
+                </p>
+              </div>
+            </div>
+            <div class="pt-5 mt-5 border-t border-slate-200/80 dark:border-slate-700/60 flex items-center justify-between text-[11px] font-bold text-slate-500 dark:text-slate-400">
+              <span>Pressure Jet</span>
+              <span class="text-amber-500 font-extrabold">3000 PSI @ 200°F</span>
+            </div>
+          </div>
+
+          <!-- Step 4: Safety Certification -->
+          <div class="group relative bg-slate-50 dark:bg-slate-800/90 rounded-3xl p-7 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-14 h-14 rounded-2xl bg-emerald-500 text-white font-black text-xl flex items-center justify-center shadow-lg shadow-emerald-500/30 group-hover:scale-110 transition-transform">
+                  04
+                </div>
+                <span class="text-[10px] font-black tracking-wider uppercase text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/80 px-2.5 py-1 rounded-full border border-emerald-200 dark:border-emerald-800/60">
+                  Phase 04 • NFPA Tag
+                </span>
+              </div>
+              <div class="pt-2">
+                <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-emerald-500 transition-colors flex items-center space-x-2 rtl:space-x-reverse">
+                  <span>📜</span>
+                  <span>Safety Certification</span>
+                </h3>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                  Official NFPA compliance sticker affixed to canopy hood with digital before & after photo audit log delivered instantly.
+                </p>
+              </div>
+            </div>
+            <div class="pt-5 mt-5 border-t border-slate-200/80 dark:border-slate-700/60 flex items-center justify-between text-[11px] font-bold text-slate-500 dark:text-slate-400">
+              <span>Fire Inspection</span>
+              <span class="text-emerald-500 font-extrabold">100% Passed ✓</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUALITY WORK SHOWCASE -->
+  <section class="py-20 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div class="space-y-6">
+          <span class="text-orange-400 font-bold text-sm tracking-widest uppercase">Verified Inspection Standards</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">
+            Bare-Metal Cleaning Excellence
+          </h2>
+          <p class="text-slate-300">
+            Our certified technicians utilize industrial hot-water pressure jetting and specialized food-grade chemical foam to restore unmaintained exhaust systems to spotless mirror-finish stainless steel.
+          </p>
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center space-x-3 rtl:space-x-reverse text-sm">
+              <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+              <span>100% Bare-metal grease removal guarantee</span>
+            </div>
+            <div class="flex items-center space-x-3 rtl:space-x-reverse text-sm">
+              <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+              <span>No toxic chemical residual odor left behind</span>
+            </div>
+            <div class="flex items-center space-x-3 rtl:space-x-reverse text-sm">
+              <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+              <span>NFPA 96 & Fire Code Inspector Approved</span>
+            </div>
+          </div>
+          <a href="gallery.html" class="inline-block mt-4 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 font-bold text-sm transition">
+            Explore Full Project Gallery
+          </a>
+        </div>
+
+        <!-- Clean Showcase Image (No Slider / No Before-After Overlay) -->
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-700 group">
+          <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80" alt="Commercial Kitchen Hood Showcase" class="w-full h-[380px] object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute bottom-4 left-4 right-4 bg-slate-950/85 backdrop-blur-md p-4 rounded-2xl border border-white/10 flex items-center justify-between text-white shadow-xl">
+            <div class="flex items-center space-x-3 rtl:space-x-reverse">
+              <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+              <span class="text-xs font-bold">NFPA 96 Bare-Metal Finish</span>
+            </div>
+            <span class="text-[10px] font-bold text-orange-400 bg-orange-500/20 px-3 py-1 rounded-full">Certified Inspection Pass</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS & CLIENT FEEDBACK (UNIQUE MODERN CARDS) -->
+  <section class="py-24 bg-white dark:bg-slate-900 relative overflow-hidden">
+    <!-- Ambient Background Lights -->
+    <div class="absolute top-1/2 left-1/3 -translate-y-1/2 w-96 h-96 bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 right-1/3 -translate-y-1/2 w-96 h-96 bg-orange-500/10 dark:bg-orange-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-extrabold uppercase tracking-widest border border-amber-500/20 shadow-sm">
+          <span>⭐ Verified Client Reviews</span>
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+          Trusted By 4,800+ Chefs & Homeowners
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
+          See why top restaurant owners, hotel managers, and residential homeowners rely on ProClean for fire safety compliance and soot-free kitchens.
+        </p>
+      </div>
+
+      <!-- 3 Unique High-End Review Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Chef Giovanni Rossi -->
+        <div class="group relative bg-slate-50 dark:bg-slate-800/90 rounded-3xl p-8 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-t-3xl"></div>
+          <!-- Decorative Quote Watermark -->
+          <div class="absolute top-4 right-6 text-6xl font-serif text-slate-200 dark:text-slate-700/50 pointer-events-none group-hover:scale-110 transition-transform">“</div>
+
+          <div class="space-y-4 relative z-10">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-black tracking-wider uppercase text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-950/80 px-3 py-1 rounded-full border border-blue-200 dark:border-blue-800/60">
+                🏢 Commercial Kitchen
+              </span>
+              <div class="flex items-center space-x-1 text-amber-400 text-sm">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+            </div>
+
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed italic pt-2">
+              "ProClean cleaned our restaurant kitchen hood overnight. Passed our fire marshal audit the next morning with zero issues. Excellent documentation."
+            </p>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-200/80 dark:border-slate-700/60 flex items-center space-x-4 rtl:space-x-reverse relative z-10">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=160&q=80" alt="Chef Giovanni Rossi" class="w-12 h-12 rounded-2xl object-cover border-2 border-blue-500 shadow-md" />
+              <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 text-white rounded-full flex items-center justify-center text-[9px] font-bold shadow">✓</span>
+            </div>
+            <div>
+              <p class="text-sm font-extrabold text-slate-900 dark:text-white">Chef Giovanni Rossi</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Executive Chef, Bella Italia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Emily Martinez -->
+        <div class="group relative bg-slate-50 dark:bg-slate-800/90 rounded-3xl p-8 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-orange-500 to-amber-500 rounded-t-3xl"></div>
+          <!-- Decorative Quote Watermark -->
+          <div class="absolute top-4 right-6 text-6xl font-serif text-slate-200 dark:text-slate-700/50 pointer-events-none group-hover:scale-110 transition-transform">“</div>
+
+          <div class="space-y-4 relative z-10">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-black tracking-wider uppercase text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/80 px-3 py-1 rounded-full border border-orange-200 dark:border-orange-800/60">
+                🏠 Residential Chimney
+              </span>
+              <div class="flex items-center space-x-1 text-amber-400 text-sm">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+            </div>
+
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed italic pt-2">
+              "Our kitchen chimney used to smoke up the entire main floor whenever we fried. ProClean deep cleaned the flue and changed filters. Now it works like brand new!"
+            </p>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-200/80 dark:border-slate-700/60 flex items-center space-x-4 rtl:space-x-reverse relative z-10">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80" alt="Emily Martinez" class="w-12 h-12 rounded-2xl object-cover border-2 border-orange-500 shadow-md" />
+              <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 text-white rounded-full flex items-center justify-center text-[9px] font-bold shadow">✓</span>
+            </div>
+            <div>
+              <p class="text-sm font-extrabold text-slate-900 dark:text-white">Emily Martinez</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Homeowner</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Ahmed Al-Mansoor -->
+        <div class="group relative bg-slate-50 dark:bg-slate-800/90 rounded-3xl p-8 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-t-3xl"></div>
+          <!-- Decorative Quote Watermark -->
+          <div class="absolute top-4 right-6 text-6xl font-serif text-slate-200 dark:text-slate-700/50 pointer-events-none group-hover:scale-110 transition-transform">“</div>
+
+          <div class="space-y-4 relative z-10">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-black tracking-wider uppercase text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800/60">
+                🏨 Hotel & Resort SLA
+              </span>
+              <div class="flex items-center space-x-1 text-amber-400 text-sm">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+            </div>
+
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed italic pt-2">
+              "Fast, punctual, and zero mess left on our granite countertops. They put down heavy protective drapes and left the kitchen spotless."
+            </p>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-200/80 dark:border-slate-700/60 flex items-center space-x-4 rtl:space-x-reverse relative z-10">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" alt="Ahmed Al-Mansoor" class="w-12 h-12 rounded-2xl object-cover border-2 border-emerald-500 shadow-md" />
+              <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 text-white rounded-full flex items-center justify-center text-[9px] font-bold shadow">✓</span>
+            </div>
+            <div>
+              <p class="text-sm font-extrabold text-slate-900 dark:text-white">Ahmed Al-Mansoor</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">General Manager, Grand Resort</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust Summary Callout -->
+      <div class="mt-14 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-around gap-6 text-center">
+        <div class="flex items-center space-x-3 rtl:space-x-reverse">
+          <span class="text-2xl font-black text-slate-900 dark:text-white">4.9 / 5</span>
+          <div class="text-left rtl:text-right">
+            <div class="flex text-amber-400 text-xs">★★★★★</div>
+            <span class="text-xs text-slate-500">Overall Rating</span>
+          </div>
+        </div>
+        <div class="flex items-center space-x-2 text-xs font-bold text-slate-600 dark:text-slate-400">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>1,200+ Verified Fire Code Audits</span>
+        </div>
+        <div class="flex items-center space-x-2 text-xs font-bold text-slate-600 dark:text-slate-400">
+          <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+          <span>100% On-Time Guarantee</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRICING PREVIEW -->
+  <section class="py-20 bg-slate-50 dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-blue-600 dark:text-blue-400 font-bold text-sm tracking-widest uppercase">Transparent Rates</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
+          Popular Cleaning Packages
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="card-theme p-8 rounded-2xl space-y-6">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Essential Sweep</h3>
+          <p class="text-xs text-slate-500">Standard residential chimney maintenance.</p>
+          <div class="text-4xl font-extrabold text-slate-900 dark:text-white">$99 <span class="text-xs font-normal text-slate-500">/ session</span></div>
+          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+            <li>✓ Single Hood Surface Clean</li>
+            <li>✓ Baffle / Mesh Filter Soak</li>
+            <li>✓ Suction Test Check</li>
+            <li>✓ 30-Day Guarantee</li>
+          </ul>
+          <button onclick="openBookingModal('Essential Sweep')" class="w-full py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white font-bold text-sm transition">Choose Plan</button>
+        </div>
+
+        <div class="card-theme p-8 rounded-2xl space-y-6 border-2 border-blue-600 relative shadow-xl">
+          <span class="absolute -top-3 right-6 bg-blue-600 text-white font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Deep Sanitization</h3>
+          <p class="text-xs text-slate-500">Comprehensive residential & cafe service.</p>
+          <div class="text-4xl font-extrabold text-blue-600 dark:text-blue-400">$149 <span class="text-xs font-normal text-slate-500">/ session</span></div>
+          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+            <li>✓ Everything in Essential</li>
+            <li>✓ Motorized Rotary Flue Scrub</li>
+            <li>✓ HEPA Soot Containment</li>
+            <li>✓ Motor Turbine Degrease</li>
+            <li>✓ Dual Scope Camera Inspection</li>
+          </ul>
+          <button onclick="openBookingModal('Deep Sanitization')" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm transition">Choose Plan</button>
+        </div>
+
+        <div class="card-theme p-8 rounded-2xl space-y-6">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Commercial Hood & Duct</h3>
+          <p class="text-xs text-slate-500">Full NFPA 96 restaurant exhaust overhaul.</p>
+          <div class="text-4xl font-extrabold text-slate-900 dark:text-white">$299 <span class="text-xs font-normal text-slate-500">/ up to 10 ft</span></div>
+          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+            <li>✓ Bare-Metal Hood Scraping</li>
+            <li>✓ 3000 PSI Pressure Jet Washing</li>
+            <li>✓ Riser Chemical Foam Degrease</li>
+            <li>✓ NFPA Compliance Certificate</li>
+          </ul>
+          <button onclick="openBookingModal('Commercial Hood & Duct')" class="w-full py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white font-bold text-sm transition">Choose Plan</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="py-20 bg-white dark:bg-slate-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 space-y-3">
+        <span class="px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold text-xs uppercase tracking-widest border border-blue-500/20">
+          Got Questions?
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-slate-500 dark:text-slate-400 text-sm">Click any question below to expand details on fire safety codes, SLAs, and cleaning methods.</p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="card-theme rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 transition duration-300">
+          <button onclick="toggleFAQ('faq-1')" class="w-full p-6 text-left rtl:text-right flex items-center justify-between focus:outline-none group">
+            <span class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">
+              How often should a residential kitchen chimney be cleaned?
+            </span>
+            <div id="faq-1-icon" class="faq-icon w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center font-bold text-sm transition-transform duration-300 flex-shrink-0 ml-4 rtl:mr-4 rtl:ml-0">
+              ▾
+            </div>
+          </button>
+          <div id="faq-1" class="faq-answer hidden px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800/60 text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-slate-50/50 dark:bg-slate-950/40">
+            For active households cooking daily with oils and spices, deep cleaning every 6 months is recommended. For lighter cooking, annual cleaning is sufficient.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="card-theme rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 transition duration-300">
+          <button onclick="toggleFAQ('faq-2')" class="w-full p-6 text-left rtl:text-right flex items-center justify-between focus:outline-none group">
+            <span class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition">
+              Do you provide NFPA 96 compliance tags for commercial kitchens?
+            </span>
+            <div id="faq-2-icon" class="faq-icon w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center font-bold text-sm transition-transform duration-300 flex-shrink-0 ml-4 rtl:mr-4 rtl:ml-0">
+              ▾
+            </div>
+          </button>
+          <div id="faq-2" class="faq-answer hidden px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800/60 text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-slate-50/50 dark:bg-slate-950/40">
+            Yes! We affix certified NFPA compliance stickers on all commercial hoods and provide a digital before & after photo audit report for fire inspectors and insurance agents.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="card-theme rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 transition duration-300">
+          <button onclick="toggleFAQ('faq-3')" class="w-full p-6 text-left rtl:text-right flex items-center justify-between focus:outline-none group">
+            <span class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-500 transition">
+              Will the cleaning process mess up my kitchen?
+            </span>
+            <div id="faq-3-icon" class="faq-icon w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center font-bold text-sm transition-transform duration-300 flex-shrink-0 ml-4 rtl:mr-4 rtl:ml-0">
+              ▾
+            </div>
+          </button>
+          <div id="faq-3" class="faq-answer hidden px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800/60 text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-slate-50/50 dark:bg-slate-950/40">
+            Never. We seal surrounding hobs, countertops, and floors with heavy plastic drape sheets and use HEPA vacuum containment units to trap all soot and oil droplets.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="card-theme rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 transition duration-300">
+          <button onclick="toggleFAQ('faq-4')" class="w-full p-6 text-left rtl:text-right flex items-center justify-between focus:outline-none group">
+            <span class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-purple-500 transition">
+              What is your emergency dispatch response time?
+            </span>
+            <div id="faq-4-icon" class="faq-icon w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center font-bold text-sm transition-transform duration-300 flex-shrink-0 ml-4 rtl:mr-4 rtl:ml-0">
+              ▾
+            </div>
+          </button>
+          <div id="faq-4" class="faq-answer hidden px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800/60 text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-slate-50/50 dark:bg-slate-950/40">
+            We operate a 24/7 commercial emergency dispatch crew. Emergency teams can be deployed on-site within 2 hours for urgent kitchen downtime issues.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / BOOKING CTA BANNER (ULTRA-UNIQUE GLASSMORPHIC BANNER) -->
+  <section class="py-24 bg-slate-950 text-white relative overflow-hidden">
+    <!-- Ambient Background Glows -->
+    <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+    <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-950/90 backdrop-blur-xl p-8 sm:p-14 rounded-3xl border border-white/10 shadow-2xl space-y-8 text-center relative overflow-hidden">
+        <div class="h-1 bg-gradient-to-r from-orange-500 via-amber-500 via-blue-500 to-emerald-500 absolute top-0 left-0 right-0"></div>
+
+        <!-- Live Status Pill Tag -->
+        <div class="inline-flex items-center space-x-3 rtl:space-x-reverse px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700 shadow-inner">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+          </span>
+          <span class="text-xs font-extrabold tracking-wider uppercase text-emerald-400">24/7 Live Emergency Dispatch Active</span>
+          <span class="text-slate-600 dark:text-slate-500">|</span>
+          <span class="text-xs font-semibold text-slate-300">Same-Day Slots Available</span>
+        </div>
+
+        <!-- Headline & Description -->
+        <div class="space-y-4 max-w-3xl mx-auto">
+          <h2 class="text-3xl sm:text-5xl font-black leading-tight tracking-tight">
+            Ready for a <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-400 to-emerald-400">Smoke-Free & Fire-Safe</span> Kitchen?
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            Eliminate grease fire risks, eliminate neighborhood smoke complaints, and guarantee a 100% municipal health inspection pass.
+          </p>
+        </div>
+
+        <!-- Glowing Action CTA Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <button onclick="openBookingModal()" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold text-sm uppercase tracking-wider shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all flex items-center space-x-3 rtl:space-x-reverse group">
+            <span class="text-base group-hover:scale-125 transition-transform">🔥</span>
+            <span>Book Free Inspection Now</span>
+            <span class="text-xs font-black bg-white/20 px-2 py-0.5 rounded-md">Instant</span>
+          </button>
+          
+          <a href="tel:8005553473" class="px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm backdrop-blur-md border border-white/20 shadow-lg hover:-translate-y-0.5 transition-all flex items-center space-x-2.5 rtl:space-x-reverse">
+            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <span>Call Dispatch: (800) 555-FIRE</span>
+          </a>
+        </div>
+
+        <!-- Trust Micro-Chips Row -->
+        <div class="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-xs font-bold text-slate-400">
+          <div class="flex items-center justify-center space-x-2 rtl:space-x-reverse bg-slate-800/40 py-2.5 px-4 rounded-xl border border-slate-700/50">
+            <span class="text-orange-400">⚡</span>
+            <span>Same-Day Express Dispatch</span>
+          </div>
+          <div class="flex items-center justify-center space-x-2 rtl:space-x-reverse bg-slate-800/40 py-2.5 px-4 rounded-xl border border-slate-700/50">
+            <span class="text-blue-400">📜</span>
+            <span>NFPA 96 Official Certification</span>
+          </div>
+          <div class="flex items-center justify-center space-x-2 rtl:space-x-reverse bg-slate-800/40 py-2.5 px-4 rounded-xl border border-slate-700/50">
+            <span class="text-emerald-400">🛡️</span>
+            <span>100% Pass Audit Guarantee</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-10 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- 4 COLUMNS GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-14 items-start">
+        
+        <!-- COLUMN 1: BRAND & SOCIAL -->
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="assets/images/favicon.svg" alt="ProClean Logo" class="w-9 h-9 rounded-xl shadow-lg object-contain bg-orange-500/10 p-1 border border-orange-500/20" />
+            <span class="text-xl font-black text-white tracking-wider">PROCLEAN<span class="text-orange-500">.EXHAUST</span></span>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-400">
+            Certified chimney sweep & commercial exhaust hood cleaning service protecting homes and businesses across the region.
+          </p>
+          <!-- Social Media Pills -->
+          <div class="flex items-center space-x-2.5 rtl:space-x-reverse pt-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: NAVIGATION -->
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">NAVIGATION</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="text-blue-400 font-bold hover:text-white transition">Home 1 (General)</a></li>
+            <li><a href="home2.html" class="text-slate-400 hover:text-white transition">Home 2 (Commercial)</a></li>
+            <li><a href="about.html" class="text-slate-400 hover:text-white transition">About Us</a></li>
+            <li><a href="services.html" class="text-slate-400 hover:text-white transition">Services</a></li>
+            <li><a href="pricing.html" class="text-slate-400 hover:text-white transition">Pricing Tiers</a></li>
+            <li><a href="blog.html" class="text-slate-400 hover:text-white transition">Blog & Journal</a></li>
+            <li><a href="contact.html" class="text-slate-400 hover:text-white transition">Contact Sales</a></li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 3: SERVICE SLA -->
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">SERVICE SLA</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><span class="text-orange-400 font-bold">24h Express</span> Dispatch SLA</li>
+            <li><span class="text-emerald-400 font-bold">100% NFPA 96</span> Fire Code Inspection</li>
+            <li><span class="text-blue-400 font-bold">Certified Degreasing</span> Guarantee</li>
+            <li><span class="text-amber-400 font-bold">5 Star Rated</span> Technician Team</li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 4: EMERGENCY DISPATCH -->
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">EMERGENCY DISPATCH</h4>
+          <div class="space-y-2 text-xs mb-5">
+            <a href="mailto:dispatch@proclean-exhaust.com" class="flex items-center space-x-2 rtl:space-x-reverse text-slate-300 hover:text-white transition">
+              <svg class="w-4 h-4 text-orange-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span class="truncate">dispatch@proclean-exhaust.com</span>
+            </a>
+            <a href="tel:8005553473" class="flex items-center space-x-2 rtl:space-x-reverse text-slate-300 hover:text-white transition">
+              <svg class="w-4 h-4 text-orange-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <span>+1 (800) 555-FIRE</span>
+            </a>
+          </div>
+
+          <button onclick="openBookingModal()" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold text-xs tracking-wide shadow-lg shadow-orange-500/20 transition">
+            Connect Dispatch Team
+          </button>
+        </div>
+
+      </div>
+
+      <!-- BOTTOM COPYRIGHT BAR -->
+      <div class="pt-8 border-t border-slate-900 text-center">
+        <p class="text-xs text-slate-500">© 2026 ProClean Exhaust Cleaning Inc. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING ACTION BUTTON (FAB LOGO) -->
+  <button onclick="openBookingModal()" aria-label="Book Quick Inspection" class="fab-btn px-4 py-3 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 text-white flex items-center space-x-2 rtl:space-x-reverse group">
+    <span class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-lg shadow-inner">🔥</span>
+    <span class="font-black text-xs tracking-wider uppercase pr-1 text-white">Book Inspection</span>
+  </button>
+
+  <!-- QUICK BOOKING MODAL -->
+  <div id="booking-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="card-theme max-w-lg w-full p-8 rounded-3xl relative shadow-2xl border border-slate-700">
+      <button onclick="closeBookingModal()" class="absolute top-4 right-4 rtl:right-auto rtl:left-4 text-slate-400 hover:text-white text-2xl font-bold">✕</button>
+      <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Book Service Inspection</h3>
+      <p class="text-xs text-slate-500 mb-6">Select your service date and contact details for instant confirmation.</p>
+
+      <form id="modal-booking-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Full Name</label>
+          <input type="text" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Phone Number</label>
+            <input type="tel" required placeholder="(555) 000-0000" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
+            <input type="email" required placeholder="john@example.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Service Type</label>
+          <select id="modal-service-select" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none">
+            <option value="Chimney Deep Cleaning">Chimney Deep Cleaning ($149)</option>
+            <option value="Commercial Hood & Duct">Commercial Hood & Duct ($299)</option>
+            <option value="Filter Replacement">Filter Replacement ($79)</option>
+            <option value="ESP Unit Servicing">ESP Unit Servicing ($349)</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Preferred Date</label>
+            <input type="date" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Time Slot</label>
+            <select class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none">
+              <option>Morning (8am - 12pm)</option>
+              <option>Afternoon (12pm - 4pm)</option>
+              <option>Overnight Off-Hours (Commercial)</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm shadow-lg transition">Confirm Service Request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
