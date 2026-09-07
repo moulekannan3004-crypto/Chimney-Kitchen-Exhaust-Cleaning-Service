@@ -28,8 +28,7 @@ export const pricingPlans = {
         'Rotary Motorized Flue Pipe Scrubbing',
         'HEPA Containment Vacuuming',
         'Motor Turbine & Impeller Degreasing',
-        'External Stainless Steel Polish',
-        'Dual-Camera Inspection Video'
+        'External Stainless Steel Polish'
       ],
       ctaText: 'Book Deep Cleaning'
     },
@@ -79,8 +78,7 @@ export const pricingPlans = {
         'Overnight / Off-Hours Service',
         'Access Door Installation included',
         'ESP Ionizer Cell Deep Wash',
-        'Grease Trap & Discharger Drain Clean',
-        'Before & After Digital Audit Report'
+        'Grease Trap & Discharger Drain Clean'
       ],
       ctaText: 'Request Restaurant Quote'
     },

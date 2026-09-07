@@ -47,13 +47,13 @@
       <div class="flex items-center justify-between h-20 gap-4">
         
         <!-- Brand Logo -->
-        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group shrink-0">
+        <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 rtl:space-x-reverse group shrink-0">
           <div class="p-0.5 rounded-2xl bg-gradient-to-tr from-orange-500 to-blue-600 shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
-            <img src="assets/images/favicon.svg" alt="ProClean Logo" class="w-9 h-9 rounded-[14px] bg-slate-900 object-contain p-1" />
+            <img src="assets/images/favicon.svg" alt="ProClean Logo" class="w-8 h-8 sm:w-9 sm:h-9 rounded-[14px] bg-slate-900 object-contain p-1" />
           </div>
           <div>
-            <span class="text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center">ProClean <span class="text-orange-500 text-xs ml-1">★</span></span>
-            <span class="block text-[9px] font-extrabold text-slate-400 dark:text-slate-400 tracking-widest uppercase">Exhaust & Chimney Care</span>
+            <span class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center">ProClean <span class="text-orange-500 text-xs ml-1">★</span></span>
+            <span class="hidden sm:block text-[9px] font-extrabold text-slate-400 dark:text-slate-400 tracking-widest uppercase">Exhaust & Chimney Care</span>
           </div>
         </a>
 
@@ -86,36 +86,36 @@
         </nav>
 
         <!-- Right Action Controls -->
-        <div class="hidden sm:flex items-center space-x-2.5 rtl:space-x-reverse shrink-0">
+        <div class="flex items-center space-x-1.5 sm:space-x-2.5 rtl:space-x-reverse shrink-0">
           <!-- Unique Login Portal Button -->
-          <a href="login.html" class="group relative px-4 py-2 rounded-full bg-slate-900 text-white dark:bg-slate-800/90 border border-slate-700/80 hover:border-blue-500/50 shadow-sm hover:shadow-md transition-all duration-300 text-xs font-bold flex items-center space-x-2 rtl:space-x-reverse">
+          <a href="login.html" class="hidden md:flex group relative px-4 py-2 rounded-full bg-slate-900 text-white dark:bg-slate-800/90 border border-slate-700/80 hover:border-blue-500/50 shadow-sm hover:shadow-md transition-all duration-300 text-xs font-bold items-center space-x-2 rtl:space-x-reverse">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <svg class="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
             <span>Login Portal</span>
           </a>
 
           <!-- Dark Mode Toggle Button -->
-          <button onclick="toggleTheme()" aria-label="Toggle dark mode" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm">
+          <button onclick="toggleTheme()" aria-label="Toggle dark mode" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm cursor-pointer shrink-0">
             <svg class="sun-icon w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
             <svg class="moon-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
           </button>
 
           <!-- RTL Layout Toggle Button -->
-          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-xs font-bold px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm">
-            🌐 RTL
+          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm flex items-center justify-center cursor-pointer shrink-0">
+            <svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>RTL
           </button>
 
           <!-- Quick Booking Button -->
-          <button onclick="openBookingModal()" class="px-5 py-2 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg hover:shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 flex items-center space-x-1.5 rtl:space-x-reverse">
+          <button onclick="openBookingModal()" class="hidden md:flex px-5 py-2 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg hover:shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 items-center space-x-1.5 rtl:space-x-reverse cursor-pointer">
             <span>🔥</span>
             <span>Book Inspection</span>
           </button>
-        </div>
 
-        <!-- Mobile Drawer Toggle Button -->
-        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </button>
+          <!-- Mobile Drawer Toggle Button -->
+          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="lg:hidden p-1.5 sm:p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer shrink-0">
+            <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -147,7 +147,7 @@
             <span>Toggle Theme</span>
           </button>
           <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-xs font-bold py-2 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center cursor-pointer">
-            🌐 RTL
+            <svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>RTL
           </button>
         </div>
       </div>
@@ -181,18 +181,18 @@
           </div>
 
           <!-- Trust Badges -->
-          <div class="pt-8 border-t border-slate-700/60 grid grid-cols-3 gap-4 text-center">
-            <div>
-              <p class="text-3xl font-extrabold text-white">4,800+</p>
-              <p class="text-xs text-slate-400">Kitchens Cleaned</p>
+          <div class="pt-8 border-t border-slate-700/60 grid grid-cols-3 gap-2 sm:gap-4 text-center">
+            <div class="min-w-0">
+              <p class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white tracking-tight">4,800+</p>
+              <p class="text-[11px] sm:text-xs text-slate-400 leading-tight mt-1">Kitchens Cleaned</p>
             </div>
-            <div>
-              <p class="text-3xl font-extrabold text-orange-400">100%</p>
-              <p class="text-xs text-slate-400">Fire Code Compliant</p>
+            <div class="min-w-0">
+              <p class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-orange-400 tracking-tight">100%</p>
+              <p class="text-[11px] sm:text-xs text-slate-400 leading-tight mt-1">Fire Code Compliant</p>
             </div>
-            <div>
-              <p class="text-3xl font-extrabold text-blue-400">4.9 ★</p>
-              <p class="text-xs text-slate-400">Customer Rating</p>
+            <div class="min-w-0">
+              <p class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-blue-400 tracking-tight">4.9 ★</p>
+              <p class="text-[11px] sm:text-xs text-slate-400 leading-tight mt-1">Customer Rating</p>
             </div>
           </div>
         </div>
@@ -786,47 +786,61 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
         
-        <div class="card-theme p-8 rounded-2xl space-y-6">
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Essential Sweep</h3>
-          <p class="text-xs text-slate-500">Standard residential chimney maintenance.</p>
-          <div class="text-4xl font-extrabold text-slate-900 dark:text-white">$99 <span class="text-xs font-normal text-slate-500">/ session</span></div>
-          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-            <li>✓ Single Hood Surface Clean</li>
-            <li>✓ Baffle / Mesh Filter Soak</li>
-            <li>✓ Suction Test Check</li>
-            <li>✓ 30-Day Guarantee</li>
-          </ul>
-          <button onclick="openBookingModal('Essential Sweep')" class="w-full py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white font-bold text-sm transition">Choose Plan</button>
+        <div class="card-theme p-8 rounded-2xl flex flex-col justify-between border-2 border-slate-200 dark:border-slate-800">
+          <div class="space-y-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Essential Sweep</h3>
+              <p class="text-xs text-slate-500 mt-1">Standard residential chimney maintenance.</p>
+              <div class="text-4xl font-extrabold text-slate-900 dark:text-white mt-4">$99 <span class="text-xs font-normal text-slate-500">/ session</span></div>
+            </div>
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mt-6">
+              <li>✓ Single Hood Surface Clean</li>
+              <li>✓ Baffle / Mesh Filter Soak</li>
+              <li>✓ Suction Test Check</li>
+              <li>✓ Airflow & Safety Inspection</li>
+              <li>✓ Digital Inspection Summary</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Essential Sweep')" class="w-full py-3 rounded-xl border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold text-sm hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition mt-8 shadow-sm cursor-pointer">Choose Plan</button>
         </div>
 
-        <div class="card-theme p-8 rounded-2xl space-y-6 border-2 border-blue-600 relative shadow-xl">
+        <div class="card-theme p-8 rounded-2xl flex flex-col justify-between border-2 border-blue-600 relative shadow-xl">
           <span class="absolute -top-3 right-6 bg-blue-600 text-white font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Deep Sanitization</h3>
-          <p class="text-xs text-slate-500">Comprehensive residential & cafe service.</p>
-          <div class="text-4xl font-extrabold text-blue-600 dark:text-blue-400">$149 <span class="text-xs font-normal text-slate-500">/ session</span></div>
-          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-            <li>✓ Everything in Essential</li>
-            <li>✓ Motorized Rotary Flue Scrub</li>
-            <li>✓ HEPA Soot Containment</li>
-            <li>✓ Motor Turbine Degrease</li>
-            <li>✓ Dual Scope Camera Inspection</li>
-          </ul>
-          <button onclick="openBookingModal('Deep Sanitization')" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm transition">Choose Plan</button>
+          <div class="space-y-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Deep Sanitization</h3>
+              <p class="text-xs text-slate-500 mt-1">Comprehensive residential & cafe service.</p>
+              <div class="text-4xl font-extrabold text-blue-600 dark:text-blue-400 mt-4">$149 <span class="text-xs font-normal text-slate-500">/ session</span></div>
+            </div>
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mt-6">
+              <li>✓ Everything in Essential</li>
+              <li>✓ Motorized Rotary Flue Scrub</li>
+              <li>✓ HEPA Soot Containment</li>
+              <li>✓ Motor Turbine Degrease</li>
+              <li>✓ Dual Scope Camera Inspection</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Deep Sanitization')" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm transition mt-8 shadow-md cursor-pointer">Choose Plan</button>
         </div>
 
-        <div class="card-theme p-8 rounded-2xl space-y-6">
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Commercial Hood & Duct</h3>
-          <p class="text-xs text-slate-500">Full NFPA 96 restaurant exhaust overhaul.</p>
-          <div class="text-4xl font-extrabold text-slate-900 dark:text-white">$299 <span class="text-xs font-normal text-slate-500">/ up to 10 ft</span></div>
-          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-            <li>✓ Bare-Metal Hood Scraping</li>
-            <li>✓ 3000 PSI Pressure Jet Washing</li>
-            <li>✓ Riser Chemical Foam Degrease</li>
-            <li>✓ NFPA Compliance Certificate</li>
-          </ul>
-          <button onclick="openBookingModal('Commercial Hood & Duct')" class="w-full py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white font-bold text-sm transition">Choose Plan</button>
+        <div class="card-theme p-8 rounded-2xl flex flex-col justify-between border-2 border-slate-200 dark:border-slate-800">
+          <div class="space-y-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Commercial Hood & Duct</h3>
+              <p class="text-xs text-slate-500 mt-1">Full NFPA 96 restaurant exhaust overhaul.</p>
+              <div class="text-4xl font-extrabold text-slate-900 dark:text-white mt-4">$299 <span class="text-xs font-normal text-slate-500">/ up to 10 ft</span></div>
+            </div>
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mt-6">
+              <li>✓ Bare-Metal Hood Scraping</li>
+              <li>✓ 3000 PSI Pressure Jet Washing</li>
+              <li>✓ Riser Chemical Foam Degrease</li>
+              <li>✓ Full Exhaust Duct Degreasing</li>
+              <li>✓ Photo Audit Log</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Commercial Hood & Duct')" class="w-full py-3 rounded-xl border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold text-sm hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition mt-8 shadow-sm cursor-pointer">Choose Plan</button>
         </div>
 
       </div>
