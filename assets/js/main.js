@@ -60,10 +60,11 @@ const initApp = () => {
 
   const updateRTLBtn = (isRTL) => {
     const rtlBtns = document.querySelectorAll('.rtl-toggle-btn');
-    const arrowIcon = `<svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>`;
+    const rtlIcon = `<svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m0 0l6-6m-6 6l6 6"/></svg>`;
+    const ltrIcon = `<svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0l-6-6m6 6l-6 6"/></svg>`;
     rtlBtns.forEach(btn => {
       btn.setAttribute('dir', 'ltr');
-      btn.innerHTML = isRTL ? `${arrowIcon}LTR` : `${arrowIcon}RTL`;
+      btn.innerHTML = isRTL ? `${ltrIcon}LTR` : `${rtlIcon}RTL`;
     });
   };
 
@@ -233,16 +234,16 @@ const initApp = () => {
           <form id="modal-booking-form" class="space-y-4">
             <div>
               <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Full Name</label>
-              <input type="text" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+              <input type="text" required minlength="2" pattern="^[A-Za-z\s'.-]{2,50}$" title="Please enter at least 2 characters" placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Phone Number</label>
-                <input type="tel" required placeholder="(555) 000-0000" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+                <input type="tel" required pattern="^[0-9\-\+\(\)\s]{7,20}$" title="Please enter a valid phone number (digits, spaces, hyphens, and + only)" placeholder="(555) 000-0000" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
               </div>
               <div>
                 <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
-                <input type="email" required placeholder="john@example.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+                <input type="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address (e.g. name@domain.com)" placeholder="john@example.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
               </div>
             </div>
             <div>
@@ -279,6 +280,36 @@ const initApp = () => {
       if (dynamicForm) {
         dynamicForm.addEventListener('submit', (e) => {
           e.preventDefault();
+          const textInputs = dynamicForm.querySelectorAll('input[type="text"]');
+          for (const input of textInputs) {
+            const val = input.value.trim();
+            if (val.length < 2) {
+              showToast('Please enter a valid full name (at least 2 characters).');
+              input.focus();
+              return;
+            }
+          }
+          const phoneRegex = /^[0-9\-\+\(\)\s]{7,20}$/;
+          const telInputs = dynamicForm.querySelectorAll('input[type="tel"]');
+          for (const input of telInputs) {
+            const val = input.value.trim();
+            const digitCount = val.replace(/\D/g, '').length;
+            if (!phoneRegex.test(val) || digitCount < 7) {
+              showToast('Please enter a valid phone number (digits only, at least 7 digits).');
+              input.focus();
+              return;
+            }
+          }
+          const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          const emailInputs = dynamicForm.querySelectorAll('input[type="email"]');
+          for (const input of emailInputs) {
+            const val = input.value.trim();
+            if (!emailRegex.test(val)) {
+              showToast('Please enter a valid email address (e.g. name@domain.com).');
+              input.focus();
+              return;
+            }
+          }
           showToast('Thank you! Your booking request has been submitted successfully.');
           closeBookingModal();
           dynamicForm.reset();
@@ -345,11 +376,68 @@ const initApp = () => {
     setTimeout(() => toast.classList.remove('show'), 4000);
   };
 
+  // Forgot Password Handler with mandatory email validation
+  window.handleForgotPassword = (event, btn) => {
+    if (event) event.preventDefault();
+    const form = btn ? btn.closest('form') : document.querySelector('form');
+    const emailInput = form ? form.querySelector('input[type="email"]') : document.querySelector('input[type="email"]');
+    
+    if (!emailInput) return false;
+    
+    const emailVal = emailInput.value.trim();
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    if (!emailVal || !emailRegex.test(emailVal)) {
+      showToast('Please enter a valid email address first to reset your password.');
+      emailInput.focus();
+      return false;
+    }
+    
+    showToast(`Password reset link sent to ${emailVal}.`);
+    return false;
+  };
+
   // 10. Booking and Contact Form Handling
+  document.addEventListener('input', (e) => {
+    if (e.target && e.target.matches('input[type="tel"]')) {
+      e.target.value = e.target.value.replace(/[^0-9\-\+\(\)\s]/g, '');
+    }
+  });
+
   const bookingForms = document.querySelectorAll('.booking-form, #contact-form, #modal-booking-form');
   bookingForms.forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+      const textInputs = form.querySelectorAll('input[type="text"]');
+      for (const input of textInputs) {
+        const val = input.value.trim();
+        if (val.length < 2) {
+          showToast('Please enter a valid full name (at least 2 characters).');
+          input.focus();
+          return;
+        }
+      }
+      const phoneRegex = /^[0-9\-\+\(\)\s]{7,20}$/;
+      const telInputs = form.querySelectorAll('input[type="tel"]');
+      for (const input of telInputs) {
+        const val = input.value.trim();
+        const digitCount = val.replace(/\D/g, '').length;
+        if (!phoneRegex.test(val) || digitCount < 7) {
+          showToast('Please enter a valid phone number (digits only, at least 7 digits).');
+          input.focus();
+          return;
+        }
+      }
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      const emailInputs = form.querySelectorAll('input[type="email"]');
+      for (const input of emailInputs) {
+        const val = input.value.trim();
+        if (!emailRegex.test(val)) {
+          showToast('Please enter a valid email address (e.g. name@domain.com).');
+          input.focus();
+          return;
+        }
+      }
       showToast('Thank you! Your booking request has been submitted successfully.');
       closeBookingModal();
       form.reset();
@@ -509,7 +597,7 @@ const initApp = () => {
         desc: 'Bare-metal hand scraping, 3000 PSI hot thermal jet pressure washing, and rooftop fan housing degreasing for commercial facilities.',
         price: '$299',
         time: 'Takes approx 2-3 hours',
-        img: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+        img: 'assets/images/exhaust-duct-cleaning.png',
         overview1: 'Commercial kitchen exhaust systems accumulate dangerous layers of grease across ductwork, fan blades, and hoods. Without routine deep cleaning, grease buildup becomes a catastrophic fire hazard that violates local fire safety codes.',
         overview2: 'Our NFPA 96 certified process cleans the entire system from hood to roof fan. Using high-pressure hot water washing, eco-friendly degreasers, and scraper techniques, we restore duct interiors to bare metal and provide full audit documentation.',
         benefits: [
@@ -563,7 +651,7 @@ const initApp = () => {
         desc: 'Overhead canopy hood degreasing, mirror stainless steel polishing, grease trough clearing, and drip tray seal replacement.',
         price: '$199',
         time: 'Takes approx 1-2 hours',
-        img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80',
+        img: 'assets/images/commercial-hood-washing.png',
         overview1: 'Canopy hoods trap grease directly above hot cooking surfaces. Over time, dripping grease and charred carbon create unhygienic conditions and severe fire vulnerabilities right over open flames.',
         overview2: 'We degrease, scrape, and polish inner and outer hood surfaces, gutters, and grease cups to a mirror shine using non-corrosive, food-grade cleaning agents that preserve stainless steel brilliance.',
         benefits: [

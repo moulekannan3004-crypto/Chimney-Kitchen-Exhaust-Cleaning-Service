@@ -29,8 +29,8 @@
 
   <!-- HEADER -->
   <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-    <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20 gap-4">
+    <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8">
+      <div class="flex items-center justify-between h-20 gap-2 lg:gap-3 xl:gap-4">
         
         <!-- Brand Logo -->
         <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 rtl:space-x-reverse group shrink-0">
@@ -44,21 +44,19 @@
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center space-x-3.5 xl:space-x-6 rtl:space-x-reverse font-medium text-sm text-slate-700 dark:text-slate-200 shrink-0">
+        <nav class="hidden lg:flex items-center space-x-2 xl:space-x-5 rtl:space-x-reverse font-medium text-xs xl:text-sm text-slate-700 dark:text-slate-200">
           <!-- Home Dropdown Navigation Link -->
           <div class="relative group dropdown-model-container">
-            <button onclick="toggleDropdownModel('home-nav-dropdown-2')" class="nav-link active flex items-center space-x-1 rtl:space-x-reverse font-bold text-sm text-orange-600 dark:text-orange-400 py-2">
+            <button onclick="toggleDropdownModel('home-nav-dropdown-2')" class="nav-link active flex items-center space-x-1 rtl:space-x-reverse font-bold text-xs xl:text-sm text-orange-600 dark:text-orange-400 py-2">
               <span class="whitespace-nowrap">Home 2</span>
               <span class="text-xs">▾</span>
             </button>
             <div id="home-nav-dropdown-2" class="dropdown-model-menu hidden group-hover:block absolute left-0 rtl:left-auto rtl:right-0 mt-1 w-64 rounded-2xl bg-white dark:bg-slate-900 shadow-2xl border border-slate-200 dark:border-slate-800 py-2 z-50 text-slate-900 dark:text-white">
-              <a href="index.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-slate-800 flex items-center space-x-2 rtl:space-x-reverse">
-                <span class="text-blue-600">🏠</span>
-                <span>Home 1 – General Landing</span>
+              <a href="index.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-slate-800">
+                Home 1 – General Landing
               </a>
-              <a href="home2.html" class="block px-4 py-2.5 text-xs font-bold text-orange-600 bg-orange-50 dark:bg-slate-800/60 flex items-center space-x-2 rtl:space-x-reverse">
-                <span>🏢</span>
-                <span>Home 2 – Commercial Landing</span>
+              <a href="home2.html" class="block px-4 py-2.5 text-xs font-bold text-orange-600 bg-orange-50 dark:bg-slate-800/60">
+                Home 2 – Commercial Landing
               </a>
             </div>
           </div>
@@ -71,8 +69,8 @@
           <a href="contact.html" class="nav-link whitespace-nowrap">Contact</a>
         </nav>
 
-        <div class="flex items-center space-x-1.5 sm:space-x-2.5 rtl:space-x-reverse shrink-0">
-          <a href="login.html" class="hidden md:flex group relative px-4 py-2 rounded-full bg-slate-900 text-white dark:bg-slate-800/90 border border-slate-700/80 hover:border-orange-500/50 shadow-sm hover:shadow-md transition-all duration-300 text-xs font-bold items-center space-x-2 rtl:space-x-reverse">
+        <div class="flex items-center space-x-1.5 sm:space-x-2 xl:space-x-2.5 rtl:space-x-reverse shrink-0">
+          <a href="login.html" class="hidden xl:flex group relative px-4 py-2 rounded-full bg-slate-900 text-white dark:bg-slate-800/90 border border-slate-700/80 hover:border-orange-500/50 shadow-sm hover:shadow-md transition-all duration-300 text-xs font-bold items-center space-x-2 rtl:space-x-reverse">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <svg class="w-4 h-4 text-orange-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
             <span>Login Portal</span>
@@ -81,11 +79,11 @@
             <svg class="sun-icon w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
             <svg class="moon-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
           </button>
-          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm flex items-center justify-center cursor-pointer shrink-0"><svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>RTL</button>
+          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm flex items-center justify-center cursor-pointer shrink-0"><svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m0 0l6-6m-6 6l6 6"/></svg>RTL</button>
           
           <!-- Dropdown Model Button in Header -->
-          <div class="hidden md:block relative dropdown-model-container">
-            <button onclick="toggleDropdownModel('header-quote-drop-model')" class="px-5 py-2 rounded-full bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg hover:shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 flex items-center space-x-1.5 rtl:space-x-reverse cursor-pointer">
+          <div class="hidden md:flex relative dropdown-model-container">
+            <button onclick="toggleDropdownModel('header-quote-drop-model')" class="px-3.5 xl:px-5 py-2 rounded-full bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg hover:shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 flex items-center space-x-1.5 rtl:space-x-reverse cursor-pointer shrink-0">
               <span>Book Commercial</span>
               <span class="text-xs">▾</span>
             </button>
@@ -147,7 +145,7 @@
             <span>Toggle Theme</span>
           </button>
           <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-xs font-bold py-2 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center cursor-pointer">
-            <svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>RTL
+            <svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m0 0l6-6m-6 6l6 6"/></svg>RTL
           </button>
         </div>
       </div>
@@ -235,7 +233,7 @@
         <div class="relative">
           <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-orange-500 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
           <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-800 group">
-            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80" alt="Restaurant Kitchen Hood" class="w-full h-[460px] object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?auto=format&fit=crop&w=1200&q=80" alt="Restaurant Kitchen Hood" class="w-full h-[460px] object-cover transition-transform duration-500 group-hover:scale-105" />
             <div class="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-white/10 flex items-center justify-between text-white shadow-lg">
               <div>
                 <p class="text-sm font-bold text-white">Zero Business Downtime</p>
@@ -310,7 +308,7 @@
         <div class="card-theme rounded-2xl overflow-hidden group relative hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-orange-500/10 flex flex-col justify-between">
           <div class="h-1 bg-gradient-to-r from-orange-500 via-amber-500 to-red-500 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Commercial Canopy Hood Washing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <img src="assets/images/commercial-hood-washing.png" alt="Commercial Canopy Hood Washing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10 flex items-center space-x-1.5 rtl:space-x-reverse">
               <span>🍳</span>
               <span class="text-orange-400">Restaurant & Hotel</span>
@@ -337,7 +335,7 @@
         <div class="card-theme rounded-2xl overflow-hidden group relative hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col justify-between">
           <div class="h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-500 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Commercial Exhaust Duct Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <img src="assets/images/exhaust-duct-cleaning.png" alt="Commercial Exhaust Duct Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10 flex items-center space-x-1.5 rtl:space-x-reverse">
               <span>💨</span>
               <span class="text-blue-400">3000 PSI Thermal</span>
@@ -391,7 +389,7 @@
         <div class="card-theme rounded-2xl overflow-hidden group relative hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-purple-500/10 flex flex-col justify-between">
           <div class="h-1 bg-gradient-to-r from-purple-500 via-fuchsia-500 to-pink-500 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="ESP Precipitator Unit Servicing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80" alt="ESP Precipitator Unit Servicing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10 flex items-center space-x-1.5 rtl:space-x-reverse">
               <span>⚡</span>
               <span class="text-purple-400">99.8% Capture Rate</span>
@@ -1013,13 +1011,13 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- 4 COLUMNS GRID -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-14 items-start">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6 xl:gap-10 pb-14 items-start">
         
         <!-- COLUMN 1: BRAND & SOCIAL -->
         <div class="space-y-4 text-left rtl:text-right">
-          <div class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="assets/images/favicon.svg" alt="ProClean Logo" class="w-9 h-9 rounded-xl shadow-lg object-contain bg-orange-500/10 p-1 border border-orange-500/20" />
-            <span class="text-xl font-black text-white tracking-wider">PROCLEAN<span class="text-orange-500">.EXHAUST</span></span>
+          <div class="flex items-center space-x-2.5 sm:space-x-3 rtl:space-x-reverse shrink-0">
+            <img src="assets/images/favicon.svg" alt="ProClean Logo" class="w-9 h-9 rounded-xl shadow-lg object-contain bg-orange-500/10 p-1 border border-orange-500/20 shrink-0" />
+            <span class="text-sm sm:text-base lg:text-sm xl:text-xl font-black text-white tracking-wider whitespace-nowrap">PROCLEAN<span class="text-orange-500">.EXHAUST</span></span>
           </div>
           <p class="text-xs leading-relaxed text-slate-400">
             Certified chimney sweep & commercial exhaust hood cleaning service protecting homes and businesses across the region.
@@ -1055,14 +1053,16 @@
           </ul>
         </div>
 
-        <!-- COLUMN 3: SERVICE SLA -->
-        <div class="text-left rtl:text-right">
-          <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">SERVICE SLA</h4>
-          <ul class="space-y-2.5 text-xs">
-            <li><span class="text-orange-400 font-bold">24h Express</span> Dispatch SLA</li>
-            <li><span class="text-emerald-400 font-bold">100% NFPA 96</span> Fire Code Inspection</li>
-            <li><span class="text-blue-400 font-bold">Certified Degreasing</span> Guarantee</li>
-            <li><span class="text-amber-400 font-bold">5 Star Rated</span> Technician Team</li>
+        <!-- COLUMN 3: OUR SERVICES -->
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">OUR SERVICES</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="service-details.html?service=chimney" class="text-slate-400 hover:text-orange-400 transition">Chimney Deep Cleaning</a></li>
+            <li><a href="service-details.html?service=exhaust-duct" class="text-slate-400 hover:text-orange-400 transition">Exhaust Duct Cleaning</a></li>
+            <li><a href="service-details.html?service=filter-replacement" class="text-slate-400 hover:text-orange-400 transition">Filter Replacement & Degreasing</a></li>
+            <li><a href="service-details.html?service=esp-unit" class="text-slate-400 hover:text-orange-400 transition">ESP Precipitator Unit Servicing</a></li>
+            <li><a href="service-details.html?service=commercial-hood" class="text-slate-400 hover:text-orange-400 transition">Commercial Hood Washing</a></li>
+            <li><a href="service-details.html?service=nfpa-inspection" class="text-slate-400 hover:text-orange-400 transition">NFPA 96 Safety Inspection</a></li>
           </ul>
         </div>
 
@@ -1109,10 +1109,10 @@
       </button>
       <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2">Book Commercial Service</h3>
       <form id="modal-booking-form" class="space-y-4 mt-4">
-        <input type="text" required placeholder="Business / Restaurant Name" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm" />
+        <input type="text" required minlength="2" pattern="^[A-Za-z0-9\s'.-]{2,50}$" title="Please enter at least 2 characters" placeholder="Business / Restaurant Name" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm" />
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <input type="tel" required placeholder="Phone Number" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm" />
-          <input type="email" required placeholder="Manager Email" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm" />
+          <input type="tel" required pattern="^[0-9\-\+\(\)\s]{7,20}$" title="Please enter a valid phone number (digits, spaces, hyphens, and + only)" placeholder="Phone Number" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm" />
+          <input type="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address (e.g. name@domain.com)" placeholder="Manager Email" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm" />
         </div>
         <select id="modal-service-select" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
           <option value="Commercial Canopy Hood Cleaning">Commercial Canopy Hood Cleaning ($199)</option>
