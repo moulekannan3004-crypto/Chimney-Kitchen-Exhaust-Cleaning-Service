@@ -404,7 +404,7 @@ const initApp = () => {
     }
   });
 
-  const bookingForms = document.querySelectorAll('.booking-form, #contact-form, #modal-booking-form');
+  const bookingForms = document.querySelectorAll('.booking-form:not(#login-form), #contact-form, #modal-booking-form');
   bookingForms.forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
