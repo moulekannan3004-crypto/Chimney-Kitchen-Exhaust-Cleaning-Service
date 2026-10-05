@@ -83,7 +83,7 @@ export const servicesData = [
     price: '$79',
     badge: 'Essential',
     icon: 'ShieldCheck',
-    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80',
     bannerImage: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=80',
     fullDesc: 'Clogged filters choke your ventilation system and allow heavy grease droplets to migrate straight into fans and roof structures. We offer ultrasonic filter bath cleaning, custom stainless steel baffle filter replacements, and activated carbon odor filters.',
     features: [
@@ -119,7 +119,7 @@ export const servicesData = [
     badge: 'Advanced Tech',
     icon: 'Zap',
     image: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80',
-    bannerImage: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80',
+    bannerImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80',
     fullDesc: 'ESP units filter smoke and micro-grease particles using high-voltage ionization. Accumulated carbon and sticky oil on collector cells cause sparking, efficiency loss, and system shutdown. We specialize in deep chemical cell wash and electrical contact alignment.',
     features: [
       'High-Voltage Ionizing Cell Chemical Soaking',

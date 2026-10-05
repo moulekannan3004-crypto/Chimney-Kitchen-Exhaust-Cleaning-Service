@@ -615,7 +615,7 @@ const initApp = () => {
         desc: 'Ultrasonic dip-tank filter soaking, heavy-duty stainless steel baffle filter fabrication, and activated charcoal odor upgrades.',
         price: '$79',
         time: 'Takes approx 45-60 minutes',
-        img: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
+        img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80',
         overview1: 'Grease baffle filters are your hood\'s first line of defense. Blocked or saturated filters restrict airflow, overheat exhaust motors, and allow heavy grease vapor deeper into your ventilation duct system.',
         overview2: 'We offer professional ultrasonic tank soaking and heavy-duty stainless baffle filter replacement. Our multi-stage degreasing process dissolves baked-on grease layers without damaging stainless steel structures.',
         benefits: [
@@ -669,7 +669,7 @@ const initApp = () => {
         desc: 'Full ventilation fire safety audit, access panel check, dual-lens camera scope video logging, and official NFPA 96 certificate.',
         price: '$129',
         time: 'Takes approx 45-60 minutes',
-        img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80',
+        img: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80',
         overview1: 'Regular inspections are required by law for commercial kitchens under NFPA 96 standard. Detailed visual and video scope reports verify system integrity and prevent unexpected shutdown orders.',
         overview2: 'We conduct end-to-end inspections using digital scope cameras, measure grease accumulation levels, issue official NFPA compliance certificates, and log digital inspection records for fire marshals.',
         benefits: [

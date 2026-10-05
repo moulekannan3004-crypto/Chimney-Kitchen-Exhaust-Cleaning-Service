@@ -1,35 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <!-- Background Gradient: Blue to Orange/Amber -->
-    <linearGradient id="bgGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2563eb"/>
-      <stop offset="50%" stop-color="#7c3aed"/>
-      <stop offset="100%" stop-color="#f97316"/>
+    <!-- Background Shield Gradient -->
+    <linearGradient id="shieldBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    
+    <!-- Shield Border Gradient -->
+    <linearGradient id="shieldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#10b981"/>
     </linearGradient>
 
-    <!-- Flame Main Body Gradient -->
-    <linearGradient id="flameMain" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#ea580c"/>
-      <stop offset="60%" stop-color="#f97316"/>
-      <stop offset="100%" stop-color="#ef4444"/>
+    <!-- Hood & Canopy Gold/Orange Gradient -->
+    <linearGradient id="hoodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
     </linearGradient>
 
-    <!-- Flame Inner Core Gradient -->
-    <linearGradient id="flameInner" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#fef08a"/>
+    <!-- Airflow / Spark Teal/Emerald Gradient -->
+    <linearGradient id="airGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#34d399"/>
     </linearGradient>
   </defs>
 
-  <!-- Rounded Square Container -->
-  <rect width="512" height="512" rx="140" fill="url(#bgGrad)"/>
+  <!-- Background Shield Shape -->
+  <path d="M256 32 C370 32, 440 60, 440 60 V240 C440 360, 340 440, 256 480 C172 440, 72 360, 72 240 V60 C72 60, 142 32, 256 32 Z" fill="url(#shieldBg)" stroke="url(#shieldBorder)" stroke-width="12" stroke-linejoin="round"/>
 
-  <!-- Outer Flame Layer -->
-  <path d="M256 90 C256 90, 340 180, 340 280 C340 355, 300 405, 256 405 C212 405, 172 355, 172 280 C172 180, 256 90, 256 90 Z" fill="url(#flameMain)"/>
+  <!-- Chimney Stack & Flue Riser Base -->
+  <rect x="216" y="100" width="80" height="70" rx="8" fill="#475569" stroke="#94a3b8" stroke-width="4"/>
+  <!-- Chimney Cap Top -->
+  <path d="M196 100 H316 L300 80 H212 Z" fill="#64748b"/>
 
-  <!-- Flame Wing Layer -->
-  <path d="M235 150 C235 150, 305 220, 305 295 C305 345, 275 385, 235 385 C215 385, 195 365, 195 330 C195 250, 235 150, 235 150 Z" fill="#f97316" opacity="0.8"/>
+  <!-- Commercial Exhaust Hood Canopy Trapeze -->
+  <path d="M140 230 L180 170 H332 L372 230 C372 230, 360 250, 256 250 C152 250, 140 230, 140 230 Z" fill="url(#hoodGrad)" stroke="#ffedd5" stroke-width="4"/>
+  
+  <!-- Exhaust Hood Filters / Stainless Baffles -->
+  <line x1="200" y1="230" x2="220" y2="185" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+  <line x1="240" y1="230" x2="252" y2="185" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+  <line x1="280" y1="230" x2="284" y2="185" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+  <line x1="312" y1="230" x2="316" y2="185" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
 
-  <!-- Inner Bright Core -->
-  <path d="M256 220 C256 220, 300 270, 300 320 C300 360, 280 385, 256 385 C232 385, 212 360, 212 320 C212 270, 256 220, 256 220 Z" fill="url(#flameInner)"/>
+  <!-- Clean Airflow Vortices & Degreasing Sweeps (Dynamic Curves) -->
+  <path d="M130 310 C 180 260, 220 340, 280 290 C 330 250, 380 280, 400 260" fill="none" stroke="url(#airGrad)" stroke-width="14" stroke-linecap="round"/>
+  <path d="M110 360 C 160 310, 210 390, 290 330 C 340 290, 370 330, 390 310" fill="none" stroke="url(#airGrad)" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Spark / Fire-Safety Clean Star -->
+  <path d="M256 340 L266 370 L296 380 L266 390 L256 420 L246 390 L216 380 L246 370 Z" fill="#fef08a"/>
+  <circle cx="256" cy="380" r="6" fill="#ffffff"/>
+
+  <!-- Sparkle Accent 1 -->
+  <path d="M340 370 L345 385 L360 390 L345 395 L340 410 L335 395 L320 390 L335 385 Z" fill="#38bdf8" opacity="0.9"/>
+  <!-- Sparkle Accent 2 -->
+  <path d="M170 370 L174 382 L186 386 L174 390 L170 402 L166 390 L154 386 L166 382 Z" fill="#f97316" opacity="0.9"/>
 </svg>
