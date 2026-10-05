@@ -119,32 +119,44 @@
     </div>
   </section>
 
-  <!-- SERVICES LIST & GRID -->
+  <!-- SERVICES LIST & CATEGORIES (REQUIREMENT 7) -->
   <section class="py-20 bg-slate-50 dark:bg-slate-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold text-xs uppercase tracking-widest border border-blue-500/20">
+          Available Service Types & Categories
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white">
+          Comprehensive Chimney & Exhaust Cleaning Solutions
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
+          Engineered for both residential home kitchens and high-volume commercial food establishments. Every service features specialized machinery and certified NFPA compliance.
+        </p>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
         
         <!-- 1. Chimney Deep Cleaning -->
-        <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10">
-          <div class="h-1 bg-gradient-to-r from-blue-500 to-indigo-500 absolute top-0 left-0 right-0 z-20"></div>
+        <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 border border-slate-200 dark:border-slate-800">
+          <div class="h-1 bg-blue-600 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-52 overflow-hidden shrink-0">
-            <img src="https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=800&q=80" alt="Chimney Deep Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-            <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10">HEPA Filtered</span>
+            <img src="assets/images/bare-metal-cleaning-excellence.png" alt="Residential Chimney Deep Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10">HEPA Soot Extraction</span>
           </div>
           <div class="p-6 flex flex-col flex-1 justify-between">
-            <div class="space-y-4 mb-4 flex-1 flex flex-col justify-start">
+            <div class="space-y-4 mb-4 flex-1 flex flex-col justify-start text-left rtl:text-right">
               <div>
-                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 font-bold text-xs rounded-full inline-block">Residential</span>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 font-bold text-xs rounded-full inline-block">Type: Residential Chimney</span>
               </div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Chimney Deep Cleaning</h3>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Residential Chimney Deep Cleaning</h3>
               <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                Rotary wire brushing, HEPA vacuum soot extraction, motorized oil degreasing, and flue camera inspection.
+                360-degree rotary wire brushing, HEPA vacuum soot extraction, motorized oil degreasing, and glass door polishing for home chimneys.
               </p>
               <ul class="text-xs space-y-2 text-slate-500 dark:text-slate-400 mt-2">
-                <li>✓ 360-degree rotary scrubbing</li>
-                <li>✓ HEPA soot containment</li>
-                <li>✓ Glass door polishing</li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-600 font-bold">✓</span> <span>360-degree rotary flue scrubbing</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-600 font-bold">✓</span> <span>HEPA vacuum soot containment</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-600 font-bold">✓</span> <span>Motor turbine oil degreasing</span></li>
               </ul>
             </div>
             <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between mt-auto">
@@ -154,26 +166,26 @@
           </div>
         </div>
 
-        <!-- 2. Exhaust Duct Cleaning -->
-        <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-orange-500/10">
-          <div class="h-1 bg-gradient-to-r from-orange-500 to-amber-500 absolute top-0 left-0 right-0 z-20"></div>
+        <!-- 2. Commercial Exhaust Duct Cleaning -->
+        <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-orange-500/10 border border-slate-200 dark:border-slate-800">
+          <div class="h-1 bg-orange-500 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-52 overflow-hidden shrink-0">
-            <img src="assets/images/exhaust-duct-cleaning.png" alt="Exhaust Duct Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-            <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10">NFPA 96 Tagged</span>
+            <img src="assets/images/exhaust-duct-cleaning.png" alt="Commercial Exhaust Duct Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10">3000 PSI Thermal</span>
           </div>
           <div class="p-6 flex flex-col flex-1 justify-between">
-            <div class="space-y-4 mb-4 flex-1 flex flex-col justify-start">
+            <div class="space-y-4 mb-4 flex-1 flex flex-col justify-start text-left rtl:text-right">
               <div>
-                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400 font-bold text-xs rounded-full inline-block">Commercial</span>
+                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 font-bold text-xs rounded-full inline-block">Type: Commercial Ductwork</span>
               </div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Exhaust Duct Cleaning</h3>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Commercial Exhaust Duct Cleaning</h3>
               <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                Bare-metal hand scraping, hot water jet washing, and vertical riser duct degreasing for restaurants.
+                Bare-metal hand scraping, 3000 PSI hot-water thermal pressure jetting, and vertical riser duct degreasing for restaurants.
               </p>
               <ul class="text-xs space-y-2 text-slate-500 dark:text-slate-400 mt-2">
-                <li>✓ 3000 PSI thermal jetting</li>
-                <li>✓ Code access panels</li>
-                <li>✓ NFPA compliance certificate</li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-orange-500 font-bold">✓</span> <span>Bare-metal code scraping</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-orange-500 font-bold">✓</span> <span>Leak-proof access door installs</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-orange-500 font-bold">✓</span> <span>NFPA 96 compliance certificate</span></li>
               </ul>
             </div>
             <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between mt-auto">
@@ -183,84 +195,84 @@
           </div>
         </div>
 
-        <!-- 3. Filter Replacement -->
-        <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-emerald-500/10">
-          <div class="h-1 bg-gradient-to-r from-emerald-500 to-teal-500 absolute top-0 left-0 right-0 z-20"></div>
+        <!-- 3. Filter Replacement & Dip Tank Soak -->
+        <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 border border-slate-200 dark:border-slate-800">
+          <div class="h-1 bg-blue-600 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-52 overflow-hidden shrink-0">
-            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Filter Replacement" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Baffle Filter Replacement & Dip Soak" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10">Ultrasonic Bath</span>
           </div>
           <div class="p-6 flex flex-col flex-1 justify-between">
-            <div class="space-y-4 mb-4 flex-1 flex flex-col justify-start">
+            <div class="space-y-4 mb-4 flex-1 flex flex-col justify-start text-left rtl:text-right">
               <div>
-                <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 font-bold text-xs rounded-full inline-block">Maintenance</span>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 font-bold text-xs rounded-full inline-block">Type: Filter Maintenance</span>
               </div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Filter Replacement & Degreasing</h3>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Filter Replacement & Dip Tank Soak</h3>
               <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                Ultrasonic dip-tank filter soaking, custom stainless steel baffle filter fabrication, and charcoal odor upgrades.
+                Ultrasonic dip-tank filter chemical soaking, custom heavy 430 stainless steel baffle filter fabrication, and carbon odor pad refills.
               </p>
               <ul class="text-xs space-y-2 text-slate-500 dark:text-slate-400 mt-2">
-                <li>✓ Stainless baffle replacement</li>
-                <li>✓ Deep dip tank wash</li>
-                <li>✓ Activated carbon swap</li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-600 font-bold">✓</span> <span>Heavy 430 stainless baffle filters</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-600 font-bold">✓</span> <span>Deep ultrasonic degreasing bath</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-600 font-bold">✓</span> <span>Active carbon odor pad swap</span></li>
               </ul>
             </div>
             <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between mt-auto">
-              <span class="text-xl font-black text-emerald-600 dark:text-emerald-400">$79</span>
-              <a href="service-details.html?service=filter-replacement" class="px-4 py-2 bg-emerald-600 text-white rounded-xl text-xs font-bold hover:bg-emerald-700 transition shadow-md whitespace-nowrap">View Details</a>
+              <span class="text-xl font-black text-blue-600 dark:text-blue-400">$79</span>
+              <a href="service-details.html?service=filter-replacement" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition shadow-md whitespace-nowrap">View Details</a>
             </div>
           </div>
         </div>
 
-        <!-- 4. Electrostatic Precipitator (ESP) -->
-        <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-purple-500/10">
-          <div class="h-1 bg-gradient-to-r from-purple-500 to-pink-500 absolute top-0 left-0 right-0 z-20"></div>
+        <!-- 4. Electrostatic Precipitator (ESP) Unit Servicing -->
+        <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 border border-slate-200 dark:border-slate-800">
+          <div class="h-1 bg-blue-600 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-52 overflow-hidden shrink-0">
-            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="ESP Servicing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Electrostatic Precipitator ESP Servicing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10">99.8% Efficiency</span>
           </div>
           <div class="p-6 flex flex-col flex-1 justify-between">
-            <div class="space-y-4 mb-4 flex-1 flex flex-col justify-start">
+            <div class="space-y-4 mb-4 flex-1 flex flex-col justify-start text-left rtl:text-right">
               <div>
-                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 font-bold text-xs rounded-full inline-block">Specialized</span>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 font-bold text-xs rounded-full inline-block">Type: Specialized Air Filtration</span>
               </div>
               <h3 class="text-xl font-bold text-slate-900 dark:text-white">ESP Precipitator Unit Servicing</h3>
               <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                High-voltage ionizer cell chemical bath soaking, insulator testing, and UV-C air purifier tube replacement.
+                High-voltage ionizer cell chemical bath soaking, insulator spark testing, voltage calibration, and UV-C air purifier tube replacement.
               </p>
               <ul class="text-xs space-y-2 text-slate-500 dark:text-slate-400 mt-2">
-                <li>✓ 99.8% Smoke capture restored</li>
-                <li>✓ Sparking diagnostics</li>
-                <li>✓ Odor module refill</li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-600 font-bold">✓</span> <span>High-voltage ionizer cell wash</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-600 font-bold">✓</span> <span>Sparking & insulator diagnostic</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-600 font-bold">✓</span> <span>Odor module & UV-C lamp refill</span></li>
               </ul>
             </div>
             <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between mt-auto">
-              <span class="text-xl font-black text-purple-600 dark:text-purple-400">$349</span>
-              <a href="service-details.html?service=esp-unit" class="px-4 py-2 bg-purple-600 text-white rounded-xl text-xs font-bold hover:bg-purple-700 transition shadow-md whitespace-nowrap">View Details</a>
+              <span class="text-xl font-black text-blue-600 dark:text-blue-400">$349</span>
+              <a href="service-details.html?service=esp-unit" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition shadow-md whitespace-nowrap">View Details</a>
             </div>
           </div>
         </div>
 
         <!-- 5. Commercial Hood Washing -->
-        <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-orange-500/10">
-          <div class="h-1 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 absolute top-0 left-0 right-0 z-20"></div>
+        <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-orange-500/10 border border-slate-200 dark:border-slate-800">
+          <div class="h-1 bg-orange-500 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-52 overflow-hidden shrink-0">
             <img src="assets/images/commercial-hood-washing.png" alt="Commercial Hood Washing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10">Bare-Metal Polish</span>
           </div>
           <div class="p-6 flex flex-col flex-1 justify-between">
-            <div class="space-y-4 mb-4 flex-1 flex flex-col justify-start">
+            <div class="space-y-4 mb-4 flex-1 flex flex-col justify-start text-left rtl:text-right">
               <div>
-                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400 font-bold text-xs rounded-full inline-block">Commercial</span>
+                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 font-bold text-xs rounded-full inline-block">Type: Restaurant Hood</span>
               </div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Commercial Hood Washing</h3>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Commercial Hood Canopy Washing</h3>
               <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                Overhead canopy hood washing, stainless steel polishing, grease trough clearing, and drip tray installation.
+                Overhead canopy hood washing, stainless steel mirror polishing, grease trough clearing, and drip tray gasket installation.
               </p>
               <ul class="text-xs space-y-2 text-slate-500 dark:text-slate-400 mt-2">
-                <li>✓ Bare metal mirror polish</li>
-                <li>✓ Grease trough drainage</li>
-                <li>✓ Food safe degreasers</li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-orange-500 font-bold">✓</span> <span>Mirror stainless steel polish</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-orange-500 font-bold">✓</span> <span>Grease trough drainage unclog</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-orange-500 font-bold">✓</span> <span>Food-safe NSF active degreasers</span></li>
               </ul>
             </div>
             <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between mt-auto">
@@ -270,31 +282,31 @@
           </div>
         </div>
 
-        <!-- 6. Fire Safety Inspection -->
-        <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-red-500/10">
-          <div class="h-1 bg-gradient-to-r from-red-500 via-rose-500 to-orange-500 absolute top-0 left-0 right-0 z-20"></div>
+        <!-- 6. Auto-Clean Chimney Servicing & Motor Repair -->
+        <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 border border-slate-200 dark:border-slate-800">
+          <div class="h-1 bg-blue-600 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-52 overflow-hidden shrink-0">
-            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80" alt="Fire Safety Inspection" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-            <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10">Official NFPA Tag</span>
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Auto-Clean Chimney Repair & Servicing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10">Thermal Repair</span>
           </div>
           <div class="p-6 flex flex-col flex-1 justify-between">
-            <div class="space-y-4 mb-4 flex-1 flex flex-col justify-start">
+            <div class="space-y-4 mb-4 flex-1 flex flex-col justify-start text-left rtl:text-right">
               <div>
-                <span class="px-3 py-1 bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 font-bold text-xs rounded-full inline-block">Compliance</span>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 font-bold text-xs rounded-full inline-block">Type: Auto-Clean & Repair</span>
               </div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white">NFPA 96 Safety Inspection</h3>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Auto-Clean Chimney Repair & Service</h3>
               <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                Full ventilation fire safety audit, access panel check, fuel shut-off interlock testing, and digital report.
+                Diagnostic and repair for auto-clean heating elements, motor capacitor replacements, touch sensor repairs, and unblocking oil collectors.
               </p>
               <ul class="text-xs space-y-2 text-slate-500 dark:text-slate-400 mt-2">
-                <li>✓ Official NFPA compliance tag</li>
-                <li>✓ Insurance report delivery</li>
-                <li>✓ Dual-camera video scope</li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-600 font-bold">✓</span> <span>Thermal heating element repair</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-600 font-bold">✓</span> <span>PCB touch switch replacement</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-600 font-bold">✓</span> <span>Internal oil collector drain flush</span></li>
               </ul>
             </div>
             <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between mt-auto">
-              <span class="text-xl font-black text-red-600 dark:text-red-400">$129</span>
-              <a href="service-details.html?service=nfpa-inspection" class="px-4 py-2 bg-red-600 text-white rounded-xl text-xs font-bold hover:bg-red-700 transition shadow-md whitespace-nowrap">View Details</a>
+              <span class="text-xl font-black text-blue-600 dark:text-blue-400">$129</span>
+              <a href="service-details.html?service=nfpa-inspection" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition shadow-md whitespace-nowrap">View Details</a>
             </div>
           </div>
         </div>

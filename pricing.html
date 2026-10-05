@@ -117,65 +117,99 @@
     </div>
   </section>
 
-  <!-- PRICING TABLES -->
+  <!-- PRICING TABLES WITH RELEVANT IMAGES & DETAILED SERVICE BREAKDOWNS (REQUIREMENT 8) -->
   <section class="py-20 bg-white dark:bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Residential Section -->
       <div class="mb-20">
-        <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-8 border-b border-slate-200 dark:border-slate-800 pb-4">Residential Kitchen Chimney Packages</h2>
+        <div class="text-left rtl:text-right mb-8 border-b border-slate-200 dark:border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <span class="text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider">Home & Apartment Care</span>
+            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Residential Chimney Deep Cleaning & Maintenance</h2>
+          </div>
+          <span class="text-xs text-slate-500 font-medium">Includes 100% HEPA Soot Extraction</span>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           
-          <div class="card-theme p-8 rounded-2xl flex flex-col justify-between border-2 border-slate-200 dark:border-slate-800">
-            <div class="space-y-6 flex-1 flex flex-col justify-between">
+          <!-- Tier 1: Essential Sweep -->
+          <div class="card-theme rounded-2xl overflow-hidden flex flex-col justify-between border-2 border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition duration-300">
+            <div class="relative h-44 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=600&q=80" alt="Essential Chimney Sweep Service" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full border border-white/10">Type: Standard Clean</span>
+            </div>
+
+            <div class="p-6 space-y-5 flex-1 flex flex-col justify-between">
               <div>
                 <h3 class="text-xl font-bold text-slate-900 dark:text-white">Essential Sweep</h3>
-                <div class="text-4xl font-extrabold text-slate-900 dark:text-white mt-4">$99 <span class="text-xs font-normal text-slate-500">/ visit</span></div>
+                <p class="text-xs text-slate-500 mt-1">Standard residential chimney & hob maintenance.</p>
+                <div class="text-3xl font-black text-slate-900 dark:text-white mt-3">$99 <span class="text-xs font-normal text-slate-500">/ session</span></div>
+                
+                <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+                  <p class="font-extrabold text-blue-600 dark:text-blue-400">Included Services:</p>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Overhead hood surface grease wipe</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Baffle / mesh filter chemical dip soak</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Airflow suction paper test check</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Motor noise & vibration diagnostic</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Digital inspection summary report</span></li>
+                </div>
               </div>
-              <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mt-6">
-                <li>✓ Single Hood Surface Degrease</li>
-                <li>✓ Filter Chemical Dip Soak</li>
-                <li>✓ Suction Airflow Measurement</li>
-                <li>✓ Fire Safety Inspection</li>
-                <li>✓ Digital Service Summary</li>
-              </ul>
+              <button onclick="openBookingModal('Essential Sweep')" class="w-full py-3 rounded-xl border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold text-sm hover:bg-blue-600 hover:text-white transition mt-6 shadow-sm cursor-pointer">Choose Plan</button>
             </div>
-            <button onclick="openBookingModal('Essential Sweep')" class="w-full py-3 rounded-xl border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold text-sm hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition mt-8 shadow-sm cursor-pointer">Book Essential</button>
           </div>
 
-          <div class="card-theme p-8 rounded-2xl flex flex-col justify-between border-2 border-blue-600 relative shadow-xl">
-            <span class="absolute -top-3 right-6 bg-blue-600 text-white font-bold text-[10px] px-3 py-1 rounded-full uppercase">Most Popular</span>
-            <div class="space-y-6 flex-1 flex flex-col justify-between">
-              <div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Deep Sanitization</h3>
-                <div class="text-4xl font-extrabold text-blue-600 mt-4">$149 <span class="text-xs font-normal text-slate-500">/ visit</span></div>
-              </div>
-              <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mt-6">
-                <li>✓ Everything in Essential</li>
-                <li>✓ Motorized Rotary Flue Scrub</li>
-                <li>✓ HEPA Soot Containment</li>
-                <li>✓ Motor Turbine Degrease</li>
-                <li>✓ Dual Scope Video Inspection</li>
-              </ul>
+          <!-- Tier 2: Deep Sanitization -->
+          <div class="card-theme rounded-2xl overflow-hidden flex flex-col justify-between border-2 border-blue-600 relative shadow-xl">
+            <span class="absolute top-3 right-3 bg-blue-600 text-white font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider z-20 shadow">Most Popular</span>
+            
+            <div class="relative h-44 overflow-hidden">
+              <img src="assets/images/bare-metal-cleaning-excellence.png" alt="Deep Sanitization Chimney Cleaning" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full border border-white/10">Type: Deep Motorized Scrub</span>
             </div>
-            <button onclick="openBookingModal('Deep Sanitization')" class="w-full py-3 rounded-xl bg-blue-600 text-white font-bold text-sm hover:bg-blue-700 transition mt-8 shadow-md cursor-pointer">Book Deep Clean</button>
+
+            <div class="p-6 space-y-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Deep Sanitization & Flue Scrub</h3>
+                <p class="text-xs text-slate-500 mt-1">Full deep clean for heavy oil cooking chimneys.</p>
+                <div class="text-3xl font-black text-blue-600 dark:text-blue-400 mt-3">$149 <span class="text-xs font-normal text-slate-500">/ session</span></div>
+                
+                <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+                  <p class="font-extrabold text-blue-600 dark:text-blue-400">Included Services:</p>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Everything in Essential Sweep</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>360° Motorized rotary flue wire scrub</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>HEPA vacuum soot & creosote extraction</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Motor turbine impeller degreasing</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Dual-camera HD scope video audit</span></li>
+                </div>
+              </div>
+              <button onclick="openBookingModal('Deep Sanitization')" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm transition mt-6 shadow-md cursor-pointer">Choose Plan</button>
+            </div>
           </div>
 
-          <div class="card-theme p-8 rounded-2xl flex flex-col justify-between border-2 border-slate-200 dark:border-slate-800">
-            <div class="space-y-6 flex-1 flex flex-col justify-between">
-              <div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Annual Care Plan</h3>
-                <div class="text-4xl font-extrabold text-slate-900 dark:text-white mt-4">$249 <span class="text-xs font-normal text-slate-500">/ year (2 visits)</span></div>
-              </div>
-              <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mt-6">
-                <li>✓ 2 Full Deep Cleaning Visits</li>
-                <li>✓ Free Filter Replacement</li>
-                <li>✓ Priority Emergency Service</li>
-                <li>✓ Annual Safety Certificate</li>
-                <li>✓ Free Pre-Seasonal Checkup</li>
-              </ul>
+          <!-- Tier 3: Annual Care Plan -->
+          <div class="card-theme rounded-2xl overflow-hidden flex flex-col justify-between border-2 border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition duration-300">
+            <div class="relative h-44 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Annual Chimney Care Contract" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full border border-white/10">Type: Annual SLA</span>
             </div>
-            <button onclick="openBookingModal('Annual Care Plan')" class="w-full py-3 rounded-xl border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold text-sm hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition mt-8 shadow-sm cursor-pointer">Subscribe Annual</button>
+
+            <div class="p-6 space-y-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Annual Maintenance Contract</h3>
+                <p class="text-xs text-slate-500 mt-1">Year-round protection with 2 deep cleans.</p>
+                <div class="text-3xl font-black text-slate-900 dark:text-white mt-3">$249 <span class="text-xs font-normal text-slate-500">/ year</span></div>
+                
+                <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+                  <p class="font-extrabold text-blue-600 dark:text-blue-400">Included Services:</p>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>2 Full Deep Cleaning sessions per year</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Free stainless baffle filter replacement</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Priority 24-hour repair dispatch</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Annual Fire Safety Certificate</span></li>
+                </div>
+              </div>
+              <button onclick="openBookingModal('Annual Care Plan')" class="w-full py-3 rounded-xl border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold text-sm hover:bg-blue-600 hover:text-white transition mt-6 shadow-sm cursor-pointer">Choose Plan</button>
+            </div>
           </div>
 
         </div>
@@ -183,61 +217,96 @@
 
       <!-- Commercial Section -->
       <div>
-        <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-8 border-b border-slate-200 dark:border-slate-800 pb-4">Commercial Restaurant & Hotel Exhaust Packages</h2>
+        <div class="text-left rtl:text-right mb-8 border-b border-slate-200 dark:border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <span class="text-orange-500 text-xs font-bold uppercase tracking-wider">Restaurant & Commercial Kitchens</span>
+            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">Commercial Hood & Exhaust System Packages</h2>
+          </div>
+          <span class="text-xs text-slate-500 font-medium">Certified NFPA 96 Bare-Metal Standards</span>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           
-          <div class="card-theme p-8 rounded-2xl flex flex-col justify-between border-2 border-slate-200 dark:border-slate-800">
-            <div class="space-y-6 flex-1 flex flex-col justify-between">
-              <div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Standard Commercial</h3>
-                <div class="text-4xl font-extrabold text-slate-900 dark:text-white mt-4">$299 <span class="text-xs font-normal text-slate-500">/ canopy</span></div>
-              </div>
-              <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mt-6">
-                <li>✓ Bare-Metal Hood Scraping</li>
-                <li>✓ 3000 PSI Pressure Jetting</li>
-                <li>✓ Riser Duct Foam Degrease</li>
-                <li>✓ Basic Duct System Audit</li>
-                <li>✓ Post-Clean Inspection Log</li>
-              </ul>
+          <!-- Commercial Tier 1 -->
+          <div class="card-theme rounded-2xl overflow-hidden flex flex-col justify-between border-2 border-slate-200 dark:border-slate-800 hover:border-orange-500/50 transition duration-300">
+            <div class="relative h-44 overflow-hidden">
+              <img src="assets/images/commercial-hood-washing.png" alt="Standard Commercial Hood Washing" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full border border-white/10">Type: Single Hood Clean</span>
             </div>
-            <button onclick="openBookingModal('Commercial Hood & Duct')" class="w-full py-3 rounded-xl border-2 border-orange-500 text-orange-600 dark:text-orange-400 font-bold text-sm hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition mt-8 shadow-sm cursor-pointer">Book Commercial</button>
+
+            <div class="p-6 space-y-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Standard Canopy Hood Wash</h3>
+                <p class="text-xs text-slate-500 mt-1">Single canopy hood & grease trough degreasing.</p>
+                <div class="text-3xl font-black text-slate-900 dark:text-white mt-3">$299 <span class="text-xs font-normal text-slate-500">/ canopy (up to 10ft)</span></div>
+                
+                <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+                  <p class="font-extrabold text-orange-500">Included Services:</p>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Bare-metal hood scraping & polish</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>3000 PSI thermal hot water pressure wash</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Riser duct active chemical foam soak</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Post-clean photo audit log</span></li>
+                </div>
+              </div>
+              <button onclick="openBookingModal('Commercial Hood & Duct')" class="w-full py-3 rounded-xl border-2 border-orange-500 text-orange-600 dark:text-orange-400 font-bold text-sm hover:bg-orange-600 hover:text-white transition mt-6 shadow-sm cursor-pointer">Choose Plan</button>
+            </div>
           </div>
 
-          <div class="card-theme p-8 rounded-2xl flex flex-col justify-between border-2 border-orange-600 relative shadow-xl">
-            <span class="absolute -top-3 right-6 bg-orange-600 text-white font-bold text-[10px] px-3 py-1 rounded-full uppercase">Chef Choice</span>
-            <div class="space-y-6 flex-1 flex flex-col justify-between">
-              <div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Heavy Commercial Overhaul</h3>
-                <div class="text-4xl font-extrabold text-orange-600 mt-4">$549 <span class="text-xs font-normal text-slate-500">/ up to 25 ft</span></div>
-              </div>
-              <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mt-6">
-                <li>✓ Everything in Standard</li>
-                <li>✓ Overnight / Off-Hours Service</li>
-                <li>✓ Code Access Doors Included</li>
-                <li>✓ ESP Ionizer Cell Wash</li>
-                <li>✓ Rooftop Fan Kit Servicing</li>
-              </ul>
+          <!-- Commercial Tier 2 -->
+          <div class="card-theme rounded-2xl overflow-hidden flex flex-col justify-between border-2 border-orange-500 relative shadow-xl">
+            <span class="absolute top-3 right-3 bg-orange-600 text-white font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider z-20 shadow">Chef Choice</span>
+            
+            <div class="relative h-44 overflow-hidden">
+              <img src="assets/images/exhaust-duct-cleaning.png" alt="Heavy Commercial Exhaust Overhaul" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full border border-white/10">Type: Full System Overhaul</span>
             </div>
-            <button onclick="openBookingModal('Heavy Commercial Overhaul')" class="w-full py-3 rounded-xl bg-orange-600 text-white font-bold text-sm hover:bg-orange-700 transition mt-8 shadow-md cursor-pointer">Book Overhaul</button>
+
+            <div class="p-6 space-y-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Heavy Exhaust Overhaul</h3>
+                <p class="text-xs text-slate-500 mt-1">Full hood, riser duct, ESP & fan overhaul.</p>
+                <div class="text-3xl font-black text-orange-600 mt-3">$549 <span class="text-xs font-normal text-slate-500">/ up to 25ft system</span></div>
+                
+                <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+                  <p class="font-extrabold text-orange-500">Included Services:</p>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Everything in Standard Canopy Wash</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>24/7 Overnight off-hours dispatch</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Code access door gasket inspection</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Electrostatic precipitator (ESP) cell wash</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Official NFPA 96 Fire Marshal Tag</span></li>
+                </div>
+              </div>
+              <button onclick="openBookingModal('Heavy Commercial Overhaul')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition mt-6 shadow-md cursor-pointer">Choose Plan</button>
+            </div>
           </div>
 
-          <div class="card-theme p-8 rounded-2xl flex flex-col justify-between border-2 border-slate-200 dark:border-slate-800 relative group hover:border-amber-500/50 transition duration-300">
-            <span class="absolute -top-3 right-6 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold text-[10px] px-3 py-1 rounded-full uppercase shadow-md">Enterprise</span>
-            <div class="space-y-6 flex-1 flex flex-col justify-between">
+          <!-- Commercial Tier 3 -->
+          <div class="card-theme rounded-2xl overflow-hidden flex flex-col justify-between border-2 border-slate-200 dark:border-slate-800 hover:border-orange-500/50 transition duration-300">
+            <div class="relative h-44 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80" alt="Enterprise Resort & Hotel Contract" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full border border-white/10">Type: Multi-Station Contract</span>
+            </div>
+
+            <div class="p-6 space-y-5 flex-1 flex flex-col justify-between">
               <div>
                 <h3 class="text-xl font-bold text-slate-900 dark:text-white">Enterprise Resort Contract</h3>
-                <div class="text-4xl font-extrabold text-slate-900 dark:text-white mt-4">Custom <span class="text-xs font-normal text-slate-500">/ quote</span></div>
+                <p class="text-xs text-slate-500 mt-1">Multi-canopy hotel & resort maintenance.</p>
+                <div class="text-3xl font-black text-slate-900 dark:text-white mt-3">Custom <span class="text-xs font-normal text-slate-500">/ tailored quote</span></div>
+                
+                <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+                  <p class="font-extrabold text-orange-500">Included Services:</p>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Multi-kitchen complex SLA management</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Dedicated senior lead fire inspector</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Quarterly scheduled automated audits</span></li>
+                  <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Guaranteed 2-hour emergency dispatch</span></li>
+                </div>
               </div>
-              <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mt-6">
-                <li>✓ Multi-Station Complex Service</li>
-                <li>✓ Dedicated Lead Technician</li>
-                <li>✓ Quarterly Automated Audits</li>
-                <li>✓ Custom Compliance Reporting</li>
-                <li>✓ SLA Response Guarantee</li>
-              </ul>
+              <a href="contact.html" class="block text-center py-3 rounded-xl border-2 border-orange-500 text-orange-600 dark:text-orange-400 font-bold text-sm hover:bg-orange-600 hover:text-white transition mt-6 shadow-sm">Contact Sales</a>
             </div>
-            <a href="contact.html" class="block text-center py-3 rounded-xl border-2 border-orange-500 text-orange-600 dark:text-orange-400 font-bold text-sm hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white transition mt-8 shadow-sm">Contact Enterprise Sales</a>
           </div>
+
+        </div>
+      </div>
           </div>
 
         </div>
