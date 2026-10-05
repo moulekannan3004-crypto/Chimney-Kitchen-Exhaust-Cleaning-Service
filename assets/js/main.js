@@ -60,11 +60,9 @@ const initApp = () => {
 
   const updateRTLBtn = (isRTL) => {
     const rtlBtns = document.querySelectorAll('.rtl-toggle-btn');
-    const rtlIcon = `<svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m0 0l6-6m-6 6l6 6"/></svg>`;
-    const ltrIcon = `<svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0l-6-6m6 6l-6 6"/></svg>`;
     rtlBtns.forEach(btn => {
       btn.setAttribute('dir', 'ltr');
-      btn.innerHTML = isRTL ? `${ltrIcon}LTR` : `${rtlIcon}RTL`;
+      btn.textContent = isRTL ? 'LTR' : 'RTL';
     });
   };
 
