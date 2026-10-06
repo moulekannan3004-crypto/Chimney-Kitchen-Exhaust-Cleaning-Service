@@ -117,6 +117,20 @@ const initApp = () => {
     }
   });
 
+  // 5. Sticky Header Scroll Monitor ("Standing" header elevation)
+  const header = document.querySelector('header');
+  if (header) {
+    const handleScroll = () => {
+      if (window.scrollY > 8) {
+        header.classList.add('scrolled', 'shadow-md');
+      } else {
+        header.classList.remove('scrolled', 'shadow-md');
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
+
   // 6. Gallery Filter Tabs
   const filterBtns = document.querySelectorAll('.gallery-filter-btn');
   const galleryItems = document.querySelectorAll('.gallery-item');
