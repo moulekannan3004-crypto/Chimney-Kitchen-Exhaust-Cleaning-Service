@@ -17,7 +17,7 @@ export const blogPosts = [
     role: 'Certified Master Fire Inspector',
     date: 'August 28, 2026',
     readTime: '6 min read',
-    image: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80',
+    image: 'assets/images/blog-nfpa96-standards.jpg',
     summary: 'Understanding NFPA 96 fire safety codes for commercial hood cleaning can save your restaurant business from devastating fires and health authority fines.',
     content: `
       <p>Commercial kitchen fires cause millions of dollars in property damage every year. The vast majority of these fires originate on cooking appliances and quickly spread into the exhaust canopy and vertical ductwork lined with flammable grease buildup.</p>
@@ -50,7 +50,7 @@ export const blogPosts = [
     role: 'Lead Ventilation Specialist',
     date: 'August 14, 2026',
     readTime: '4 min read',
-    image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80',
+    image: 'assets/images/blog-chimney-warning-signs.jpg',
     summary: 'Smoke backing up into your kitchen? Dripping oil from filters? Discover the key indicators that your home chimney requires urgent professional deep cleaning.',
     content: `
       <p>A residential kitchen chimney is your main line of defense against heavy oil vapors, combustion gases, and soot. When neglected, it quickly transitions from a helpful appliance into a serious health and fire hazard.</p>
@@ -74,7 +74,7 @@ export const blogPosts = [
     role: 'Senior Duct Engineer',
     date: 'July 30, 2026',
     readTime: '5 min read',
-    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
+    image: 'assets/images/blog-baffle-filters.jpg',
     summary: 'Compare stainless steel baffle filters against multi-layered aluminum mesh filters for suction efficiency, fire protection, and ease of degreasing.',
     content: `
       <p>Choosing the correct filter type directly impacts your chimney suction power, fire safety rating, and maintenance frequency. Here is our expert side-by-side comparison.</p>
