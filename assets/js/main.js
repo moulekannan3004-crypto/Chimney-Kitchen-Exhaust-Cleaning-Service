@@ -133,9 +133,9 @@ const initApp = () => {
       btn.classList.add('bg-blue-600', 'text-white', 'dark:bg-blue-600');
 
       galleryItems.forEach(item => {
-        const itemCat = item.getAttribute('data-category');
-        if (category === 'All' || itemCat === category) {
-          item.style.display = 'block';
+        const itemCat = item.getAttribute('data-category') || '';
+        if (category === 'All' || itemCat.includes(category)) {
+          item.style.display = 'flex';
         } else {
           item.style.display = 'none';
         }
@@ -577,7 +577,7 @@ const initApp = () => {
         desc: 'Complete motorized rotary wire brushing, HEPA soot containment, food-grade chemical degreasing, and dual-lens scope inspection.',
         price: '$149',
         time: 'Takes approx 60-90 minutes',
-        img: 'https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=1200&q=80',
+        img: 'assets/images/gallery-island-chimney.jpg',
         overview1: 'Accumulated cooking oils, creosote, and carbonized soot inside home chimneys pose severe indoor air pollution and persistent fire hazards. Standard surface wiping leaves interior duct walls lined with sticky, highly flammable sludge.',
         overview2: 'Our certified technicians utilize industrial motorized rotary wire brushes and food-grade chemical foam to scrub every interior flue inch down to pristine metal. All dislodged particles are captured instantly by HEPA sealed negative-air vacuum units, ensuring your kitchen remains 100% spotless.',
         benefits: [
@@ -595,7 +595,7 @@ const initApp = () => {
         desc: 'Bare-metal hand scraping, 3000 PSI hot thermal jet pressure washing, and rooftop fan housing degreasing for commercial facilities.',
         price: '$299',
         time: 'Takes approx 2-3 hours',
-        img: 'assets/images/exhaust-duct-cleaning.png',
+        img: 'assets/images/gallery-exhaust-duct.jpg',
         overview1: 'Commercial kitchen exhaust systems accumulate dangerous layers of grease across ductwork, fan blades, and hoods. Without routine deep cleaning, grease buildup becomes a catastrophic fire hazard that violates local fire safety codes.',
         overview2: 'Our NFPA 96 certified process cleans the entire system from hood to roof fan. Using high-pressure hot water washing, eco-friendly degreasers, and scraper techniques, we restore duct interiors to bare metal and provide full audit documentation.',
         benefits: [
@@ -613,7 +613,7 @@ const initApp = () => {
         desc: 'Ultrasonic dip-tank filter soaking, heavy-duty stainless steel baffle filter fabrication, and activated charcoal odor upgrades.',
         price: '$79',
         time: 'Takes approx 45-60 minutes',
-        img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80',
+        img: 'assets/images/gallery-filter-degrease.jpg',
         overview1: 'Grease baffle filters are your hood\'s first line of defense. Blocked or saturated filters restrict airflow, overheat exhaust motors, and allow heavy grease vapor deeper into your ventilation duct system.',
         overview2: 'We offer professional ultrasonic tank soaking and heavy-duty stainless baffle filter replacement. Our multi-stage degreasing process dissolves baked-on grease layers without damaging stainless steel structures.',
         benefits: [
@@ -631,7 +631,7 @@ const initApp = () => {
         desc: 'High-voltage ionizer cell chemical bath soaking, spark diagnostics, insulator testing, and UV-C air purifier tube replacement.',
         price: '$349',
         time: 'Takes approx 90-120 minutes',
-        img: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80',
+        img: 'assets/images/gallery-duct-riser.jpg',
         overview1: 'Electrostatic Precipitators (ESP) filter high-density smoke, fine grease mist, and odor particles before air is discharged. Saturated ionizer cells lose charge efficiency and trigger automatic safety shutdowns.',
         overview2: 'Our technicians perform deep cell washing, ionizer wire alignment, insulator cleaning, and voltage power module testing to ensure maximum smoke suppression and compliance with environmental emissions regulations.',
         benefits: [
@@ -649,7 +649,7 @@ const initApp = () => {
         desc: 'Overhead canopy hood degreasing, mirror stainless steel polishing, grease trough clearing, and drip tray seal replacement.',
         price: '$199',
         time: 'Takes approx 1-2 hours',
-        img: 'assets/images/commercial-hood-washing.png',
+        img: 'assets/images/gallery-hood-overhaul.jpg',
         overview1: 'Canopy hoods trap grease directly above hot cooking surfaces. Over time, dripping grease and charred carbon create unhygienic conditions and severe fire vulnerabilities right over open flames.',
         overview2: 'We degrease, scrape, and polish inner and outer hood surfaces, gutters, and grease cups to a mirror shine using non-corrosive, food-grade cleaning agents that preserve stainless steel brilliance.',
         benefits: [
@@ -667,7 +667,7 @@ const initApp = () => {
         desc: 'Full ventilation fire safety audit, access panel check, dual-lens camera scope video logging, and official NFPA 96 certificate.',
         price: '$129',
         time: 'Takes approx 45-60 minutes',
-        img: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80',
+        img: 'assets/images/bare-metal-cleaning-excellence.png',
         overview1: 'Regular inspections are required by law for commercial kitchens under NFPA 96 standard. Detailed visual and video scope reports verify system integrity and prevent unexpected shutdown orders.',
         overview2: 'We conduct end-to-end inspections using digital scope cameras, measure grease accumulation levels, issue official NFPA compliance certificates, and log digital inspection records for fire marshals.',
         benefits: [
@@ -685,7 +685,7 @@ const initApp = () => {
         desc: 'Fan blade degreasing, belt tension adjustment, motor bearing lubrication, hinge kit inspection, and roof grease containment.',
         price: '$179',
         time: 'Takes approx 60-90 minutes',
-        img: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80',
+        img: 'assets/images/gallery-rooftop-fan.jpg',
         overview1: 'Rooftop exhaust fans operate under extreme conditions, drawing heat, moisture, and grease out of the facility. Unbalanced fan blades, worn belts, or grease accumulation cause motor failure and roof damage.',
         overview2: 'Our service includes fan blade degreasing, belt tension adjustment, motor bearing lubrication, hinge kit inspection, and containment pillow replacement to protect roof membranes from grease damage.',
         benefits: [
