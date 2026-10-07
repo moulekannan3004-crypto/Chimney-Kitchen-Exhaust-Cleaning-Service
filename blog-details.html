@@ -20,12 +20,12 @@
 
   <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-200">
-    <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8">
+    <div class="max-w-[90rem] mx-auto px-3 sm:px-6 lg:px-4 xl:px-8">
       <div class="flex items-center justify-between h-20 gap-2 lg:gap-3 xl:gap-4">
         <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 rtl:space-x-reverse group shrink-0">
-          <img src="assets/images/favicon.svg" alt="ProClean Exhaust Logo" class="w-10 h-10 sm:w-11 sm:h-11 object-contain filter drop-shadow-md group-hover:scale-105 transition-transform shrink-0" />
+          <img src="assets/images/favicon.svg" alt="ProClean Exhaust Logo" class="w-8 h-8 sm:w-11 sm:h-11 object-contain filter drop-shadow-md group-hover:scale-105 transition-transform shrink-0" />
           <div>
-            <span class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center">ProClean<span class="text-orange-500">.Exhaust</span></span>
+            <span class="text-base sm:text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center">ProClean<span class="text-orange-500">.Exhaust</span></span>
             <span class="hidden sm:block text-[9px] font-extrabold text-slate-500 dark:text-slate-400 tracking-widest uppercase">Exhaust & Chimney Care</span>
           </div>
         </a>
@@ -54,53 +54,62 @@
         </nav>
 
         <div class="flex items-center space-x-1.5 sm:space-x-2 xl:space-x-2.5 rtl:space-x-reverse shrink-0">
-          <!-- 24/7 Emergency Hotline CTA -->
-          <a href="tel:18005553942" class="hidden xl:flex items-center space-x-1.5 px-3.5 py-2 rounded-full bg-orange-500/10 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-500/30 hover:bg-orange-500 hover:text-white transition text-xs font-extrabold shrink-0">
-            <span>📞 24/7 Hotline</span>
+          <!-- Login Button -->
+          <a href="login.html" class="hidden md:flex group relative px-4 py-2 rounded-full bg-slate-900 text-white dark:bg-slate-800/90 border border-slate-700/80 hover:border-blue-500/50 shadow-sm transition text-xs font-bold items-center justify-center shrink-0">
+            <span>Login</span>
           </a>
-          <button onclick="toggleTheme()" aria-label="Toggle theme" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm cursor-pointer shrink-0">
-            <svg class="sun-icon w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-            <svg class="moon-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          <!-- Dark Mode Toggle Button (Desktop & Tablet) -->
+          <button onclick="toggleTheme()" aria-label="Toggle theme" class="hidden md:flex w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm cursor-pointer shrink-0">
+            <svg class="sun-icon w-4 h-4 hidden text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="moon-icon w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
           </button>
-          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm flex items-center justify-center cursor-pointer shrink-0">RTL</button>
+
+          <!-- RTL Layout Toggle Button (Desktop & Tablet) -->
+          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn hidden md:flex text-[11px] xl:text-xs font-bold px-2.5 xl:px-3 py-1 xl:py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm items-center justify-center cursor-pointer shrink-0">
+            RTL
+          </button>
+
           <button onclick="openBookingModal()" class="hidden sm:flex px-4 xl:px-5 py-2 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition items-center justify-center cursor-pointer shrink-0">
             <span>Book Inspection</span>
           </button>
 
-          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-xl text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center cursor-pointer shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </button>
         </div>
       </div>
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-4 pb-6 space-y-3 shadow-2xl">
-      <a href="index.html" class="block font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1">Home 1 (General)</a>
-      <a href="home2.html" class="block font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1">Home 2 (Commercial)</a>
-      <a href="about.html" class="block font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1">About Us</a>
-      <a href="services.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Services</a>
-      <a href="service-details.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Service Details</a>
-      <a href="pricing.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Pricing</a>
-      <a href="gallery.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Before & After Gallery</a>
-      <a href="blog.html" class="block font-bold text-blue-600 dark:text-blue-400 py-1">Blog</a>
-      <a href="contact.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Contact Us</a>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-5 pt-5 pb-6 shadow-2xl">
+      <div class="space-y-2 sm:space-y-3">
+        <a href="index.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Home 1 (General)</a>
+        <a href="home2.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Home 2 (Commercial)</a>
+        <a href="about.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">About Us</a>
+        <a href="services.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Services</a>
+        <a href="pricing.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Pricing</a>
+        <a href="blog.html" class="block text-xl sm:text-2xl font-extrabold text-blue-600 dark:text-blue-400 py-2 sm:py-2.5">Blog</a>
+        <a href="contact.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Contact Us</a>
+      </div>
 
       <div class="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-3">
-        <button onclick="openBookingModal()" class="w-full py-3 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md flex items-center justify-center cursor-pointer">
+        <button onclick="openBookingModal()" class="w-full py-3 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer">
+          <span>🔥</span>
           <span>Book Inspection</span>
         </button>
 
-        <a href="tel:18005553942" class="w-full py-2.5 rounded-xl bg-slate-900 text-white dark:bg-slate-800 border border-slate-700 font-bold text-xs flex items-center justify-center space-x-2">
-          <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-          <span>📞 Emergency 24/7 Hotline: (800) 555-3942</span>
+        <a href="login.html" class="w-full py-2.5 rounded-xl bg-slate-900 text-white dark:bg-slate-800 border border-slate-700 font-bold text-xs flex items-center justify-center space-x-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Login</span>
         </a>
 
         <div class="grid grid-cols-2 gap-2 pt-1">
-          <button onclick="toggleTheme()" class="text-xs font-bold py-2 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center space-x-1.5 cursor-pointer">
-            <span>Toggle Theme</span>
+          <button onclick="toggleTheme()" aria-label="Toggle theme" class="text-xs font-bold py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+            <svg class="sun-icon w-4 h-4 hidden text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="moon-icon w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            <span class="theme-btn-text">Dark Mode</span>
           </button>
-          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-xs font-bold py-2 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center cursor-pointer">
+          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-xs font-bold py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition">
             <svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m0 0l6-6m-6 6l6 6"/></svg>RTL
           </button>
         </div>
@@ -111,19 +120,19 @@
   <!-- ARTICLE HEADER -->
   <section class="py-16 bg-slate-900 text-white">
     <div class="max-w-4xl mx-auto px-4 space-y-4">
-      <div class="flex items-center space-x-3 rtl:space-x-reverse text-xs text-orange-400 font-bold uppercase tracking-wider">
-        <span>Regulations & Codes</span>
+      <div id="bd-tag" class="flex items-center space-x-3 rtl:space-x-reverse text-xs text-orange-400 font-bold uppercase tracking-wider">
+        <span>Commercial ESP Tech</span>
         <span>•</span>
-        <span>August 28, 2026</span>
+        <span>March 2026</span>
         <span>•</span>
-        <span>6 min read</span>
+        <span>8 min read</span>
       </div>
-      <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">NFPA 96 Standards: What Every Restaurant Owner Must Know</h1>
+      <h1 id="bd-title" class="text-3xl sm:text-5xl font-extrabold leading-tight">How Electrostatic Precipitators (ESP) Cut Kitchen Odor & Grease Smoke by 99.8%</h1>
       <div class="flex items-center space-x-4 rtl:space-x-reverse pt-2">
-        <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">MV</div>
+        <div id="bd-author-avatar" class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm">DC</div>
         <div>
-          <p class="text-sm font-bold text-white">Capt. Marcus Vance</p>
-          <p class="text-xs text-slate-400">Certified Master Fire Inspector</p>
+          <p id="bd-author-name" class="text-sm font-bold text-white">David Chen</p>
+          <p id="bd-author-role" class="text-xs text-slate-400">Duct & ESP Specialist</p>
         </div>
       </div>
     </div>
@@ -136,40 +145,39 @@
       <!-- Article Content -->
       <div class="lg:col-span-2 space-y-8 text-slate-700 dark:text-slate-300 leading-relaxed text-base">
         
-        <img src="assets/images/blog-nfpa96-standards.jpg" alt="Commercial Hood & NFPA 96 Inspection" class="rounded-2xl shadow-xl w-full h-[420px] object-cover" />
+        <img id="bd-main-img" src="assets/images/blog-esp-precipitator.jpg" alt="How Electrostatic Precipitators (ESP) Cut Kitchen Odor & Grease Smoke by 99.8%" class="rounded-2xl shadow-xl w-full h-[420px] object-cover" />
 
-        <p class="text-lg font-medium text-slate-900 dark:text-slate-100">
-          Commercial kitchen fires cause millions of dollars in structural damage every year. The vast majority originate on cooking appliances and rapidly spread up into the exhaust canopy and vertical ductwork lined with flammable grease buildup.
-        </p>
+        <div id="bd-content" class="space-y-6">
+          <p class="text-lg font-medium text-slate-900 dark:text-slate-100">
+            Electrostatic Precipitator (ESP) air filtration systems have revolutionized commercial exhaust systems for restaurants, hotels, and industrial kitchens by trapping microscopic sub-micron grease smoke particles before they discharge into urban neighborhoods.
+          </p>
 
-        <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">What is NFPA 96?</h2>
-        <p>
-          NFPA 96 is the National Fire Protection Association standard for ventilation control and fire protection of commercial cooking operations. It dictates precise mandatory cleaning schedules based on cooking volume and fuel type:
-        </p>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">How Two-Stage ESP Ionization Works</h2>
+          <p>
+            An industrial kitchen ESP operates using a two-stage electrostatic precipitation process. Air drawn from cooking hoods passes first through a high-voltage ionization section (typically 12kV to 14kV DC) where ionizing wires impart an intense positive electrostatic charge to oil droplets, grease vapor, and smoke particulates.
+          </p>
 
-        <ul class="list-disc pl-6 space-y-2 rtl:pr-6 rtl:pl-0">
-          <li><strong>Monthly:</strong> Systems serving solid fuel cooking operations (charcoal, wood fires, wok ranges).</li>
-          <li><strong>Quarterly:</strong> High-volume cooking operations such as 24-hour diners, burger joints, and hotel kitchens.</li>
-          <li><strong>Semi-Annually:</strong> Moderate-volume cooking operations (standard sit-down restaurants).</li>
-          <li><strong>Annually:</strong> Low-volume cooking operations such as churches, seasonal venues, and day camps.</li>
-        </ul>
+          <p>
+            Next, the charged airflow enters the collector section composed of closely spaced parallel aluminum plates with alternating high voltage (6kV to 7kV) and ground charges. Positively charged grease particles are forcefully repelled by the high-voltage plates and drawn to the grounded plates, where they condense and drain into collector trays.
+          </p>
 
-        <div class="p-6 rounded-2xl bg-orange-500/10 border-l-4 border-orange-500 dark:bg-orange-500/20 text-orange-900 dark:text-orange-200 font-semibold italic">
-          "Failing a municipal fire inspector audit due to hidden duct grease is an easily preventable disaster that can void your insurance policy."
+          <div class="p-6 rounded-2xl bg-orange-500/10 border-l-4 border-orange-500 dark:bg-orange-500/20 text-orange-900 dark:text-orange-200 font-semibold italic">
+            "High-efficiency two-stage ESP units achieve up to 99.8% capture efficiency for sub-micron particulate matter, eliminating neighborhood smoke violations."
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">Essential Maintenance & Chemical Cell Soaking</h2>
+          <p>
+            When grease accumulates on collector plates, electrical resistance increases, leading to spark arcing, voltage drops, and automatic safety tripping. Bi-weekly or monthly ultrasonic chemical tank soaking is critical to strip baked-on grease layers without damaging ceramic insulators or bending delicate ionizer wires.
+          </p>
         </div>
-
-        <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">Why Bare-Metal Cleaning Matters</h2>
-        <p>
-          Superficial wiping of visible stainless steel hood surfaces is not enough. NFPA 96 section 11.6 explicitly mandates that the entire exhaust system—from the hood filters, through horizontal and vertical duct risers, up to the rooftop fan—must be cleaned to bare metal.
-        </p>
       </div>
 
       <!-- Sidebar -->
       <div class="space-y-8">
         <div class="card-theme p-6 rounded-2xl space-y-4">
           <h3 class="text-lg font-bold text-slate-900 dark:text-white">About the Author</h3>
-          <p class="text-xs text-slate-500 leading-relaxed">
-            Capt. Marcus Vance has inspected over 3,000 commercial kitchen exhaust systems across his 18-year career as a certified fire safety official.
+          <p id="bd-sidebar-bio" class="text-xs text-slate-500 leading-relaxed">
+            David Chen has engineered and serviced high-performance electrostatic precipitation systems for over 12 years across commercial hotel chains and restaurants.
           </p>
         </div>
 
@@ -291,7 +299,7 @@
       <form id="modal-booking-form" class="space-y-4">
         <div>
           <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Full Name</label>
-          <input type="text" required minlength="2" pattern="^[A-Za-z\s'.-]{2,50}$" title="Please enter at least 2 characters" placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+          <input type="text" required minlength="2" pattern="^[A-Za-z\s]{2,50}$" title="Please enter only alphabets (letters and spaces only)" placeholder="John Doe" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>

@@ -44,7 +44,7 @@ export const blogPosts = [
   {
     id: 'signs-your-kitchen-chimney-needs-deep-clean',
     slug: 'signs-your-kitchen-chimney-needs-deep-clean',
-    title: '5 Warning Signs Your Home Kitchen Chimney is Clogged & Dangerous',
+    title: 'Warning Signs Your Home Kitchen Chimney is Clogged & Dangerous',
     category: 'Home Maintenance',
     author: 'Sarah Jenkins',
     role: 'Lead Ventilation Specialist',

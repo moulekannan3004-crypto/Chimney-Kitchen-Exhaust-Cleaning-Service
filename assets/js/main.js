@@ -2,6 +2,7 @@
 window.toggleMobileMenu = (open) => {
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
+  const header = mobileMenuBtn ? mobileMenuBtn.closest('header') : document.querySelector('header');
   if (!mobileMenuBtn || !mobileMenu) return;
 
   const isCurrentlyHidden = mobileMenu.classList.contains('hidden');
@@ -9,10 +10,17 @@ window.toggleMobileMenu = (open) => {
 
   if (shouldShow) {
     mobileMenu.classList.remove('hidden');
-    mobileMenuBtn.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+    if (header) header.classList.add('mobile-menu-open');
+    document.body.classList.add('mobile-menu-active');
+    document.documentElement.classList.add('mobile-menu-active');
+    mobileMenu.scrollTop = 0;
+    mobileMenuBtn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
   } else {
     mobileMenu.classList.add('hidden');
-    mobileMenuBtn.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+    if (header) header.classList.remove('mobile-menu-open');
+    document.body.classList.remove('mobile-menu-active');
+    document.documentElement.classList.remove('mobile-menu-active');
+    mobileMenuBtn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
   }
 };
 
@@ -32,7 +40,7 @@ const initApp = () => {
   const updateThemeIcons = (isDark) => {
     const themeBtnText = document.querySelectorAll('.theme-btn-text');
     themeBtnText.forEach(el => {
-      el.textContent = isDark ? 'Light' : 'Dark';
+      el.textContent = isDark ? 'Light Mode' : 'Dark Mode';
     });
     const sunIcons = document.querySelectorAll('.sun-icon');
     const moonIcons = document.querySelectorAll('.moon-icon');
@@ -87,11 +95,23 @@ const initApp = () => {
       mobileMenuBtn.addEventListener('click', () => window.toggleMobileMenu());
     }
 
-    mobileMenu.querySelectorAll('a, button:not(.theme-toggle-btn)').forEach(link => {
+    mobileMenu.querySelectorAll('a, button:not([onclick*="toggleTheme"]):not([onclick*="toggleRTL"])').forEach(link => {
       link.addEventListener('click', (e) => {
         if (e.target.closest('button[onclick*="toggle"]')) return;
         window.toggleMobileMenu(false);
       });
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        window.toggleMobileMenu(false);
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        window.toggleMobileMenu(false);
+      }
     });
   }
 
@@ -234,7 +254,7 @@ const initApp = () => {
     if (!modal) {
       modal = document.createElement('div');
       modal.id = 'booking-modal';
-      modal.className = 'fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4';
+      modal.className = 'fixed inset-0 z-[10000] bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4';
       modal.innerHTML = `
         <div class="card-theme max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-3xl relative shadow-2xl border border-slate-700">
           <button onclick="closeBookingModal()" aria-label="Close Modal" class="absolute top-4 right-4 rtl:right-auto rtl:left-4 w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition flex items-center justify-center cursor-pointer shadow-sm z-20">
@@ -246,7 +266,7 @@ const initApp = () => {
           <form id="modal-booking-form" class="space-y-4">
             <div>
               <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Full Name</label>
-              <input type="text" required minlength="2" pattern="^[A-Za-z\s'.-]{2,50}$" title="Please enter at least 2 characters" placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+              <input type="text" required minlength="2" pattern="^[A-Za-z\s]{2,50}$" title="Please enter only alphabets (letters and spaces only)" placeholder="John Doe" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
@@ -300,6 +320,12 @@ const initApp = () => {
               input.focus();
               return;
             }
+            const isNameField = input.placeholder === 'John Doe' || (input.previousElementSibling && /Name/i.test(input.previousElementSibling.textContent));
+            if (isNameField && !/^[A-Za-z\s]{2,50}$/.test(val)) {
+              showToast('Please enter only alphabets for Full Name.');
+              input.focus();
+              return;
+            }
           }
           const phoneRegex = /^[0-9\-\+\(\)\s]{7,20}$/;
           const telInputs = dynamicForm.querySelectorAll('input[type="tel"]');
@@ -332,6 +358,7 @@ const initApp = () => {
   };
 
   window.openBookingModal = (serviceName = '') => {
+    window.toggleMobileMenu(false);
     const modal = ensureBookingModalInDOM();
     const serviceSelect = document.getElementById('modal-service-select');
     if (serviceSelect && serviceName) {
@@ -414,6 +441,9 @@ const initApp = () => {
     if (e.target && e.target.matches('input[type="tel"]')) {
       e.target.value = e.target.value.replace(/[^0-9\-\+\(\)\s]/g, '');
     }
+    if (e.target && (e.target.placeholder === 'John Doe' || (e.target.previousElementSibling && /Name/i.test(e.target.previousElementSibling.textContent)))) {
+      e.target.value = e.target.value.replace(/[^A-Za-z\s]/g, '');
+    }
   });
 
   const bookingForms = document.querySelectorAll('.booking-form:not(#login-form), #contact-form, #modal-booking-form');
@@ -425,6 +455,12 @@ const initApp = () => {
         const val = input.value.trim();
         if (val.length < 2) {
           showToast('Please enter a valid full name (at least 2 characters).');
+          input.focus();
+          return;
+        }
+        const isNameField = input.placeholder === 'John Doe' || (input.previousElementSibling && /Name/i.test(input.previousElementSibling.textContent));
+        if (isNameField && !/^[A-Za-z\s]{2,50}$/.test(val)) {
+          showToast('Please enter only alphabets for Full Name.');
           input.focus();
           return;
         }
@@ -591,7 +627,7 @@ const initApp = () => {
         desc: 'Complete motorized rotary wire brushing, HEPA soot containment, food-grade chemical degreasing, and dual-lens scope inspection.',
         price: '$149',
         time: 'Takes approx 60-90 minutes',
-        img: 'assets/images/gallery-island-chimney.jpg',
+        img: 'assets/images/chimney-deep-cleaning.jpg',
         overview1: 'Accumulated cooking oils, creosote, and carbonized soot inside home chimneys pose severe indoor air pollution and persistent fire hazards. Standard surface wiping leaves interior duct walls lined with sticky, highly flammable sludge.',
         overview2: 'Our certified technicians utilize industrial motorized rotary wire brushes and food-grade chemical foam to scrub every interior flue inch down to pristine metal. All dislodged particles are captured instantly by HEPA sealed negative-air vacuum units, ensuring your kitchen remains 100% spotless.',
         benefits: [
@@ -609,7 +645,7 @@ const initApp = () => {
         desc: 'Bare-metal hand scraping, 3000 PSI hot thermal jet pressure washing, and rooftop fan housing degreasing for commercial facilities.',
         price: '$299',
         time: 'Takes approx 2-3 hours',
-        img: 'assets/images/gallery-exhaust-duct.jpg',
+        img: 'assets/images/exhaust-duct-cleaning.png',
         overview1: 'Commercial kitchen exhaust systems accumulate dangerous layers of grease across ductwork, fan blades, and hoods. Without routine deep cleaning, grease buildup becomes a catastrophic fire hazard that violates local fire safety codes.',
         overview2: 'Our NFPA 96 certified process cleans the entire system from hood to roof fan. Using high-pressure hot water washing, eco-friendly degreasers, and scraper techniques, we restore duct interiors to bare metal and provide full audit documentation.',
         benefits: [
@@ -627,7 +663,7 @@ const initApp = () => {
         desc: 'Ultrasonic dip-tank filter soaking, heavy-duty stainless steel baffle filter fabrication, and activated charcoal odor upgrades.',
         price: '$79',
         time: 'Takes approx 45-60 minutes',
-        img: 'assets/images/gallery-filter-degrease.jpg',
+        img: 'assets/images/home-filter-replacement-degreasing.png',
         overview1: 'Grease baffle filters are your hood\'s first line of defense. Blocked or saturated filters restrict airflow, overheat exhaust motors, and allow heavy grease vapor deeper into your ventilation duct system.',
         overview2: 'We offer professional ultrasonic tank soaking and heavy-duty stainless baffle filter replacement. Our multi-stage degreasing process dissolves baked-on grease layers without damaging stainless steel structures.',
         benefits: [
@@ -645,7 +681,7 @@ const initApp = () => {
         desc: 'High-voltage ionizer cell chemical bath soaking, spark diagnostics, insulator testing, and UV-C air purifier tube replacement.',
         price: '$349',
         time: 'Takes approx 90-120 minutes',
-        img: 'assets/images/gallery-duct-riser.jpg',
+        img: 'assets/images/home2-esp-unit.jpg',
         overview1: 'Electrostatic Precipitators (ESP) filter high-density smoke, fine grease mist, and odor particles before air is discharged. Saturated ionizer cells lose charge efficiency and trigger automatic safety shutdowns.',
         overview2: 'Our technicians perform deep cell washing, ionizer wire alignment, insulator cleaning, and voltage power module testing to ensure maximum smoke suppression and compliance with environmental emissions regulations.',
         benefits: [
@@ -663,7 +699,7 @@ const initApp = () => {
         desc: 'Overhead canopy hood degreasing, mirror stainless steel polishing, grease trough clearing, and drip tray seal replacement.',
         price: '$199',
         time: 'Takes approx 1-2 hours',
-        img: 'assets/images/gallery-hood-overhaul.jpg',
+        img: 'assets/images/commercial-hood-washing.png',
         overview1: 'Canopy hoods trap grease directly above hot cooking surfaces. Over time, dripping grease and charred carbon create unhygienic conditions and severe fire vulnerabilities right over open flames.',
         overview2: 'We degrease, scrape, and polish inner and outer hood surfaces, gutters, and grease cups to a mirror shine using non-corrosive, food-grade cleaning agents that preserve stainless steel brilliance.',
         benefits: [
@@ -710,6 +746,24 @@ const initApp = () => {
         ],
         faq1: { q: 'Why is roof fan hinge kit installation important?', a: 'Hinge kits allow roof fans to be tilted safely during duct cleaning without damaging electrical lines or seals.' },
         faq2: { q: 'Do you replace grease containment absorbent pads?', a: 'Yes, we supply and replace heavy-duty grease catchment pillows on every rooftop inspection.' }
+      },
+      'auto-clean': {
+        title: 'Auto-Clean Chimney Repair & Service',
+        tag: 'Diagnostic & Thermal Repair',
+        desc: 'Diagnostic and repair for auto-clean heating elements, motor capacitor replacements, touch sensor repairs, and unblocking oil collectors.',
+        price: '$129',
+        time: 'Takes approx 45-60 minutes',
+        img: 'assets/images/auto-clean-chimney-repair.png',
+        overview1: 'Auto-clean kitchen chimneys rely on internal heating elements or water flushing mechanisms to melt and channel sticky grease into a collection tray. When the heating coil, thermostat, or PCB board malfunctions, grease solidifies inside the motor casing, drastically reducing suction and risking motor burnout.',
+        overview2: 'Our technicians specialize in diagnosing and repairing all auto-clean brands. We test thermal heating circuits, replace faulty motor capacitors, repair responsive touch & motion sensor controls, and thoroughly flush clogged oil drainage channels.',
+        benefits: [
+          { title: 'Thermal Coil Diagnostics', desc: 'Precise multimeter testing and replacement of auto-clean heating elements.' },
+          { title: 'Touch & Gesture Sensors', desc: 'Fixes unresponsive capacitive touch switches and motion control sensors.' },
+          { title: 'Motor & Capacitor Check', desc: 'Eliminates humming noises, slow rotation, and power capacitor failures.' },
+          { title: 'Oil Collector Channel Flush', desc: 'Unblocks internal grease drainage tubes and collector cups.' }
+        ],
+        faq1: { q: 'Why is my chimney auto-clean feature not collecting oil?', a: 'This is commonly caused by a burnt-out heating coil, a tripped thermostat fuse, or solidified grease choking the oil collector drain pipe.' },
+        faq2: { q: 'Do you service all auto-clean chimney brands?', a: 'Yes, we service Faber, Glen, Elica, Hindware, Kaff, Bosch, and all major auto-clean chimney models.' }
       }
     };
 
@@ -723,7 +777,10 @@ const initApp = () => {
       'commercial-hood-cleaning': 'commercial-hood',
       'nfpa-safety-inspection': 'nfpa-inspection',
       'fire-safety': 'nfpa-inspection',
-      'rooftop-exhaust-fan': 'rooftop-fan'
+      'rooftop-exhaust-fan': 'rooftop-fan',
+      'auto-clean-repair': 'auto-clean',
+      'auto-clean-chimney': 'auto-clean',
+      'auto-clean-servicing': 'auto-clean'
     };
 
     const resolvedKey = aliases[serviceKey] || serviceKey;
@@ -744,9 +801,28 @@ const initApp = () => {
     const timeEl = document.getElementById('sd-hero-time');
     if (timeEl) timeEl.textContent = data.time;
 
+    const home2Images = {
+      'commercial-hood': 'assets/images/home2-commercial-canopy-hood-washing.png',
+      'exhaust-duct': 'assets/images/home2-exhaust-duct-jetting.jpg',
+      'rooftop-fan': 'assets/images/home2-rooftop-exhaust-fan-maintenance.jpg',
+      'esp-unit': 'assets/images/home2-esp-unit.jpg',
+      'filter-replacement': 'assets/images/home2-baffle-filter-replacement-soak.png',
+      'nfpa-inspection': 'assets/images/home2-fire-safety-inspection.jpg'
+    };
+
+    const fromSource = params.get('from');
+    const customImg = params.get('img');
+
+    let resolvedImg = data.img;
+    if (customImg) {
+      resolvedImg = customImg;
+    } else if (fromSource === 'home2' && home2Images[resolvedKey]) {
+      resolvedImg = home2Images[resolvedKey];
+    }
+
     const imgEl = document.getElementById('sd-main-img');
     if (imgEl) {
-      imgEl.src = data.img;
+      imgEl.src = resolvedImg;
       imgEl.alt = data.title;
     }
 
@@ -797,6 +873,262 @@ const initApp = () => {
   };
 
   initServiceDetailsPage();
+
+  const initBlogDetailsPage = () => {
+    const titleEl = document.getElementById('bd-title');
+    if (!titleEl) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const postKey = (params.get('post') || params.get('article') || 'esp-precipitator').toLowerCase();
+
+    const blogArticlesData = {
+      'esp-precipitator': {
+        title: 'How Electrostatic Precipitators (ESP) Cut Kitchen Odor & Grease Smoke by 99.8%',
+        tag: 'Commercial ESP Tech • March 2026 • 8 min read',
+        author: 'David Chen',
+        role: 'Duct & ESP Specialist',
+        initials: 'DC',
+        avatarBg: 'bg-emerald-600',
+        img: 'assets/images/blog-esp-precipitator.jpg',
+        bio: 'David Chen has engineered and serviced high-performance electrostatic precipitation systems for over 12 years across commercial hotel chains and restaurants.',
+        content: `
+          <p class="text-lg font-medium text-slate-900 dark:text-slate-100">
+            Electrostatic Precipitator (ESP) air filtration systems have revolutionized commercial exhaust systems for restaurants, hotels, and industrial kitchens by trapping microscopic sub-micron grease smoke particles before they discharge into urban neighborhoods.
+          </p>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">How Two-Stage ESP Ionization Works</h2>
+          <p>
+            An industrial kitchen ESP operates using a two-stage electrostatic precipitation process. Air drawn from cooking hoods passes first through a high-voltage ionization section (typically 12kV to 14kV DC) where ionizing wires impart an intense positive electrostatic charge to oil droplets, grease vapor, and smoke particulates.
+          </p>
+          <p>
+            Next, the charged airflow enters the collector section composed of closely spaced parallel aluminum plates with alternating high voltage (6kV to 7kV) and ground charges. Positively charged grease particles are forcefully repelled by the high-voltage plates and drawn to the grounded plates, where they condense and drain into collector trays.
+          </p>
+          <div class="p-6 rounded-2xl bg-orange-500/10 border-l-4 border-orange-500 dark:bg-orange-500/20 text-orange-900 dark:text-orange-200 font-semibold italic">
+            "High-efficiency two-stage ESP units achieve up to 99.8% capture efficiency for sub-micron particulate matter, eliminating neighborhood smoke violations."
+          </div>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">Essential Maintenance & Chemical Cell Soaking</h2>
+          <p>
+            When grease accumulates on collector plates, electrical resistance increases, leading to spark arcing, voltage drops, and automatic safety tripping. Bi-weekly or monthly ultrasonic chemical tank soaking is critical to strip baked-on grease layers without damaging ceramic insulators or bending delicate ionizer wires.
+          </p>
+        `
+      },
+      'nfpa-96': {
+        title: 'NFPA 96 Standards: What Every Restaurant Owner Must Know',
+        tag: 'Regulations & Codes • August 28, 2026 • 6 min read',
+        author: 'Capt. Marcus Vance',
+        role: 'Certified Master Fire Inspector',
+        initials: 'MV',
+        avatarBg: 'bg-blue-600',
+        img: 'assets/images/blog-nfpa96-standards.jpg',
+        bio: 'Capt. Marcus Vance has inspected over 3,000 commercial kitchen exhaust systems across his 18-year career as a certified fire safety official.',
+        content: `
+          <p class="text-lg font-medium text-slate-900 dark:text-slate-100">
+            Commercial kitchen fires cause millions of dollars in structural damage every year. The vast majority originate on cooking appliances and rapidly spread up into the exhaust canopy and vertical ductwork lined with flammable grease buildup.
+          </p>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">What is NFPA 96?</h2>
+          <p>
+            NFPA 96 is the National Fire Protection Association standard for ventilation control and fire protection of commercial cooking operations. It dictates precise mandatory cleaning schedules based on cooking volume and fuel type:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 rtl:pr-6 rtl:pl-0">
+            <li><strong>Monthly:</strong> Systems serving solid fuel cooking operations (charcoal, wood fires, wok ranges).</li>
+            <li><strong>Quarterly:</strong> High-volume cooking operations such as 24-hour diners, burger joints, and hotel kitchens.</li>
+            <li><strong>Semi-Annually:</strong> Moderate-volume cooking operations (standard sit-down restaurants).</li>
+            <li><strong>Annually:</strong> Low-volume cooking operations such as churches, seasonal venues, and day camps.</li>
+          </ul>
+          <div class="p-6 rounded-2xl bg-orange-500/10 border-l-4 border-orange-500 dark:bg-orange-500/20 text-orange-900 dark:text-orange-200 font-semibold italic">
+            "Failing a municipal fire inspector audit due to hidden duct grease is an easily preventable disaster that can void your insurance policy."
+          </div>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">Why Bare-Metal Cleaning Matters</h2>
+          <p>
+            Superficial wiping of visible stainless steel hood surfaces is not enough. NFPA 96 section 11.6 explicitly mandates that the entire exhaust system—from the hood filters, through horizontal and vertical duct risers, up to the rooftop fan—must be cleaned to bare metal.
+          </p>
+        `
+      },
+      'warning-signs': {
+        title: 'Warning Signs Your Kitchen Chimney Needs Urgent Deep Clean',
+        tag: 'Home Chimney Care • Feb 22, 2026 • 4 min read',
+        author: 'Sarah Jenkins',
+        role: 'Residential Chimney Specialist',
+        initials: 'SJ',
+        avatarBg: 'bg-orange-600',
+        img: 'assets/images/blog-chimney-warning-signs.jpg',
+        bio: 'Sarah Jenkins specializes in residential chimney care, airflow diagnostics, and home fire prevention.',
+        content: `
+          <p class="text-lg font-medium text-slate-900 dark:text-slate-100">
+            A malfunctioning or grease-choked kitchen chimney is not just an annoying source of haze—it is a severe indoor air pollutant and persistent kitchen fire hazard.
+          </p>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">Critical Warning Signs to Watch For</h2>
+          <p>
+            Watch for these unmistakable symptoms indicating your chimney flue and blower turbine require immediate motorized scrub servicing:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 rtl:pr-6 rtl:pl-0">
+            <li><strong>Smoke Backdraft:</strong> Cooking vapors hover around cabinets and linger instead of exhausting outward.</li>
+            <li><strong>Yellow Oil Dripping:</strong> Condensed grease leaks from the outer hood rim or light fixtures down onto stovetops.</li>
+            <li><strong>Excessive Motor Vibration:</strong> Heavy carbonized grease on blower impellers throws the motor off balance.</li>
+            <li><strong>Persistent Pungent Odor:</strong> Burnt oil smell remains even 12 hours after cooking has finished.</li>
+          </ul>
+          <div class="p-6 rounded-2xl bg-orange-500/10 border-l-4 border-orange-500 dark:bg-orange-500/20 text-orange-900 dark:text-orange-200 font-semibold italic">
+            "Never ignore oily dripping near electrical range switches; liquid grease conducts electricity and triggers short circuit fires."
+          </div>
+        `
+      },
+      'baffle-filters': {
+        title: 'Baffle vs Mesh Filters: Which is Best for Your Ventilation?',
+        tag: 'Commercial Hoods • Feb 14, 2026 • 5 min read',
+        author: 'David Chen',
+        role: 'Filtration Specialist',
+        initials: 'DC',
+        avatarBg: 'bg-emerald-600',
+        img: 'assets/images/blog-baffle-filters.jpg',
+        bio: 'David Chen has engineered and serviced high-performance filtration systems for over 12 years.',
+        content: `
+          <p class="text-lg font-medium text-slate-900 dark:text-slate-100">
+            Grease filters are your kitchen hood's primary fire barrier and air intake mechanism. Choosing between stainless steel baffle filters and aluminum mesh filters directly determines system efficiency and insurance safety compliance.
+          </p>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">Stainless Steel Baffle Filters: The Commercial Gold Standard</h2>
+          <p>
+            Baffle filters force grease-laden airflow through interlocking S-curved channels. Because grease is heavier than air, centrifugal force slings grease droplets onto the cool stainless steel slats, allowing clean air to pass upward into exhaust ducts.
+          </p>
+          <p>
+            Crucially, UL-listed baffle filters act as certified flame barriers. If cooking oil catches fire on the stove, flames cannot penetrate the interlocking baffles to ignite grease inside duct risers.
+          </p>
+          <div class="p-6 rounded-2xl bg-emerald-500/10 border-l-4 border-emerald-500 dark:bg-emerald-500/20 text-emerald-900 dark:text-emerald-200 font-semibold italic">
+            "Commercial building codes and NFPA 96 strictly prohibit mesh filters on commercial cooktops because mesh allows flames to pass straight through."
+          </div>
+        `
+      },
+      'fire-marshal': {
+        title: 'Pass Your Annual Fire Marshal Hood Inspection With Zero Violations',
+        tag: 'Fire Safety Audits • Feb 08, 2026 • 7 min read',
+        author: 'Capt. Marcus Vance',
+        role: 'Certified Master Fire Inspector',
+        initials: 'MV',
+        avatarBg: 'bg-purple-600',
+        img: 'assets/images/blog-fire-marshal.jpg',
+        bio: 'Capt. Marcus Vance has inspected over 3,000 commercial kitchen exhaust systems across his 18-year career.',
+        content: `
+          <p class="text-lg font-medium text-slate-900 dark:text-slate-100">
+            A surprise visit from the municipal fire marshal shouldn't cause panic. With proper inspection logs and certified bare-metal duct cleanings, passing your annual review with zero code violations is completely routine.
+          </p>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">The Top 5 Inspector Scrutiny Points</h2>
+          <ul class="list-disc pl-6 space-y-2 rtl:pr-6 rtl:pl-0">
+            <li><strong>Duct Access Panels:</strong> Gaskets must be liquid-tight and spaced every 12 feet along horizontal duct runs.</li>
+            <li><strong>Rooftop Grease Containment:</strong> Grease boxes on the roof must have fresh hydrophobic absorbent pillows without overflow.</li>
+            <li><strong>Combustible Clearance:</strong> Ensure non-insulated single-wall ducts maintain an 18-inch clearance from wood framing.</li>
+            <li><strong>Official Inspection Tag:</strong> A valid signed certificate tag must be clearly affixed to the hood exterior.</li>
+          </ul>
+          <div class="p-6 rounded-2xl bg-purple-500/10 border-l-4 border-purple-500 dark:bg-purple-500/20 text-purple-900 dark:text-purple-200 font-semibold italic">
+            "Always keep your digital photographic before-and-after audit logs on hand in your kitchen safety binder."
+          </div>
+        `
+      },
+      'rotary-sweeping': {
+        title: 'Rotary Power Sweeping vs Manual Scrapers: Soot Tech Breakdown',
+        tag: 'Home Chimney Care • Jan 30, 2026 • 5 min read',
+        author: 'Sarah Jenkins',
+        role: 'Soot Tech Specialist',
+        initials: 'SJ',
+        avatarBg: 'bg-amber-600',
+        img: 'assets/images/blog-rotary-sweeping.jpg',
+        bio: 'Sarah Jenkins specializes in modern motorized soot sweeping technology and indoor air hygiene.',
+        content: `
+          <p class="text-lg font-medium text-slate-900 dark:text-slate-100">
+            Traditional chimney sweeping relied on stiff wire brushes pushed manually up flues. Modern motorized rotary whip technology has rendered manual scrapers obsolete by removing 4 times more creosote in half the time.
+          </p>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">How Motorized Rotary Power Whips Work</h2>
+          <p>
+            Rotary power sweeping utilizes a flexible spinning shaft driven by a high-torque variable drill. Specially calibrated nylon or stainless filament strands spin at high RPM, expanding automatically to conform to round, oval, or rectangular chimney shapes.
+          </p>
+          <p>
+            The dynamic whipping action fractures glazed third-stage creosote deposits that manual brushes simply glide over. Simultaneously, HEPA negative air vacuums create continuous suction at the flue base, preventing airborne dust from escaping into living quarters.
+          </p>
+          <div class="p-6 rounded-2xl bg-amber-500/10 border-l-4 border-amber-500 dark:bg-amber-500/20 text-amber-900 dark:text-amber-200 font-semibold italic">
+            "Rotary sweeping cleans deep into mortar joints and flue elbows that rigid manual rods cannot negotiate."
+          </div>
+        `
+      },
+      'duct-jetting': {
+        title: 'Overnight Commercial Duct Jetting: Zero Kitchen Downtime',
+        tag: 'Commercial Hoods • Jan 18, 2026 • 8 min read',
+        author: 'Elena Rostova',
+        role: 'Commercial Operations Lead',
+        initials: 'ER',
+        avatarBg: 'bg-cyan-600',
+        img: 'assets/images/blog-duct-jetting.jpg',
+        bio: 'Elena Rostova leads overnight rapid-response commercial cleaning crews across metropolitan restaurant chains.',
+        content: `
+          <p class="text-lg font-medium text-slate-900 dark:text-slate-100">
+            For high-volume 18-hour restaurants, closing the kitchen for scheduled exhaust maintenance is financially unacceptable. Our dedicated overnight crews deploy heavy-duty thermal hydrojetting fleets during off-hours, guaranteeing full bare-metal compliance before morning kitchen shifts arrive.
+          </p>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">3,000 PSI Hot-Water Thermal Jetting</h2>
+          <p>
+            Hot water hydrojetting combines 200°F water with 3,000 PSI pressure to liquefy polymerized grease inside vertical risers without caustic chemicals. Our technicians wrap all cooking equipment in 6-mil poly draping with funnel drainage conduits directly to holding tanks.
+          </p>
+          <p>
+            By 5:30 AM, our technicians perform final stainless steel polishing, test exhaust airflow sensors, post certified inspection tags, and remove all shielding, leaving the facility spotless and ready for immediate culinary operations.
+          </p>
+          <div class="p-6 rounded-2xl bg-cyan-500/10 border-l-4 border-cyan-500 dark:bg-cyan-500/20 text-cyan-900 dark:text-cyan-200 font-semibold italic">
+            "Zero restaurant downtime, zero morning cleanup required—our overnight service leaves your kitchen sparkling clean for breakfast service."
+          </div>
+        `
+      }
+    };
+
+    const postAliases = {
+      'esp': 'esp-precipitator',
+      'esp-filtration': 'esp-precipitator',
+      'nfpa': 'nfpa-96',
+      'nfpa96': 'nfpa-96',
+      'signs': 'warning-signs',
+      'warning': 'warning-signs',
+      'baffle': 'baffle-filters',
+      'filters': 'baffle-filters',
+      'fire': 'fire-marshal',
+      'inspection': 'fire-marshal',
+      'rotary': 'rotary-sweeping',
+      'sweeping': 'rotary-sweeping',
+      'jetting': 'duct-jetting',
+      'duct': 'duct-jetting'
+    };
+
+    const resolvedPostKey = postAliases[postKey] || postKey;
+    const postData = blogArticlesData[resolvedPostKey] || blogArticlesData['esp-precipitator'];
+
+    document.title = `${postData.title} | ProClean Blog`;
+    titleEl.textContent = postData.title;
+
+    const tagEl = document.getElementById('bd-tag');
+    if (tagEl) tagEl.innerHTML = `<span>${postData.tag}</span>`;
+
+    const authorNameEl = document.getElementById('bd-author-name');
+    if (authorNameEl) authorNameEl.textContent = postData.author;
+
+    const authorRoleEl = document.getElementById('bd-author-role');
+    if (authorRoleEl) authorRoleEl.textContent = postData.role;
+
+    const authorAvatarEl = document.getElementById('bd-author-avatar');
+    if (authorAvatarEl) {
+      authorAvatarEl.textContent = postData.initials;
+      authorAvatarEl.className = `w-10 h-10 rounded-full ${postData.avatarBg} text-white flex items-center justify-center font-bold text-sm`;
+    }
+
+    const imgEl = document.getElementById('bd-main-img');
+    if (imgEl) {
+      imgEl.src = postData.img;
+      imgEl.alt = postData.title;
+    }
+
+    const contentEl = document.getElementById('bd-content');
+    if (contentEl) {
+      contentEl.innerHTML = postData.content;
+    }
+
+    const bioEl = document.getElementById('bd-sidebar-bio');
+    if (bioEl) {
+      bioEl.textContent = postData.bio;
+    }
+  };
+
+  initBlogDetailsPage();
 };
 
 if (document.readyState === 'loading') {

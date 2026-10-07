@@ -29,11 +29,12 @@
 }
 
 html {
-  overflow-x: clip;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
-  overflow-x: clip;
+  overflow-x: hidden;
   max-width: 100%;
   background-color: var(--bg-primary);
   color: var(--text-main);
@@ -57,6 +58,61 @@ header.scrolled {
 
 .dark header.scrolled {
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.6), 0 2px 6px -1px rgba(0, 0, 0, 0.4);
+}
+
+/* Full Viewport Mobile Menu Overlay - completely replaces view so page beneath is hidden */
+html.mobile-menu-active,
+body.mobile-menu-active {
+  overflow: hidden !important;
+  height: 100% !important;
+  touch-action: none;
+}
+
+header.mobile-menu-open {
+  position: fixed !important;
+  inset: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  z-index: 9999 !important;
+  background-color: #ffffff !important;
+  overflow: hidden !important;
+}
+
+.dark header.mobile-menu-open {
+  background-color: #0f172a !important; /* Tailwind slate-900 */
+}
+
+header.mobile-menu-open > div:first-child {
+  flex-shrink: 0 !important;
+  width: 100% !important;
+  background-color: inherit !important;
+}
+
+header.mobile-menu-open #mobile-menu {
+  flex: 1 1 0% !important;
+  height: calc(100vh - 5rem) !important;
+  height: calc(100dvh - 5rem) !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  background-color: #ffffff !important;
+  padding-bottom: 2.5rem !important;
+}
+
+.dark header.mobile-menu-open #mobile-menu {
+  background-color: #0f172a !important;
 }
 
 /* RTL Layout Enhancements */

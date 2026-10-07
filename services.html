@@ -20,12 +20,12 @@
 
   <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-200">
-    <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8">
+    <div class="max-w-[90rem] mx-auto px-3 sm:px-6 lg:px-4 xl:px-8">
       <div class="flex items-center justify-between h-20 gap-2 lg:gap-3 xl:gap-4">
         <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 rtl:space-x-reverse group shrink-0">
-          <img src="assets/images/favicon.svg" alt="ProClean Exhaust Logo" class="w-10 h-10 sm:w-11 sm:h-11 object-contain filter drop-shadow-md group-hover:scale-105 transition-transform shrink-0" />
+          <img src="assets/images/favicon.svg" alt="ProClean Exhaust Logo" class="w-8 h-8 sm:w-11 sm:h-11 object-contain filter drop-shadow-md group-hover:scale-105 transition-transform shrink-0" />
           <div>
-            <span class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center">ProClean<span class="text-orange-500">.Exhaust</span></span>
+            <span class="text-base sm:text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center">ProClean<span class="text-orange-500">.Exhaust</span></span>
             <span class="hidden sm:block text-[9px] font-extrabold text-slate-500 dark:text-slate-400 tracking-widest uppercase">Exhaust & Chimney Care</span>
           </div>
         </a>
@@ -54,37 +54,43 @@
         </nav>
 
         <div class="flex items-center space-x-1.5 sm:space-x-2 xl:space-x-2.5 rtl:space-x-reverse shrink-0">
-          <!-- 24/7 Emergency Hotline CTA -->
-          <a href="tel:18005553942" class="hidden xl:flex items-center space-x-1.5 px-3.5 py-2 rounded-full bg-orange-500/10 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-500/30 hover:bg-orange-500 hover:text-white transition text-xs font-extrabold shrink-0">
-            <span>📞 24/7 Hotline</span>
+          <!-- Login Button -->
+          <a href="login.html" class="hidden md:flex group relative px-4 py-2 rounded-full bg-slate-900 text-white dark:bg-slate-800/90 border border-slate-700/80 hover:border-blue-500/50 shadow-sm transition text-xs font-bold items-center justify-center shrink-0">
+            <span>Login</span>
           </a>
-          <button onclick="toggleTheme()" aria-label="Toggle theme" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm cursor-pointer">
-            <svg class="sun-icon w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-            <svg class="moon-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          <!-- Dark Mode Toggle Button (Desktop & Tablet) -->
+          <button onclick="toggleTheme()" aria-label="Toggle theme" class="hidden md:flex w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm cursor-pointer shrink-0">
+            <svg class="sun-icon w-4 h-4 hidden text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="moon-icon w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
           </button>
-          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-[11px] sm:text-xs font-bold px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm flex items-center justify-center cursor-pointer">RTL</button>
+
+          <!-- RTL Layout Toggle Button (Desktop & Tablet) -->
+          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn hidden md:flex text-[11px] xl:text-xs font-bold px-2.5 xl:px-3 py-1 xl:py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm items-center justify-center cursor-pointer shrink-0">
+            RTL
+          </button>
+
           <button onclick="openBookingModal()" class="hidden sm:flex px-4 xl:px-5 py-2 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition items-center justify-center cursor-pointer shrink-0">
             <span>Book Inspection</span>
           </button>
 
-          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-xl text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center cursor-pointer shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </button>
         </div>
       </div>
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-4 pb-6 space-y-3 shadow-2xl">
-      <a href="index.html" class="block font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1">Home 1 (General)</a>
-      <a href="home2.html" class="block font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1">Home 2 (Commercial)</a>
-      <a href="about.html" class="block font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1">About Us</a>
-      <a href="services.html" class="block font-bold text-blue-600 dark:text-blue-400 py-1">Services</a>
-      <a href="service-details.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Service Details</a>
-      <a href="pricing.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Pricing</a>
-      <a href="gallery.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Before & After Gallery</a>
-      <a href="blog.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Blog</a>
-      <a href="contact.html" class="block text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1 font-medium">Contact Us</a>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-5 pt-5 pb-6 shadow-2xl">
+      <div class="space-y-2 sm:space-y-3">
+        <a href="index.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Home 1 (General)</a>
+        <a href="home2.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Home 2 (Commercial)</a>
+        <a href="about.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">About Us</a>
+        <a href="services.html" class="block text-xl sm:text-2xl font-extrabold text-blue-600 dark:text-blue-400 py-2 sm:py-2.5">Services</a>
+        <a href="pricing.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Pricing</a>
+        <a href="blog.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Blog</a>
+        <a href="contact.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Contact Us</a>
+      </div>
 
       <div class="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-3">
         <button onclick="openBookingModal()" class="w-full py-3 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer">
@@ -92,16 +98,18 @@
           <span>Book Inspection</span>
         </button>
 
-        <a href="tel:18005553942" class="w-full py-2.5 rounded-xl bg-slate-900 text-white dark:bg-slate-800 border border-slate-700 font-bold text-xs flex items-center justify-center space-x-2">
-          <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-          <span>📞 Emergency 24/7 Hotline: (800) 555-3942</span>
+        <a href="login.html" class="w-full py-2.5 rounded-xl bg-slate-900 text-white dark:bg-slate-800 border border-slate-700 font-bold text-xs flex items-center justify-center space-x-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Login</span>
         </a>
 
         <div class="grid grid-cols-2 gap-2 pt-1">
-          <button onclick="toggleTheme()" class="text-xs font-bold py-2 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center space-x-1.5 cursor-pointer">
-            <span>Toggle Theme</span>
+          <button onclick="toggleTheme()" aria-label="Toggle theme" class="text-xs font-bold py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+            <svg class="sun-icon w-4 h-4 hidden text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="moon-icon w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            <span class="theme-btn-text">Dark Mode</span>
           </button>
-          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-xs font-bold py-2 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center cursor-pointer">
+          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-xs font-bold py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition">
             <svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m0 0l6-6m-6 6l6 6"/></svg>RTL
           </button>
         </div>
@@ -142,7 +150,7 @@
         <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 border border-slate-200 dark:border-slate-800">
           <div class="h-1 bg-blue-600 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-52 overflow-hidden shrink-0">
-            <img src="assets/images/bare-metal-cleaning-excellence.png" alt="Residential Chimney Deep Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <img src="assets/images/chimney-deep-cleaning.jpg" alt="Residential Chimney Deep Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10">HEPA Soot Extraction</span>
           </div>
           <div class="p-6 flex flex-col flex-1 justify-between">
@@ -200,7 +208,7 @@
         <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 border border-slate-200 dark:border-slate-800">
           <div class="h-1 bg-blue-600 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-52 overflow-hidden shrink-0">
-            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Baffle Filter Replacement & Dip Soak" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <img src="assets/images/filter-replacement-degreasing.png" alt="Baffle Filter Replacement & Dip Soak" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10">Ultrasonic Bath</span>
           </div>
           <div class="p-6 flex flex-col flex-1 justify-between">
@@ -220,7 +228,7 @@
             </div>
             <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between mt-auto">
               <span class="text-xl font-black text-blue-600 dark:text-blue-400">$79</span>
-              <a href="service-details.html?service=filter-replacement" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition shadow-md whitespace-nowrap">View Details</a>
+              <a href="service-details.html?service=filter-replacement&img=assets/images/filter-replacement-degreasing.png" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition shadow-md whitespace-nowrap">View Details</a>
             </div>
           </div>
         </div>
@@ -229,7 +237,7 @@
         <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 border border-slate-200 dark:border-slate-800">
           <div class="h-1 bg-blue-600 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-52 overflow-hidden shrink-0">
-            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Electrostatic Precipitator ESP Servicing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <img src="assets/images/home2-esp-unit.jpg" alt="Electrostatic Precipitator ESP Servicing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10">99.8% Efficiency</span>
           </div>
           <div class="p-6 flex flex-col flex-1 justify-between">
@@ -287,7 +295,7 @@
         <div class="card-theme rounded-2xl overflow-hidden group relative flex flex-col justify-between h-full hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 border border-slate-200 dark:border-slate-800">
           <div class="h-1 bg-blue-600 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-52 overflow-hidden shrink-0">
-            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Auto-Clean Chimney Repair & Servicing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <img src="assets/images/auto-clean-chimney-repair.png" alt="Auto-Clean Chimney Repair & Service" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10">Thermal Repair</span>
           </div>
           <div class="p-6 flex flex-col flex-1 justify-between">
@@ -307,7 +315,7 @@
             </div>
             <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between mt-auto">
               <span class="text-xl font-black text-blue-600 dark:text-blue-400">$129</span>
-              <a href="service-details.html?service=nfpa-inspection" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition shadow-md whitespace-nowrap">View Details</a>
+              <a href="service-details.html?service=auto-clean" class="px-4 py-2 bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-700 transition shadow-md whitespace-nowrap">View Details</a>
             </div>
           </div>
         </div>
@@ -420,7 +428,7 @@
       <form id="modal-booking-form" class="space-y-4">
         <div>
           <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Full Name</label>
-          <input type="text" required minlength="2" pattern="^[A-Za-z\s'.-]{2,50}$" title="Please enter at least 2 characters" placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+          <input type="text" required minlength="2" pattern="^[A-Za-z\s]{2,50}$" title="Please enter only alphabets (letters and spaces only)" placeholder="John Doe" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
