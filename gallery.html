@@ -20,17 +20,22 @@
 
   <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-200">
-    <div class="max-w-[90rem] mx-auto px-3 sm:px-6 lg:px-4 xl:px-8">
-      <div class="flex items-center justify-between h-20 gap-2 lg:gap-3 xl:gap-4">
-        <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 rtl:space-x-reverse group shrink-0">
-          <img src="assets/images/favicon.svg" alt="ProClean Exhaust Logo" class="w-8 h-8 sm:w-11 sm:h-11 object-contain filter drop-shadow-md group-hover:scale-105 transition-transform shrink-0" />
-          <div>
-            <span class="text-base sm:text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center">ProClean<span class="text-orange-500">.Exhaust</span></span>
-            <span class="hidden sm:block text-[9px] font-extrabold text-slate-500 dark:text-slate-400 tracking-widest uppercase">Exhaust & Chimney Care</span>
-          </div>
-        </a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-2 lg:gap-4">
+        
+        <!-- Brand Logo -->
+        <div class="flex items-center justify-start flex-1 min-w-0">
+          <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 rtl:space-x-reverse group shrink-0">
+            <img src="assets/images/favicon.svg" alt="ProClean Exhaust Logo" class="w-8 h-8 sm:w-11 sm:h-11 object-contain filter drop-shadow-md group-hover:scale-105 transition-transform shrink-0" />
+            <div>
+              <span class="text-base sm:text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center">ProClean<span class="text-orange-500">.Exhaust</span></span>
+              <span class="hidden sm:block text-[9px] font-extrabold text-slate-500 dark:text-slate-400 tracking-widest uppercase">Exhaust & Chimney Care</span>
+            </div>
+          </a>
+        </div>
 
-        <nav class="hidden lg:flex items-center space-x-2 xl:space-x-5 rtl:space-x-reverse font-medium text-xs xl:text-sm text-slate-700 dark:text-slate-200">
+        <!-- Desktop Navigation Links (Centered) -->
+        <nav class="hidden lg:flex items-center justify-center space-x-2 xl:space-x-5 rtl:space-x-reverse font-medium text-xs xl:text-sm text-slate-700 dark:text-slate-200 shrink-0">
           <div class="relative group dropdown-model-container">
             <button onclick="toggleDropdownModel('home-nav-dropdown')" class="nav-link flex items-center space-x-1 rtl:space-x-reverse font-medium text-xs xl:text-sm text-slate-700 dark:text-slate-200 py-2">
               <span class="whitespace-nowrap">Home</span>
@@ -53,29 +58,30 @@
           <a href="contact.html" class="nav-link whitespace-nowrap">Contact</a>
         </nav>
 
-        <div class="flex items-center space-x-1.5 sm:space-x-2 xl:space-x-2.5 rtl:space-x-reverse shrink-0">
-          <!-- Login Button -->
-          <a href="login.html" class="hidden md:flex group relative px-4 py-2 rounded-full bg-slate-900 text-white dark:bg-slate-800/90 border border-slate-700/80 hover:border-blue-500/50 shadow-sm transition text-xs font-bold items-center justify-center shrink-0">
-            <span>Login</span>
-          </a>
-          <!-- Dark Mode Toggle Button (Desktop & Tablet) -->
-          <button onclick="toggleTheme()" aria-label="Toggle theme" class="hidden md:flex w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm cursor-pointer shrink-0">
-            <svg class="sun-icon w-4 h-4 hidden text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-            <svg class="moon-icon w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-          </button>
+        <!-- Right Action Controls -->
+        <div class="flex items-center justify-end flex-1 min-w-0">
+          <div class="flex items-center space-x-2 sm:space-x-2.5 xl:space-x-3 rtl:space-x-reverse shrink-0 flex-nowrap">
+            <!-- Dark Mode Toggle Button (Desktop & Tablet) -->
+            <button onclick="toggleTheme()" aria-label="Toggle theme" class="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm cursor-pointer shrink-0">
+              <svg class="sun-icon w-4 h-4 hidden text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+              <svg class="moon-icon w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            </button>
 
-          <!-- RTL Layout Toggle Button (Desktop & Tablet) -->
-          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn hidden md:flex text-[11px] xl:text-xs font-bold px-2.5 xl:px-3 py-1 xl:py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm items-center justify-center cursor-pointer shrink-0">
-            RTL
-          </button>
+            <!-- RTL Layout Toggle Button (Desktop & Tablet) -->
+            <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn h-8 xl:h-9 text-[11px] xl:text-xs font-bold px-2.5 xl:px-3 rounded-full bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm flex items-center justify-center cursor-pointer shrink-0">
+              RTL
+            </button>
 
-          <button onclick="openBookingModal()" class="hidden sm:flex px-4 xl:px-5 py-2 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition items-center justify-center cursor-pointer shrink-0">
-            <span>Book Inspection</span>
-          </button>
+            <!-- Book Inspection CTA Button -->
+            <button onclick="openBookingModal()" class="hidden sm:inline-flex h-8 xl:h-9 px-3.5 xl:px-5 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition items-center justify-center cursor-pointer shrink-0">
+              <span>Book Inspection</span>
+            </button>
 
-          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-xl text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center cursor-pointer shrink-0">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-          </button>
+            <!-- Mobile Drawer Toggle Button -->
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-xl text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center cursor-pointer shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -88,6 +94,7 @@
         <a href="about.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">About Us</a>
         <a href="services.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Services</a>
         <a href="pricing.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Pricing</a>
+        <a href="gallery.html" class="block text-xl sm:text-2xl font-extrabold text-blue-600 dark:text-blue-400 py-2 sm:py-2.5">Gallery</a>
         <a href="blog.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Blog</a>
         <a href="contact.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Contact Us</a>
       </div>
@@ -97,11 +104,6 @@
           <span>🔥</span>
           <span>Book Inspection</span>
         </button>
-
-        <a href="login.html" class="w-full py-2.5 rounded-xl bg-slate-900 text-white dark:bg-slate-800 border border-slate-700 font-bold text-xs flex items-center justify-center space-x-2">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>Login</span>
-        </a>
 
         <div class="grid grid-cols-2 gap-2 pt-1">
           <button onclick="toggleTheme()" aria-label="Toggle theme" class="text-xs font-bold py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition">
