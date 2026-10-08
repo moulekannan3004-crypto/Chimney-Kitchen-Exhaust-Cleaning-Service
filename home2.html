@@ -13,6 +13,28 @@
       theme: {
         extend: {
           colors: {
+            background: 'var(--background)',
+            foreground: 'var(--foreground)',
+            card: {
+              DEFAULT: 'var(--card)',
+              foreground: 'var(--card-foreground)',
+            },
+            muted: {
+              DEFAULT: 'var(--muted)',
+              foreground: 'var(--muted-foreground)',
+            },
+            border: 'var(--border)',
+            input: 'var(--input)',
+            primary: {
+              DEFAULT: 'var(--primary)',
+              hover: 'var(--primary-hover)',
+              foreground: 'var(--primary-foreground)',
+            },
+            accent: {
+              DEFAULT: 'var(--accent)',
+              hover: 'var(--accent-hover)',
+              foreground: 'var(--accent-foreground)',
+            },
             brand: { 50: '#eff6ff', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' },
             fire: { 500: '#f97316', 600: '#ea580c' }
           }
@@ -297,7 +319,7 @@
         </div>
 
         <div class="flex items-center space-x-3 rtl:space-x-reverse justify-center">
-          <span class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-400 flex items-center justify-center font-extrabold text-lg">📸</span>
+          <span class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center font-extrabold text-lg">📸</span>
           <div class="text-left rtl:text-right">
             <h4 class="text-xs font-extrabold text-white">Photo Audit Log</h4>
             <p class="text-[10px] text-slate-400">Before & After HD Report</p>
@@ -352,7 +374,7 @@
 
         <!-- Service 2: Exhaust Duct Jetting -->
         <div class="card-theme rounded-2xl overflow-hidden group relative hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col justify-between">
-          <div class="h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-500 absolute top-0 left-0 right-0 z-20"></div>
+          <div class="h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-48 overflow-hidden">
             <img src="assets/images/home2-exhaust-duct-jetting.jpg" alt="Commercial Exhaust Duct Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10 flex items-center space-x-1.5 rtl:space-x-reverse">
@@ -372,7 +394,7 @@
             </div>
             <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between mt-auto">
               <span class="text-xl font-black text-blue-600 dark:text-blue-400">$299</span>
-              <a href="service-details.html?service=exhaust-duct&from=home2" class="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-xl text-xs font-bold transition shadow-md hover:shadow-lg">View Details</a>
+              <a href="service-details.html?service=exhaust-duct&from=home2" class="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-xl text-xs font-bold transition shadow-md hover:shadow-lg">View Details</a>
             </div>
           </div>
         </div>
@@ -405,13 +427,13 @@
         </div>
 
         <!-- Service 4: ESP Unit Servicing -->
-        <div class="card-theme rounded-2xl overflow-hidden group relative hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-purple-500/10 flex flex-col justify-between">
-          <div class="h-1 bg-gradient-to-r from-purple-500 via-fuchsia-500 to-pink-500 absolute top-0 left-0 right-0 z-20"></div>
+        <div class="card-theme rounded-2xl overflow-hidden group relative hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col justify-between">
+          <div class="h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-400 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-48 overflow-hidden">
             <img src="assets/images/home2-esp-unit.jpg" alt="ESP Precipitator Unit Servicing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10 flex items-center space-x-1.5 rtl:space-x-reverse">
               <span>⚡</span>
-              <span class="text-purple-400">99.8% Capture Rate</span>
+              <span class="text-blue-400">99.8% Capture Rate</span>
             </span>
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
@@ -419,26 +441,26 @@
               <h3 class="text-xl font-bold text-slate-900 dark:text-white">ESP Precipitator Unit Servicing</h3>
               <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">High-voltage ionizer cell chemical bath soaking, spark diagnostics, insulator testing, and UV-C lamp replacement.</p>
               <ul class="text-xs space-y-2 text-slate-500 dark:text-slate-400 mt-4">
-                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>High-voltage cell bath dip</span></li>
-                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Sparking & insulator check</span></li>
-                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Carbon odor module refill</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-500 font-bold">✓</span> <span>High-voltage cell bath dip</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-500 font-bold">✓</span> <span>Sparking & insulator check</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-500 font-bold">✓</span> <span>Carbon odor module refill</span></li>
               </ul>
             </div>
             <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between mt-auto">
-              <span class="text-xl font-black text-purple-600 dark:text-purple-400">$349</span>
-              <a href="service-details.html?service=esp-unit&from=home2" class="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-xl text-xs font-bold transition shadow-md hover:shadow-lg">View Details</a>
+              <span class="text-xl font-black text-blue-600 dark:text-blue-400">$349</span>
+              <a href="service-details.html?service=esp-unit&from=home2" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition shadow-md hover:shadow-lg">View Details</a>
             </div>
           </div>
         </div>
 
         <!-- Service 5: Filter Replacement & Soak -->
-        <div class="card-theme rounded-2xl overflow-hidden group relative hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-emerald-500/10 flex flex-col justify-between">
-          <div class="h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-green-500 absolute top-0 left-0 right-0 z-20"></div>
+        <div class="card-theme rounded-2xl overflow-hidden group relative hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-orange-500/10 flex flex-col justify-between">
+          <div class="h-1 bg-orange-500 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-48 overflow-hidden">
             <img src="assets/images/home2-baffle-filter-replacement-soak.png" alt="Baffle Filter Replacement & Soak" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10 flex items-center space-x-1.5 rtl:space-x-reverse">
               <span>🧼</span>
-              <span class="text-emerald-400">Ultrasonic Bath</span>
+              <span class="text-orange-400">Ultrasonic Bath</span>
             </span>
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
@@ -446,26 +468,26 @@
               <h3 class="text-xl font-bold text-slate-900 dark:text-white">Baffle Filter Replacement & Soak</h3>
               <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Stainless steel baffle filter exchange service, ultrasonic tank degreasing, and custom hood filter fitting.</p>
               <ul class="text-xs space-y-2 text-slate-500 dark:text-slate-400 mt-4">
-                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Ultrasonic deep chemical dip</span></li>
-                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Heavy 430 stainless steel</span></li>
-                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Reduced motor backpressure</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-orange-500 font-bold">✓</span> <span>Ultrasonic deep chemical dip</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-orange-500 font-bold">✓</span> <span>Heavy 430 stainless steel</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-orange-500 font-bold">✓</span> <span>Reduced motor backpressure</span></li>
               </ul>
             </div>
             <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between mt-auto">
-              <span class="text-xl font-black text-emerald-600 dark:text-emerald-400">$79</span>
-              <a href="service-details.html?service=filter-replacement&from=home2" class="px-5 py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white rounded-xl text-xs font-bold transition shadow-md hover:shadow-lg">View Details</a>
+              <span class="text-xl font-black text-orange-600 dark:text-orange-400">$79</span>
+              <a href="service-details.html?service=filter-replacement&from=home2" class="px-5 py-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-xl text-xs font-bold transition shadow-md hover:shadow-lg">View Details</a>
             </div>
           </div>
         </div>
 
         <!-- Service 6: NFPA 96 Compliance & Inspection -->
-        <div class="card-theme rounded-2xl overflow-hidden group relative hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-rose-500/10 flex flex-col justify-between">
-          <div class="h-1 bg-gradient-to-r from-rose-500 via-red-500 to-amber-500 absolute top-0 left-0 right-0 z-20"></div>
+        <div class="card-theme rounded-2xl overflow-hidden group relative hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col justify-between">
+          <div class="h-1 bg-blue-600 absolute top-0 left-0 right-0 z-20"></div>
           <div class="relative h-48 overflow-hidden">
             <img src="assets/images/home2-fire-safety-inspection.jpg" alt="NFPA 96 Compliance Inspection" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             <span class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-extrabold px-3 py-1 rounded-full border border-white/10 flex items-center space-x-1.5 rtl:space-x-reverse">
               <span>📋</span>
-              <span class="text-rose-400">Fire Code Audit</span>
+              <span class="text-blue-400">Fire Code Audit</span>
             </span>
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
@@ -473,14 +495,14 @@
               <h3 class="text-xl font-bold text-slate-900 dark:text-white">NFPA 96 Compliance & Inspection</h3>
               <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Full ventilation fire safety audit, access panel check, dual-lens camera scope video logging, and NFPA certification tag.</p>
               <ul class="text-xs space-y-2 text-slate-500 dark:text-slate-400 mt-4">
-                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Official Fire Marshal sticker tag</span></li>
-                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Digital video scope HD proof</span></li>
-                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-emerald-500 font-bold">✓</span> <span>Fuel interlock safety check</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-500 font-bold">✓</span> <span>Official Fire Marshal sticker tag</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-500 font-bold">✓</span> <span>Digital video scope HD proof</span></li>
+                <li class="flex items-center space-x-2 rtl:space-x-reverse"><span class="text-blue-500 font-bold">✓</span> <span>Fuel interlock safety check</span></li>
               </ul>
             </div>
             <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between mt-auto">
-              <span class="text-xl font-black text-rose-600 dark:text-rose-400">$129</span>
-              <a href="service-details.html?service=nfpa-inspection&from=home2" class="px-5 py-2.5 bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-700 hover:to-red-700 text-white rounded-xl text-xs font-bold transition shadow-md hover:shadow-lg">View Details</a>
+              <span class="text-xl font-black text-blue-600 dark:text-blue-400">$129</span>
+              <a href="service-details.html?service=nfpa-inspection&from=home2" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition shadow-md hover:shadow-lg">View Details</a>
             </div>
           </div>
         </div>
@@ -626,10 +648,10 @@
 
         <!-- Criterion 2 -->
         <div class="card-theme p-6 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4">
-          <div class="h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-500 absolute top-0 left-0 right-0"></div>
+          <div class="h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 absolute top-0 left-0 right-0"></div>
           
           <div class="flex items-center justify-between">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-500 text-white font-black text-sm flex items-center justify-center shadow-md shadow-blue-500/30">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-blue-400 text-white font-black text-sm flex items-center justify-center shadow-md shadow-blue-500/30">
               02
             </div>
             <span class="text-[10px] font-extrabold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-950/60 px-3 py-1 rounded-full border border-blue-500/20 flex items-center space-x-1.5 rtl:space-x-reverse">
@@ -653,10 +675,10 @@
 
         <!-- Criterion 3 -->
         <div class="card-theme p-6 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-emerald-500/10 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4">
-          <div class="h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-green-500 absolute top-0 left-0 right-0"></div>
+          <div class="h-1 bg-gradient-to-r from-emerald-500 via-emerald-400 to-emerald-600 absolute top-0 left-0 right-0"></div>
           
           <div class="flex items-center justify-between">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-500 text-white font-black text-sm flex items-center justify-center shadow-md shadow-emerald-500/30">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-600 to-emerald-400 text-white font-black text-sm flex items-center justify-center shadow-md shadow-emerald-500/30">
               03
             </div>
             <span class="text-[10px] font-extrabold text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-500/20 flex items-center space-x-1.5 rtl:space-x-reverse">
@@ -679,14 +701,14 @@
         </div>
 
         <!-- Criterion 4 -->
-        <div class="card-theme p-6 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-purple-500/10 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4">
-          <div class="h-1 bg-gradient-to-r from-purple-500 via-fuchsia-500 to-pink-500 absolute top-0 left-0 right-0"></div>
+        <div class="card-theme p-6 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/10 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4">
+          <div class="h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 absolute top-0 left-0 right-0"></div>
           
           <div class="flex items-center justify-between">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-600 to-fuchsia-500 text-white font-black text-sm flex items-center justify-center shadow-md shadow-purple-500/30">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-blue-500 text-white font-black text-sm flex items-center justify-center shadow-md shadow-blue-500/30">
               04
             </div>
-            <span class="text-[10px] font-extrabold text-purple-600 dark:text-purple-400 bg-purple-100 dark:bg-purple-950/60 px-3 py-1 rounded-full border border-purple-500/20 flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span class="text-[10px] font-extrabold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-950/60 px-3 py-1 rounded-full border border-blue-500/20 flex items-center space-x-1.5 rtl:space-x-reverse">
               <span>💧</span>
               <span>Roof Protection</span>
             </span>
@@ -699,7 +721,7 @@
             </p>
           </div>
 
-          <div class="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-bold text-purple-600 dark:text-purple-400">
+          <div class="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-bold text-blue-600 dark:text-blue-400">
             <span>✓ Hydrophobic Pillow Swap</span>
             <span>Zero Roof Rot</span>
           </div>
@@ -733,14 +755,14 @@
         </div>
 
         <!-- Criterion 6 -->
-        <div class="card-theme p-6 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-rose-500/10 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4">
-          <div class="h-1 bg-gradient-to-r from-rose-500 via-red-500 to-amber-500 absolute top-0 left-0 right-0"></div>
+        <div class="card-theme p-6 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-orange-500/10 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4">
+          <div class="h-1 bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 absolute top-0 left-0 right-0"></div>
           
           <div class="flex items-center justify-between">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-rose-600 to-red-500 text-white font-black text-sm flex items-center justify-center shadow-md shadow-rose-500/30">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-orange-600 to-amber-500 text-white font-black text-sm flex items-center justify-center shadow-md shadow-orange-500/30">
               06
             </div>
-            <span class="text-[10px] font-extrabold text-rose-600 dark:text-rose-400 bg-rose-100 dark:bg-rose-950/60 px-3 py-1 rounded-full border border-rose-500/20 flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span class="text-[10px] font-extrabold text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/60 px-3 py-1 rounded-full border border-orange-500/20 flex items-center space-x-1.5 rtl:space-x-reverse">
               <span>📷</span>
               <span>Digital HD Audit</span>
             </span>
@@ -753,7 +775,7 @@
             </p>
           </div>
 
-          <div class="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-bold text-rose-600 dark:text-rose-400">
+          <div class="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-bold text-orange-600 dark:text-orange-400">
             <span>✓ 24h Digital Report</span>
             <span>Fire Marshal Tag</span>
           </div>
@@ -807,7 +829,7 @@
 
         <!-- Sector 2: Fine Dining & Steakhouses -->
         <div class="bg-slate-800/90 border border-slate-700/80 p-7 rounded-3xl relative overflow-hidden group hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/20 flex flex-col justify-between space-y-5">
-          <div class="h-1.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-500 absolute top-0 left-0 right-0"></div>
+          <div class="h-1.5 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 absolute top-0 left-0 right-0"></div>
           
           <div class="flex items-center justify-between">
             <div class="w-14 h-14 rounded-2xl bg-blue-500/20 border border-blue-500/30 text-blue-400 flex items-center justify-center text-3xl shadow-lg shadow-blue-500/10 group-hover:scale-110 transition-transform">
@@ -833,7 +855,7 @@
 
         <!-- Sector 3: Hotels & Banquet Centers -->
         <div class="bg-slate-800/90 border border-slate-700/80 p-7 rounded-3xl relative overflow-hidden group hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-emerald-500/20 flex flex-col justify-between space-y-5">
-          <div class="h-1.5 bg-gradient-to-r from-emerald-500 via-teal-500 to-green-500 absolute top-0 left-0 right-0"></div>
+          <div class="h-1.5 bg-gradient-to-r from-emerald-500 via-emerald-400 to-emerald-600 absolute top-0 left-0 right-0"></div>
           
           <div class="flex items-center justify-between">
             <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-3xl shadow-lg shadow-emerald-500/10 group-hover:scale-110 transition-transform">
@@ -858,14 +880,14 @@
         </div>
 
         <!-- Sector 4: Hospitals & Universities -->
-        <div class="bg-slate-800/90 border border-slate-700/80 p-7 rounded-3xl relative overflow-hidden group hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-purple-500/20 flex flex-col justify-between space-y-5">
-          <div class="h-1.5 bg-gradient-to-r from-purple-500 via-fuchsia-500 to-pink-500 absolute top-0 left-0 right-0"></div>
+        <div class="bg-slate-800/90 border border-slate-700/80 p-7 rounded-3xl relative overflow-hidden group hover:-translate-y-1 transition duration-300 hover:shadow-2xl hover:shadow-blue-500/20 flex flex-col justify-between space-y-5">
+          <div class="h-1.5 bg-blue-600 absolute top-0 left-0 right-0"></div>
           
           <div class="flex items-center justify-between">
-            <div class="w-14 h-14 rounded-2xl bg-purple-500/20 border border-purple-500/30 text-purple-400 flex items-center justify-center text-3xl shadow-lg shadow-purple-500/10 group-hover:scale-110 transition-transform">
+            <div class="w-14 h-14 rounded-2xl bg-blue-500/20 border border-blue-500/30 text-blue-400 flex items-center justify-center text-3xl shadow-lg shadow-blue-500/10 group-hover:scale-110 transition-transform">
               🏫
             </div>
-            <span class="text-[10px] font-extrabold text-purple-400 bg-purple-500/15 px-3 py-1 rounded-full border border-purple-500/30 uppercase tracking-wider">
+            <span class="text-[10px] font-extrabold text-blue-400 bg-blue-500/15 px-3 py-1 rounded-full border border-blue-500/30 uppercase tracking-wider">
               Institutional Grade
             </span>
           </div>
@@ -878,7 +900,7 @@
           </div>
 
           <div class="pt-4 border-t border-slate-700/60 flex items-center justify-between">
-            <span class="text-[11px] font-bold text-purple-400">✓ Air Certified</span>
+            <span class="text-[11px] font-bold text-blue-400">✓ Air Certified</span>
             <span class="text-[10px] font-semibold text-slate-400 bg-slate-900 px-2.5 py-1 rounded-md border border-slate-700">Eco Non-Toxic</span>
           </div>
         </div>

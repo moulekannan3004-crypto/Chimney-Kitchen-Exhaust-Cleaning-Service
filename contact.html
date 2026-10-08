@@ -10,7 +10,47 @@
   <script>
     tailwind.config = {
       darkMode: 'class',
-      theme: { extend: { colors: { brand: { 500: '#3b82f6', 600: '#2563eb' } } } }
+      theme: {
+        extend: {
+          colors: {
+            background: 'var(--background)',
+            foreground: 'var(--foreground)',
+            card: {
+              DEFAULT: 'var(--card)',
+              foreground: 'var(--card-foreground)',
+            },
+            muted: {
+              DEFAULT: 'var(--muted)',
+              foreground: 'var(--muted-foreground)',
+            },
+            border: 'var(--border)',
+            input: 'var(--input)',
+            primary: {
+              DEFAULT: 'var(--primary)',
+              hover: 'var(--primary-hover)',
+              foreground: 'var(--primary-foreground)',
+            },
+            accent: {
+              DEFAULT: 'var(--accent)',
+              hover: 'var(--accent-hover)',
+              foreground: 'var(--accent-foreground)',
+            },
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            fire: {
+              500: '#f97316',
+              600: '#ea580c',
+            }
+          }
+        }
+      }
     }
   </script>
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -287,7 +327,16 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">Preferred Date *</label>
-              <input type="date" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+              <div class="relative" data-datepicker-wrapper>
+                <div class="relative flex items-center">
+                  <input type="text" readonly required placeholder="Select Service Date..." data-datepicker-display class="w-full px-4 py-3 pr-11 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none cursor-pointer" />
+                  <button type="button" data-datepicker-trigger aria-label="Open Calendar" class="absolute right-3 rtl:right-auto rtl:left-3 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 p-1 cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                  </button>
+                </div>
+                <input type="hidden" name="preferred_date" data-datepicker-input />
+                <div class="custom-datepicker-popup hidden"></div>
+              </div>
             </div>
             <div>
               <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">Preferred Time Slot *</label>
@@ -501,7 +550,16 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Preferred Date</label>
-            <input type="date" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none" />
+            <div class="relative" data-datepicker-wrapper>
+              <div class="relative flex items-center">
+                <input type="text" readonly required placeholder="Select Service Date..." data-datepicker-display class="w-full px-4 py-2.5 pr-10 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none cursor-pointer" />
+                <button type="button" data-datepicker-trigger aria-label="Open Calendar" class="absolute right-3 rtl:right-auto rtl:left-3 text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 p-1 cursor-pointer">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </button>
+              </div>
+              <input type="hidden" name="modal_preferred_date" data-datepicker-input />
+              <div class="custom-datepicker-popup hidden"></div>
+            </div>
           </div>
           <div>
             <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Time Slot</label>
