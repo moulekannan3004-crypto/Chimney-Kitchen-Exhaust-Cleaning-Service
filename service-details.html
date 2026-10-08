@@ -87,25 +87,25 @@
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-5 pt-5 pb-6 shadow-2xl">
-      <div class="space-y-2 sm:space-y-3">
-        <a href="index.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Home 1 (General)</a>
-        <a href="home2.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Home 2 (Commercial)</a>
-        <a href="about.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">About Us</a>
-        <a href="services.html" class="block text-xl sm:text-2xl font-extrabold text-blue-600 dark:text-blue-400 py-2 sm:py-2.5">Services</a>
-        <a href="pricing.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Pricing</a>
-        <a href="gallery.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Gallery</a>
-        <a href="blog.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Blog</a>
-        <a href="contact.html" class="block text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-2 sm:py-2.5 transition-colors">Contact Us</a>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-5 shadow-2xl">
+      <div class="flex-1 flex flex-col justify-center items-center my-auto w-full space-y-2.5 sm:space-y-3.5 py-4">
+        <a href="index.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">Home 1 (General)</a>
+        <a href="home2.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">Home 2 (Commercial)</a>
+        <a href="about.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">About Us</a>
+        <a href="services.html" class="block w-full text-center text-2xl sm:text-3xl font-extrabold text-blue-600 dark:text-blue-400 py-1.5 sm:py-2 transition-colors">Services</a>
+        <a href="pricing.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">Pricing</a>
+        <a href="gallery.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">Gallery</a>
+        <a href="blog.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">Blog</a>
+        <a href="contact.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">Contact Us</a>
       </div>
 
-      <div class="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-3">
-        <button onclick="openBookingModal()" class="w-full py-3 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer">
+      <div class="pt-4 border-t border-slate-200 dark:border-slate-800 space-y-3 shrink-0 w-full">
+        <button onclick="openBookingModal()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-md flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer">
           <span>🔥</span>
           <span>Book Inspection</span>
         </button>
 
-        <div class="grid grid-cols-2 gap-2 pt-1">
+        <div class="grid grid-cols-2 gap-2.5 pt-0.5">
           <button onclick="toggleTheme()" aria-label="Toggle theme" class="text-xs font-bold py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition">
             <svg class="sun-icon w-4 h-4 hidden text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
             <svg class="moon-icon w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
