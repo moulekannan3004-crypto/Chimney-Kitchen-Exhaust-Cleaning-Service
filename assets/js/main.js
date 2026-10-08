@@ -70,7 +70,13 @@ const initApp = () => {
     const rtlBtns = document.querySelectorAll('.rtl-toggle-btn');
     rtlBtns.forEach(btn => {
       btn.setAttribute('dir', 'ltr');
-      btn.textContent = isRTL ? 'LTR' : 'RTL';
+      if (btn.classList.contains('rtl-toggle-pill')) {
+        btn.innerHTML = isRTL
+          ? '<span class="rtl-text-ltr text-slate-500 dark:text-slate-400">LTR</span><span class="mx-1.5 text-slate-400 font-normal">⇄</span><span class="rtl-text-rtl text-amber-500 dark:text-amber-400 font-extrabold">RTL</span>'
+          : '<span class="rtl-text-ltr text-amber-500 dark:text-amber-400 font-extrabold">LTR</span><span class="mx-1.5 text-slate-400 font-normal">⇄</span><span class="rtl-text-rtl text-slate-500 dark:text-slate-400">RTL</span>';
+      } else {
+        btn.textContent = isRTL ? 'LTR' : 'RTL';
+      }
     });
   };
 

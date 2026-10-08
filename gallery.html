@@ -78,8 +78,8 @@
             </button>
 
             <!-- Mobile Drawer Toggle Button -->
-            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-xl text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center cursor-pointer shrink-0">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="lg:hidden w-8 h-8 xl:w-9 xl:h-9 rounded-full text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center cursor-pointer shrink-0 transition shadow-sm">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
           </div>
         </div>
@@ -87,32 +87,73 @@
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-5 shadow-2xl">
-      <div class="flex-1 flex flex-col justify-center items-center my-auto w-full space-y-2.5 sm:space-y-3.5 py-4">
-        <a href="index.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">Home 1 (General)</a>
-        <a href="home2.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">Home 2 (Commercial)</a>
-        <a href="about.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">About Us</a>
-        <a href="services.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">Services</a>
-        <a href="pricing.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">Pricing</a>
-        <a href="gallery.html" class="block w-full text-center text-2xl sm:text-3xl font-extrabold text-blue-600 dark:text-blue-400 py-1.5 sm:py-2 transition-colors">Gallery</a>
-        <a href="blog.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">Blog</a>
-        <a href="contact.html" class="block w-full text-center text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 py-1.5 sm:py-2 transition-colors">Contact Us</a>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900 px-4 sm:px-6 py-4 sm:py-5 shadow-2xl">
+      <div class="flex-1 overflow-y-auto space-y-2.5 sm:space-y-3 py-1 pr-0.5">
+        <!-- 1. Home 1 (General) -->
+        <a href="index.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+          <span>Home 1 (General)</span>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+        </a>
+
+        <!-- 2. Home 2 (Commercial) -->
+        <a href="home2.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+          <span>Home 2 (Commercial)</span>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+        </a>
+
+        <!-- 3. About Us -->
+        <a href="about.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+          <span>About Us</span>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        </a>
+
+        <!-- 4. Services -->
+        <a href="services.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+          <span>Services</span>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+        </a>
+
+        <!-- 5. Pricing -->
+        <a href="pricing.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+          <span>Pricing</span>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+        </a>
+
+        <!-- 6. Gallery - Active -->
+        <a href="gallery.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border-2 border-amber-500 dark:border-amber-500 text-slate-900 dark:text-white font-extrabold text-[15px] sm:text-base shadow-sm">
+          <span>Gallery</span>
+          <svg class="w-5 h-5 text-amber-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+        </a>
+
+        <!-- 7. Blog -->
+        <a href="blog.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+          <span>Blog</span>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+        </a>
+
+        <!-- 8. Contact Us -->
+        <a href="contact.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+          <span>Contact Us</span>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </a>
       </div>
 
-      <div class="pt-4 border-t border-slate-200 dark:border-slate-800 space-y-3 shrink-0 w-full">
-        <button onclick="openBookingModal()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-md flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer">
-          <span>🔥</span>
+      <div class="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-2.5 shrink-0 w-full mt-auto">
+        <button onclick="openBookingModal()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer transition">
+          <svg class="w-4 h-4 shrink-0 -rotate-45" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
           <span>Book Inspection</span>
         </button>
 
         <div class="grid grid-cols-2 gap-2.5 pt-0.5">
-          <button onclick="toggleTheme()" aria-label="Toggle theme" class="text-xs font-bold py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+          <button onclick="toggleTheme()" aria-label="Toggle theme" class="text-xs font-bold py-2.5 px-3 rounded-2xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition shadow-xs">
             <svg class="sun-icon w-4 h-4 hidden text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
             <svg class="moon-icon w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
             <span class="theme-btn-text">Dark Mode</span>
           </button>
-          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn text-xs font-bold py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition">
-            <svg class="w-3.5 h-3.5 inline-block me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m0 0l6-6m-6 6l6 6"/></svg>RTL
+          <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn rtl-toggle-pill text-xs font-bold py-2.5 px-3 rounded-2xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition shadow-xs">
+            <span class="rtl-text-ltr text-amber-500 dark:text-amber-400 font-extrabold">LTR</span>
+            <span class="mx-1.5 text-slate-400 font-normal">⇄</span>
+            <span class="rtl-text-rtl text-slate-500 dark:text-slate-400">RTL</span>
           </button>
         </div>
       </div>
