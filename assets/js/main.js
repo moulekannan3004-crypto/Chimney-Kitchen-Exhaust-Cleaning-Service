@@ -72,8 +72,8 @@ const initApp = () => {
       btn.setAttribute('dir', 'ltr');
       if (btn.classList.contains('rtl-toggle-pill')) {
         btn.innerHTML = isRTL
-          ? '<span class="rtl-text-ltr text-slate-500 dark:text-slate-400">LTR</span><span class="mx-1.5 text-slate-400 font-normal">⇄</span><span class="rtl-text-rtl text-amber-500 dark:text-amber-400 font-extrabold">RTL</span>'
-          : '<span class="rtl-text-ltr text-amber-500 dark:text-amber-400 font-extrabold">LTR</span><span class="mx-1.5 text-slate-400 font-normal">⇄</span><span class="rtl-text-rtl text-slate-500 dark:text-slate-400">RTL</span>';
+          ? '<span class="rtl-text-ltr text-slate-500 dark:text-slate-400">LTR</span><span class="mx-1.5 text-slate-400 font-normal">⇄</span><span class="rtl-text-rtl text-blue-500 dark:text-blue-400 font-extrabold">RTL</span>'
+          : '<span class="rtl-text-ltr text-blue-500 dark:text-blue-400 font-extrabold">LTR</span><span class="mx-1.5 text-slate-400 font-normal">⇄</span><span class="rtl-text-rtl text-slate-500 dark:text-slate-400">RTL</span>';
       } else {
         btn.textContent = isRTL ? 'LTR' : 'RTL';
       }
@@ -204,15 +204,36 @@ const initApp = () => {
   // 7b. Blog Category Filter Function
   const blogCatBtns = document.querySelectorAll('.blog-cat-btn');
   const blogCardsForFilter = document.querySelectorAll('.blog-card');
+
+  const catColorMap = {
+    'All': 'bg-blue-600 text-white shadow-md font-extrabold',
+    'Regulations': 'bg-blue-600 text-white shadow-md font-extrabold',
+    'Home Care': 'bg-blue-600 text-white shadow-md font-extrabold',
+    'Commercial Hoods': 'bg-blue-600 text-white shadow-md font-extrabold',
+    'Fire Audits': 'bg-blue-600 text-white shadow-md font-extrabold'
+  };
+
+  const catHoverMap = {
+    'All': 'hover:bg-blue-600',
+    'Regulations': 'hover:bg-blue-600',
+    'Home Care': 'hover:bg-blue-600',
+    'Commercial Hoods': 'hover:bg-blue-600',
+    'Fire Audits': 'hover:bg-blue-600'
+  };
+
   if (blogCatBtns.length > 0) {
     blogCatBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
+      btn.addEventListener('click', () => {
         const category = btn.getAttribute('data-category') || 'All';
 
         blogCatBtns.forEach(b => {
-          b.className = 'blog-cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition';
+          const bCat = b.getAttribute('data-category') || 'All';
+          const hColor = catHoverMap[bCat] || 'hover:bg-blue-600';
+          b.className = `blog-cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 ${hColor} hover:text-white transition cursor-pointer`;
         });
-        btn.className = 'blog-cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-blue-600 text-white shadow-md transition';
+
+        const activeColor = catColorMap[category] || 'bg-blue-600 text-white shadow-md font-extrabold';
+        btn.className = `blog-cat-btn px-5 py-2.5 rounded-full text-xs ${activeColor} transition cursor-pointer`;
 
         blogCardsForFilter.forEach(card => {
           const cardCat = card.getAttribute('data-category');
@@ -237,9 +258,11 @@ const initApp = () => {
       catBtns.forEach(btn => {
         const catAttr = btn.getAttribute('data-category') || '';
         if (catAttr === category || (category === 'All' && catAttr === 'All')) {
-          btn.className = 'blog-cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-blue-600 text-white shadow-md transition';
+          const activeColor = catColorMap[catAttr] || 'bg-blue-600 text-white shadow-md font-extrabold';
+          btn.className = `blog-cat-btn px-5 py-2.5 rounded-full text-xs ${activeColor} transition cursor-pointer`;
         } else {
-          btn.className = 'blog-cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition';
+          const hColor = catHoverMap[catAttr] || 'hover:bg-blue-600';
+          btn.className = `blog-cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 ${hColor} hover:text-white transition cursor-pointer`;
         }
       });
 
@@ -315,7 +338,7 @@ const initApp = () => {
                 </select>
               </div>
             </div>
-            <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition cursor-pointer">Confirm Service Request</button>
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-500 via-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition cursor-pointer">Confirm Service Request</button>
           </form>
         </div>
       `;
@@ -410,7 +433,7 @@ const initApp = () => {
     if (!toast) {
       toast = document.createElement('div');
       toast.id = 'toast-notification';
-      toast.className = 'fixed bottom-6 right-6 z-50 bg-emerald-600 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center space-x-3 transition-all duration-300';
+      toast.className = 'fixed bottom-6 right-6 z-50 bg-blue-600 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center space-x-3 transition-all duration-300';
       toast.innerHTML = `
         <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -557,13 +580,13 @@ const initApp = () => {
       lightbox.className = 'fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden items-center justify-center p-4 cursor-pointer';
       lightbox.innerHTML = `
         <div class="relative max-w-4xl w-full bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 p-2 cursor-default" onclick="event.stopPropagation()">
-          <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute top-4 right-4 z-20 w-11 h-11 rounded-full bg-orange-600 hover:bg-orange-700 text-white flex items-center justify-center font-black text-xl shadow-lg transition transform hover:scale-110 cursor-pointer">
+          <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute top-4 right-4 z-20 w-11 h-11 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center font-black text-xl shadow-lg transition transform hover:scale-110 cursor-pointer">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
           </button>
           <img id="lightbox-img" src="" alt="Full view" class="w-full max-h-[75vh] object-contain rounded-2xl" />
           <div class="p-4 text-center">
             <h4 id="lightbox-title" class="text-lg font-bold text-white"></h4>
-            <p class="text-xs text-orange-400 font-semibold mt-1">100% NFPA 96 Verified Inspection Standard</p>
+            <p class="text-xs text-blue-400 font-semibold mt-1">100% NFPA 96 Verified Inspection Standard</p>
           </div>
         </div>
       `;
@@ -902,7 +925,7 @@ const initApp = () => {
         author: 'David Chen',
         role: 'Duct & ESP Specialist',
         initials: 'DC',
-        avatarBg: 'bg-emerald-600',
+        avatarBg: 'bg-blue-600',
         img: 'assets/images/blog-esp-precipitator.jpg',
         bio: 'David Chen has engineered and serviced high-performance electrostatic precipitation systems for over 12 years across commercial hotel chains and restaurants.',
         content: `
@@ -916,7 +939,7 @@ const initApp = () => {
           <p>
             Next, the charged airflow enters the collector section composed of closely spaced parallel aluminum plates with alternating high voltage (6kV to 7kV) and ground charges. Positively charged grease particles are forcefully repelled by the high-voltage plates and drawn to the grounded plates, where they condense and drain into collector trays.
           </p>
-          <div class="p-6 rounded-2xl bg-orange-500/10 border-l-4 border-orange-500 dark:bg-orange-500/20 text-orange-900 dark:text-orange-200 font-semibold italic">
+          <div class="p-6 rounded-2xl bg-blue-500/10 border-l-4 border-blue-500 dark:bg-blue-500/20 text-blue-900 dark:text-blue-200 font-semibold italic">
             "High-efficiency two-stage ESP units achieve up to 99.8% capture efficiency for sub-micron particulate matter, eliminating neighborhood smoke violations."
           </div>
           <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">Essential Maintenance & Chemical Cell Soaking</h2>
@@ -948,7 +971,7 @@ const initApp = () => {
             <li><strong>Semi-Annually:</strong> Moderate-volume cooking operations (standard sit-down restaurants).</li>
             <li><strong>Annually:</strong> Low-volume cooking operations such as churches, seasonal venues, and day camps.</li>
           </ul>
-          <div class="p-6 rounded-2xl bg-orange-500/10 border-l-4 border-orange-500 dark:bg-orange-500/20 text-orange-900 dark:text-orange-200 font-semibold italic">
+          <div class="p-6 rounded-2xl bg-blue-500/10 border-l-4 border-blue-500 dark:bg-blue-500/20 text-blue-900 dark:text-blue-200 font-semibold italic">
             "Failing a municipal fire inspector audit due to hidden duct grease is an easily preventable disaster that can void your insurance policy."
           </div>
           <h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">Why Bare-Metal Cleaning Matters</h2>
@@ -963,7 +986,7 @@ const initApp = () => {
         author: 'Sarah Jenkins',
         role: 'Residential Chimney Specialist',
         initials: 'SJ',
-        avatarBg: 'bg-orange-600',
+        avatarBg: 'bg-blue-600',
         img: 'assets/images/blog-chimney-warning-signs.jpg',
         bio: 'Sarah Jenkins specializes in residential chimney care, airflow diagnostics, and home fire prevention.',
         content: `
@@ -980,7 +1003,7 @@ const initApp = () => {
             <li><strong>Excessive Motor Vibration:</strong> Heavy carbonized grease on blower impellers throws the motor off balance.</li>
             <li><strong>Persistent Pungent Odor:</strong> Burnt oil smell remains even 12 hours after cooking has finished.</li>
           </ul>
-          <div class="p-6 rounded-2xl bg-orange-500/10 border-l-4 border-orange-500 dark:bg-orange-500/20 text-orange-900 dark:text-orange-200 font-semibold italic">
+          <div class="p-6 rounded-2xl bg-blue-500/10 border-l-4 border-blue-500 dark:bg-blue-500/20 text-blue-900 dark:text-blue-200 font-semibold italic">
             "Never ignore oily dripping near electrical range switches; liquid grease conducts electricity and triggers short circuit fires."
           </div>
         `
@@ -991,7 +1014,7 @@ const initApp = () => {
         author: 'David Chen',
         role: 'Filtration Specialist',
         initials: 'DC',
-        avatarBg: 'bg-emerald-600',
+        avatarBg: 'bg-blue-600',
         img: 'assets/images/blog-baffle-filters.jpg',
         bio: 'David Chen has engineered and serviced high-performance filtration systems for over 12 years.',
         content: `
@@ -1005,7 +1028,7 @@ const initApp = () => {
           <p>
             Crucially, UL-listed baffle filters act as certified flame barriers. If cooking oil catches fire on the stove, flames cannot penetrate the interlocking baffles to ignite grease inside duct risers.
           </p>
-          <div class="p-6 rounded-2xl bg-emerald-500/10 border-l-4 border-emerald-500 dark:bg-emerald-500/20 text-emerald-900 dark:text-emerald-200 font-semibold italic">
+          <div class="p-6 rounded-2xl bg-blue-500/10 border-l-4 border-blue-500 dark:bg-blue-500/20 text-blue-900 dark:text-blue-200 font-semibold italic">
             "Commercial building codes and NFPA 96 strictly prohibit mesh filters on commercial cooktops because mesh allows flames to pass straight through."
           </div>
         `
@@ -1016,7 +1039,7 @@ const initApp = () => {
         author: 'Capt. Marcus Vance',
         role: 'Certified Master Fire Inspector',
         initials: 'MV',
-        avatarBg: 'bg-purple-600',
+        avatarBg: 'bg-blue-600',
         img: 'assets/images/blog-fire-marshal.jpg',
         bio: 'Capt. Marcus Vance has inspected over 3,000 commercial kitchen exhaust systems across his 18-year career.',
         content: `
@@ -1030,7 +1053,7 @@ const initApp = () => {
             <li><strong>Combustible Clearance:</strong> Ensure non-insulated single-wall ducts maintain an 18-inch clearance from wood framing.</li>
             <li><strong>Official Inspection Tag:</strong> A valid signed certificate tag must be clearly affixed to the hood exterior.</li>
           </ul>
-          <div class="p-6 rounded-2xl bg-purple-500/10 border-l-4 border-purple-500 dark:bg-purple-500/20 text-purple-900 dark:text-purple-200 font-semibold italic">
+          <div class="p-6 rounded-2xl bg-blue-500/10 border-l-4 border-blue-500 dark:bg-blue-500/20 text-blue-900 dark:text-blue-200 font-semibold italic">
             "Always keep your digital photographic before-and-after audit logs on hand in your kitchen safety binder."
           </div>
         `
@@ -1041,7 +1064,7 @@ const initApp = () => {
         author: 'Sarah Jenkins',
         role: 'Soot Tech Specialist',
         initials: 'SJ',
-        avatarBg: 'bg-amber-600',
+        avatarBg: 'bg-blue-600',
         img: 'assets/images/blog-rotary-sweeping.jpg',
         bio: 'Sarah Jenkins specializes in modern motorized soot sweeping technology and indoor air hygiene.',
         content: `
@@ -1055,7 +1078,7 @@ const initApp = () => {
           <p>
             The dynamic whipping action fractures glazed third-stage creosote deposits that manual brushes simply glide over. Simultaneously, HEPA negative air vacuums create continuous suction at the flue base, preventing airborne dust from escaping into living quarters.
           </p>
-          <div class="p-6 rounded-2xl bg-amber-500/10 border-l-4 border-amber-500 dark:bg-amber-500/20 text-amber-900 dark:text-amber-200 font-semibold italic">
+          <div class="p-6 rounded-2xl bg-blue-500/10 border-l-4 border-blue-500 dark:bg-blue-500/20 text-blue-900 dark:text-blue-200 font-semibold italic">
             "Rotary sweeping cleans deep into mortar joints and flue elbows that rigid manual rods cannot negotiate."
           </div>
         `
@@ -1066,7 +1089,7 @@ const initApp = () => {
         author: 'Elena Rostova',
         role: 'Commercial Operations Lead',
         initials: 'ER',
-        avatarBg: 'bg-cyan-600',
+        avatarBg: 'bg-blue-600',
         img: 'assets/images/blog-duct-jetting.jpg',
         bio: 'Elena Rostova leads overnight rapid-response commercial cleaning crews across metropolitan restaurant chains.',
         content: `
@@ -1080,7 +1103,7 @@ const initApp = () => {
           <p>
             By 5:30 AM, our technicians perform final stainless steel polishing, test exhaust airflow sensors, post certified inspection tags, and remove all shielding, leaving the facility spotless and ready for immediate culinary operations.
           </p>
-          <div class="p-6 rounded-2xl bg-cyan-500/10 border-l-4 border-cyan-500 dark:bg-cyan-500/20 text-cyan-900 dark:text-cyan-200 font-semibold italic">
+          <div class="p-6 rounded-2xl bg-blue-500/10 border-l-4 border-blue-500 dark:bg-blue-500/20 text-blue-900 dark:text-blue-200 font-semibold italic">
             "Zero restaurant downtime, zero morning cleanup required—our overnight service leaves your kitchen sparkling clean for breakfast service."
           </div>
         `

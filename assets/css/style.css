@@ -12,9 +12,10 @@
   --input: #cbd5e1;
   --primary: #2563eb;
   --primary-hover: #1d4ed8;
+  --primary-text: #1d4ed8;
   --primary-foreground: #ffffff;
-  --accent: #f97316;
-  --accent-hover: #ea580c;
+  --accent: var(--primary);
+  --accent-hover: var(--primary-hover);
   --accent-foreground: #ffffff;
 
   /* Backward Compatibility Aliases */
@@ -43,9 +44,10 @@
   --input: #475569;
   --primary: #3b82f6;
   --primary-hover: #2563eb;
+  --primary-text: #93c5fd;
   --primary-foreground: #ffffff;
-  --accent: #ea580c;
-  --accent-hover: #c2410c;
+  --accent: var(--primary);
+  --accent-hover: var(--primary-hover);
   --accent-foreground: #ffffff;
 
   /* Backward Compatibility Aliases */
@@ -177,17 +179,17 @@ header.mobile-menu-open #mobile-menu {
   bottom: 1.5rem;
   right: 1.5rem;
   z-index: 50;
-  box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.6), 0 0 15px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.6), 0 0 15px rgba(37, 99, 235, 0.4);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   animation: fab-pulse 3s infinite;
 }
 
 @keyframes fab-pulse {
   0%, 100% {
-    box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.6), 0 0 15px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.6), 0 0 15px rgba(37, 99, 235, 0.4);
   }
   50% {
-    box-shadow: 0 15px 35px -5px rgba(249, 115, 22, 0.9), 0 0 25px rgba(37, 99, 235, 0.7);
+    box-shadow: 0 15px 35px -5px rgba(37, 99, 235, 0.9), 0 0 25px rgba(37, 99, 235, 0.7);
   }
 }
 
@@ -574,4 +576,50 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .dark .datepicker-btn-quick:hover {
   background-color: #334155;
   color: #ffffff;
+}
+
+/* Keep brand-colored copy and icons on one primary color across every page. */
+:is(
+  [class*="text-blue-"], [class*="text-orange-"], [class*="text-amber-"],
+  [class*="text-red-"], [class*="text-rose-"], [class*="text-pink-"],
+  [class*="text-purple-"], [class*="text-violet-"], [class*="text-indigo-"],
+  [class*="text-cyan-"], [class*="text-sky-"], [class*="text-teal-"],
+  [class*="text-green-"], [class*="text-emerald-"], [class*="text-lime-"],
+  [class*="text-yellow-"], [class*="text-fuchsia-"]
+) {
+  color: var(--primary-text) !important;
+}
+
+:is(
+  [class*="stroke-blue-"], [class*="stroke-orange-"], [class*="stroke-amber-"],
+  [class*="stroke-red-"], [class*="stroke-rose-"], [class*="stroke-pink-"],
+  [class*="stroke-purple-"], [class*="stroke-violet-"], [class*="stroke-indigo-"],
+  [class*="stroke-cyan-"], [class*="stroke-sky-"], [class*="stroke-teal-"],
+  [class*="stroke-green-"], [class*="stroke-emerald-"], [class*="stroke-lime-"],
+  [class*="stroke-yellow-"], [class*="stroke-fuchsia-"]
+) {
+  color: var(--primary-text) !important;
+  stroke: var(--primary-text) !important;
+}
+
+:is(
+  [class*="fill-blue-"], [class*="fill-orange-"], [class*="fill-amber-"],
+  [class*="fill-red-"], [class*="fill-rose-"], [class*="fill-pink-"],
+  [class*="fill-purple-"], [class*="fill-violet-"], [class*="fill-indigo-"],
+  [class*="fill-cyan-"], [class*="fill-sky-"], [class*="fill-teal-"],
+  [class*="fill-green-"], [class*="fill-emerald-"], [class*="fill-lime-"],
+  [class*="fill-yellow-"], [class*="fill-fuchsia-"]
+) {
+  color: var(--primary-text) !important;
+  fill: var(--primary-text) !important;
+}
+
+/* Make the custom date control easy to spot on both contact and booking forms. */
+[data-datepicker-trigger] {
+  z-index: 1;
+  min-width: 2rem;
+  min-height: 2rem;
+  display: grid;
+  place-items: center;
+  color: var(--primary-text) !important;
 }

@@ -45,8 +45,8 @@
               900: '#1e3a8a',
             },
             fire: {
-              500: '#f97316',
-              600: '#ea580c',
+              500: 'var(--primary)',
+              600: 'var(--primary-hover)',
             }
           }
         }
@@ -80,12 +80,12 @@
     </div>
 
     <!-- Logged-in Alert Banner -->
-    <div id="loginSuccessBanner" class="hidden p-3.5 rounded-2xl border border-emerald-500/40 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs flex items-center justify-between gap-2 transition-all">
+    <div id="loginSuccessBanner" class="hidden p-3.5 rounded-2xl border border-blue-500/40 bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs flex items-center justify-between gap-2 transition-all">
       <div class="flex items-center gap-2">
-        <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
         <span>Signed in successfully! Session is active.</span>
       </div>
-      <button type="button" onclick="handleLogout()" class="text-xs font-bold underline hover:text-emerald-300 text-slate-700 dark:text-slate-300 transition-colors">
+      <button type="button" onclick="handleLogout()" class="text-xs font-bold underline hover:text-blue-300 text-slate-700 dark:text-slate-300 transition-colors">
         Sign Out
       </button>
     </div>
@@ -193,7 +193,7 @@
             </select>
           </div>
         </div>
-        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition cursor-pointer">Confirm Service Request</button>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-500 via-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition cursor-pointer">Confirm Service Request</button>
       </form>
     </div>
   </div>

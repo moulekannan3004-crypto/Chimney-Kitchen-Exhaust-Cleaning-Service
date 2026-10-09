@@ -45,8 +45,8 @@
               900: '#1e3a8a',
             },
             fire: {
-              500: '#f97316',
-              600: '#ea580c',
+              500: 'var(--primary)',
+              600: 'var(--primary-hover)',
             }
           }
         }
@@ -68,7 +68,7 @@
           <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 rtl:space-x-reverse group shrink-0">
             <img src="assets/images/favicon.svg" alt="ProClean Exhaust Logo" class="w-8 h-8 sm:w-11 sm:h-11 object-contain filter drop-shadow-md group-hover:scale-105 transition-transform shrink-0" />
             <div>
-              <span class="text-base sm:text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center">ProClean<span class="text-orange-500">.Exhaust</span></span>
+              <span class="text-base sm:text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center">ProClean<span class="text-blue-500">.Exhaust</span></span>
               <span class="hidden sm:block text-[9px] font-extrabold text-slate-500 dark:text-slate-400 tracking-widest uppercase">Exhaust & Chimney Care</span>
             </div>
           </a>
@@ -85,7 +85,7 @@
               <a href="index.html" class="block px-4 py-2.5 text-xs font-semibold hover:bg-blue-50 dark:hover:bg-slate-800">
                 Home 1 – General Landing
               </a>
-              <a href="home2.html" class="block px-4 py-2.5 text-xs font-semibold hover:bg-orange-50 dark:hover:bg-slate-800">
+              <a href="home2.html" class="block px-4 py-2.5 text-xs font-semibold hover:bg-blue-50 dark:hover:bg-slate-800">
                 Home 2 – Commercial Landing
               </a>
             </div>
@@ -103,7 +103,7 @@
           <div class="flex items-center space-x-2 sm:space-x-2.5 xl:space-x-3 rtl:space-x-reverse shrink-0 flex-nowrap">
             <!-- Dark Mode Toggle Button (Desktop & Tablet) -->
             <button onclick="toggleTheme()" aria-label="Toggle theme" class="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm cursor-pointer shrink-0">
-              <svg class="sun-icon w-4 h-4 hidden text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+              <svg class="sun-icon w-4 h-4 hidden text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
               <svg class="moon-icon w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
             </button>
 
@@ -113,7 +113,7 @@
             </button>
 
             <!-- Book Inspection CTA Button -->
-            <button onclick="openBookingModal()" class="hidden sm:inline-flex h-8 xl:h-9 px-3.5 xl:px-5 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition items-center justify-center cursor-pointer shrink-0">
+            <button onclick="openBookingModal()" class="hidden sm:inline-flex h-8 xl:h-9 px-3.5 xl:px-5 rounded-full bg-gradient-to-r from-blue-500 via-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition items-center justify-center cursor-pointer shrink-0">
               <span>Book Inspection</span>
             </button>
 
@@ -130,68 +130,68 @@
     <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900 px-4 sm:px-6 py-4 sm:py-5 shadow-2xl">
       <div class="flex-1 overflow-y-auto space-y-2.5 sm:space-y-3 py-1 pr-0.5">
         <!-- 1. Home 1 (General) -->
-        <a href="index.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="index.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>Home 1 (General)</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
         </a>
 
         <!-- 2. Home 2 (Commercial) -->
-        <a href="home2.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="home2.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>Home 2 (Commercial)</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
         </a>
 
         <!-- 3. About Us -->
-        <a href="about.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="about.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>About Us</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
         </a>
 
         <!-- 4. Services -->
-        <a href="services.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="services.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>Services</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
         </a>
 
         <!-- 5. Pricing -->
-        <a href="pricing.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="pricing.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>Pricing</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
         </a>
 
         <!-- 6. Gallery -->
-        <a href="gallery.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="gallery.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>Gallery</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
         </a>
 
         <!-- 7. Blog -->
-        <a href="blog.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="blog.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>Blog</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
         </a>
 
         <!-- 8. Contact Us - Active -->
-        <a href="contact.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border-2 border-amber-500 dark:border-amber-500 text-slate-900 dark:text-white font-extrabold text-[15px] sm:text-base shadow-sm">
+        <a href="contact.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border-2 border-blue-500 dark:border-blue-500 text-slate-900 dark:text-white font-extrabold text-[15px] sm:text-base shadow-sm">
           <span>Contact Us</span>
-          <svg class="w-5 h-5 text-amber-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          <svg class="w-5 h-5 text-blue-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
         </a>
       </div>
 
       <div class="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-2.5 shrink-0 w-full mt-auto">
-        <button onclick="openBookingModal()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer transition">
+        <button onclick="openBookingModal()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-blue-500 via-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer transition">
           <svg class="w-4 h-4 shrink-0 -rotate-45" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
           <span>Book Inspection</span>
         </button>
 
         <div class="grid grid-cols-2 gap-2.5 pt-0.5">
           <button onclick="toggleTheme()" aria-label="Toggle theme" class="text-xs font-bold py-2.5 px-3 rounded-2xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition shadow-xs">
-            <svg class="sun-icon w-4 h-4 hidden text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="sun-icon w-4 h-4 hidden text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
             <svg class="moon-icon w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
             <span class="theme-btn-text">Dark Mode</span>
           </button>
           <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn rtl-toggle-pill text-xs font-bold py-2.5 px-3 rounded-2xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition shadow-xs">
-            <span class="rtl-text-ltr text-amber-500 dark:text-amber-400 font-extrabold">LTR</span>
+            <span class="rtl-text-ltr text-blue-500 dark:text-blue-400 font-extrabold">LTR</span>
             <span class="mx-1.5 text-slate-400 font-normal">⇄</span>
             <span class="rtl-text-rtl text-slate-500 dark:text-slate-400">RTL</span>
           </button>
@@ -203,7 +203,7 @@
   <!-- HERO -->
   <section class="py-16 bg-slate-900 text-white text-center">
     <div class="max-w-4xl mx-auto px-4 space-y-4">
-      <span class="text-orange-400 font-bold text-xs uppercase tracking-widest">Get In Touch</span>
+      <span class="text-blue-400 font-bold text-xs uppercase tracking-widest">Get In Touch</span>
       <h1 class="text-4xl sm:text-5xl font-black">Contact & Service Booking</h1>
       <p class="text-slate-300 text-lg">Have a question or need emergency commercial exhaust dispatch? Send us a message or schedule an inspection.</p>
     </div>
@@ -260,7 +260,7 @@
             <h4 class="font-black text-slate-900 dark:text-white text-base flex items-center space-x-2 rtl:space-x-reverse">
               <span>🗺️ Service Area Map</span>
             </h4>
-            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-extrabold border border-emerald-500/30 uppercase">
+            <span class="px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-600 dark:text-blue-400 text-[10px] font-extrabold border border-blue-500/30 uppercase">
               Live Dispatch Zone
             </span>
           </div>
@@ -277,10 +277,10 @@
             
             <div class="absolute bottom-3 left-3 right-3 bg-slate-900/90 backdrop-blur-md p-3 rounded-xl border border-white/10 flex items-center justify-between text-xs text-white">
               <span class="font-bold flex items-center space-x-1.5 rtl:space-x-reverse">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
                 <span>HQ & Dispatch Hub</span>
               </span>
-              <a href="https://maps.google.com" target="_blank" rel="noopener" class="text-orange-400 hover:text-orange-300 font-bold underline">Open Full Map ↗</a>
+              <a href="https://maps.google.com" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 font-bold underline">Open Full Map ↗</a>
             </div>
           </div>
         </div>
@@ -354,7 +354,7 @@
             <textarea rows="4" placeholder="Mention stove type, chimney brand, access notes, or special instructions..." class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-600 outline-none"></textarea>
           </div>
 
-          <button type="submit" class="w-full py-4 bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white font-bold text-base rounded-xl shadow-xl transition transform hover:-translate-y-0.5">
+          <button type="submit" class="w-full py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold text-base rounded-xl shadow-xl transition transform hover:-translate-y-0.5">
             Send Service Booking Request
           </button>
         </form>
@@ -373,7 +373,7 @@
             📍 Metro Dispatch Coverage
           </span>
           <h2 class="text-3xl sm:text-4xl font-black tracking-tight">
-            Find Us & Explore Our <span class="text-orange-400">Service Coverage</span>
+            Find Us & Explore Our <span class="text-blue-400">Service Coverage</span>
           </h2>
           <p class="text-slate-300 text-sm">
             Our overnight fleets cover all metro commercial food corridors within a 60-mile radius with guaranteed 24-hour response SLAs.
@@ -381,7 +381,7 @@
         </div>
 
         <div class="flex flex-wrap gap-3">
-          <a href="https://maps.google.com?q=Chicago,IL" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs shadow-lg transition flex items-center space-x-2 rtl:space-x-reverse">
+          <a href="https://maps.google.com?q=Chicago,IL" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-lg transition flex items-center space-x-2 rtl:space-x-reverse">
             <span>🧭</span>
             <span>Get Directions</span>
           </a>
@@ -432,7 +432,7 @@
           <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3 rtl:space-x-reverse shrink-0 group hover:opacity-90 transition">
             <img src="assets/images/favicon.svg" alt="ProClean Exhaust Logo" class="w-10 h-10 sm:w-11 sm:h-11 object-contain filter drop-shadow-md group-hover:scale-105 transition-transform shrink-0" />
             <div>
-              <span class="text-lg sm:text-xl font-black text-white tracking-tight flex items-center">ProClean<span class="text-orange-500">.Exhaust</span></span>
+              <span class="text-lg sm:text-xl font-black text-white tracking-tight flex items-center">ProClean<span class="text-blue-500">.Exhaust</span></span>
               <span class="block text-[9px] font-extrabold text-slate-400 tracking-widest uppercase">Exhaust & Chimney Care</span>
             </div>
           </a>
@@ -474,12 +474,12 @@
         <div>
           <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">OUR SERVICES</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="service-details.html?service=chimney" class="text-slate-400 hover:text-orange-400 transition">Chimney Deep Cleaning</a></li>
-            <li><a href="service-details.html?service=exhaust-duct" class="text-slate-400 hover:text-orange-400 transition">Exhaust Duct Cleaning</a></li>
-            <li><a href="service-details.html?service=filter-replacement" class="text-slate-400 hover:text-orange-400 transition">Filter Replacement & Degreasing</a></li>
-            <li><a href="service-details.html?service=esp-unit" class="text-slate-400 hover:text-orange-400 transition">ESP Precipitator Unit Servicing</a></li>
-            <li><a href="service-details.html?service=commercial-hood" class="text-slate-400 hover:text-orange-400 transition">Commercial Hood Washing</a></li>
-            <li><a href="service-details.html?service=nfpa-inspection" class="text-slate-400 hover:text-orange-400 transition">NFPA 96 Safety Inspection</a></li>
+            <li><a href="service-details.html?service=chimney" class="text-slate-400 hover:text-blue-400 transition">Chimney Deep Cleaning</a></li>
+            <li><a href="service-details.html?service=exhaust-duct" class="text-slate-400 hover:text-blue-400 transition">Exhaust Duct Cleaning</a></li>
+            <li><a href="service-details.html?service=filter-replacement" class="text-slate-400 hover:text-blue-400 transition">Filter Replacement & Degreasing</a></li>
+            <li><a href="service-details.html?service=esp-unit" class="text-slate-400 hover:text-blue-400 transition">ESP Precipitator Unit Servicing</a></li>
+            <li><a href="service-details.html?service=commercial-hood" class="text-slate-400 hover:text-blue-400 transition">Commercial Hood Washing</a></li>
+            <li><a href="service-details.html?service=nfpa-inspection" class="text-slate-400 hover:text-blue-400 transition">NFPA 96 Safety Inspection</a></li>
           </ul>
         </div>
 
@@ -488,16 +488,17 @@
           <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">EMERGENCY DISPATCH</h4>
           <div class="space-y-2 text-xs mb-5">
             <a href="mailto:dispatch@proclean-exhaust.com" class="flex items-center space-x-2 rtl:space-x-reverse text-slate-300 hover:text-white transition">
-              <svg class="w-4 h-4 text-orange-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <svg class="w-4 h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               <span class="truncate">dispatch@proclean-exhaust.com</span>
             </a>
             <a href="tel:8005553473" class="flex items-center space-x-2 rtl:space-x-reverse text-slate-300 hover:text-white transition">
-              <svg class="w-4 h-4 text-orange-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <svg class="w-4 h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
               <span>+1 (800) 555-FIRE</span>
             </a>
+            <div class="flex items-start space-x-2 rtl:space-x-reverse text-slate-300 leading-relaxed"><svg class="w-4 h-4 text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21s-6-4.35-6-11a6 6 0 1112 0c0 6.65-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg><span>742 Industrial Ventilation Blvd, Suite 400, Chicago, IL 60611</span></div>
           </div>
 
-          <button onclick="openBookingModal()" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold text-xs tracking-wide shadow-lg shadow-orange-500/20 transition">
+          <button onclick="openBookingModal()" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold text-xs tracking-wide shadow-lg shadow-blue-500/20 transition">
             Connect Dispatch Team
           </button>
         </div>
@@ -570,7 +571,7 @@
             </select>
           </div>
         </div>
-        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition cursor-pointer">Confirm Service Request</button>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-500 via-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition cursor-pointer">Confirm Service Request</button>
       </form>
     </div>
   </div>

@@ -45,8 +45,8 @@
               900: '#1e3a8a',
             },
             fire: {
-              500: '#f97316',
-              600: '#ea580c',
+              500: 'var(--primary)',
+              600: 'var(--primary-hover)',
             }
           }
         }
@@ -59,9 +59,9 @@
 <body class="bg-slate-900 text-white min-h-screen flex items-center justify-center p-4 text-center">
 
   <div class="max-w-xl w-full space-y-8">
-    <div class="w-16 h-16 mx-auto rounded-2xl bg-orange-600 flex items-center justify-center text-3xl font-bold shadow-xl">🛠️</div>
+    <div class="w-16 h-16 mx-auto rounded-2xl bg-blue-600 flex items-center justify-center text-3xl font-bold shadow-xl">🛠️</div>
     <div class="space-y-3">
-      <span class="text-orange-400 font-bold text-xs uppercase tracking-widest">Scheduled Portal Upgrade</span>
+      <span class="text-blue-400 font-bold text-xs uppercase tracking-widest">Scheduled Portal Upgrade</span>
       <h1 class="text-4xl font-extrabold">System Maintenance In Progress</h1>
       <p class="text-slate-300 text-sm max-w-md mx-auto">We are currently enhancing our online scheduling engine and compliance portal. Emergency 24/7 hotline dispatch remains fully operational!</p>
     </div>
@@ -89,7 +89,7 @@
     <!-- Newsletter Subscription -->
     <form class="booking-form max-w-md mx-auto flex gap-2">
       <input type="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address (e.g. name@domain.com)" placeholder="Enter email for launch notify..." class="flex-1 px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-sm text-white focus:ring-2 focus:ring-blue-600 outline-none" />
-      <button type="submit" class="px-6 py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm shadow-lg transition">Notify Me</button>
+      <button type="submit" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-lg transition">Notify Me</button>
     </form>
 
     <div class="text-xs text-slate-500">
@@ -145,7 +145,7 @@
             </select>
           </div>
         </div>
-        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition">Confirm Service Request</button>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-500 via-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition">Confirm Service Request</button>
       </form>
     </div>
   </div>

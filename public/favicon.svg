@@ -4,26 +4,26 @@
     <linearGradient id="shieldBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="50%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#2563eb"/>
     </linearGradient>
     
     <!-- Shield Border Gradient -->
     <linearGradient id="shieldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f97316"/>
-      <stop offset="50%" stop-color="#3b82f6"/>
-      <stop offset="100%" stop-color="#10b981"/>
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
     </linearGradient>
 
-    <!-- Hood & Canopy Gold/Orange Gradient -->
+    <!-- Primary Blue Hood & Canopy Gradient -->
     <linearGradient id="hoodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fb923c"/>
-      <stop offset="100%" stop-color="#ea580c"/>
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
     </linearGradient>
 
-    <!-- Airflow / Spark Teal/Emerald Gradient -->
+    <!-- Airflow / Spark Blue Gradient -->
     <linearGradient id="airGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#34d399"/>
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
     </linearGradient>
   </defs>
 
@@ -36,7 +36,7 @@
   <path d="M196 100 H316 L300 80 H212 Z" fill="#64748b"/>
 
   <!-- Commercial Exhaust Hood Canopy Trapeze -->
-  <path d="M140 230 L180 170 H332 L372 230 C372 230, 360 250, 256 250 C152 250, 140 230, 140 230 Z" fill="url(#hoodGrad)" stroke="#ffedd5" stroke-width="4"/>
+  <path d="M140 230 L180 170 H332 L372 230 C372 230, 360 250, 256 250 C152 250, 140 230, 140 230 Z" fill="url(#hoodGrad)" stroke="#dbeafe" stroke-width="4"/>
   
   <!-- Exhaust Hood Filters / Stainless Baffles -->
   <line x1="200" y1="230" x2="220" y2="185" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
@@ -49,11 +49,11 @@
   <path d="M110 360 C 160 310, 210 390, 290 330 C 340 290, 370 330, 390 310" fill="none" stroke="url(#airGrad)" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
 
   <!-- Spark / Fire-Safety Clean Star -->
-  <path d="M256 340 L266 370 L296 380 L266 390 L256 420 L246 390 L216 380 L246 370 Z" fill="#fef08a"/>
+  <path d="M256 340 L266 370 L296 380 L266 390 L256 420 L246 390 L216 380 L246 370 Z" fill="#bfdbfe"/>
   <circle cx="256" cy="380" r="6" fill="#ffffff"/>
 
   <!-- Sparkle Accent 1 -->
-  <path d="M340 370 L345 385 L360 390 L345 395 L340 410 L335 395 L320 390 L335 385 Z" fill="#38bdf8" opacity="0.9"/>
+  <path d="M340 370 L345 385 L360 390 L345 395 L340 410 L335 395 L320 390 L335 385 Z" fill="#60a5fa" opacity="0.9"/>
   <!-- Sparkle Accent 2 -->
-  <path d="M170 370 L174 382 L186 386 L174 390 L170 402 L166 390 L154 386 L166 382 Z" fill="#f97316" opacity="0.9"/>
+  <path d="M170 370 L174 382 L186 386 L174 390 L170 402 L166 390 L154 386 L166 382 Z" fill="#3b82f6" opacity="0.9"/>
 </svg>

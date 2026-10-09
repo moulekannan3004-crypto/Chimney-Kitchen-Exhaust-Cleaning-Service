@@ -46,8 +46,8 @@
               900: '#1e3a8a',
             },
             fire: {
-              500: '#f97316',
-              600: '#ea580c',
+              500: 'var(--primary)',
+              600: 'var(--primary-hover)',
             }
           }
         }
@@ -73,7 +73,7 @@
           <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 rtl:space-x-reverse group shrink-0">
             <img src="assets/images/favicon.svg" alt="ProClean Exhaust Logo" class="w-8 h-8 sm:w-11 sm:h-11 object-contain filter drop-shadow-md group-hover:scale-105 transition-transform shrink-0" />
             <div>
-              <span class="text-base sm:text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center">ProClean<span class="text-orange-500">.Exhaust</span></span>
+              <span class="text-base sm:text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center">ProClean<span class="text-blue-500">.Exhaust</span></span>
               <span class="hidden sm:block text-[9px] font-extrabold text-slate-500 dark:text-slate-400 tracking-widest uppercase">Exhaust & Chimney Care</span>
             </div>
           </a>
@@ -91,7 +91,7 @@
               <a href="index.html" class="block px-4 py-2.5 text-xs font-bold text-blue-600 bg-blue-50 dark:bg-slate-800/60">
                 Home 1 – General Landing
               </a>
-              <a href="home2.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-orange-50 dark:hover:bg-slate-800">
+              <a href="home2.html" class="block px-4 py-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-slate-800">
                 Home 2 – Commercial Landing
               </a>
             </div>
@@ -110,7 +110,7 @@
           <div class="flex items-center space-x-2 sm:space-x-2.5 xl:space-x-3 rtl:space-x-reverse shrink-0 flex-nowrap">
             <!-- Dark Mode Toggle Button (Desktop & Tablet) -->
             <button onclick="toggleTheme()" aria-label="Toggle theme" class="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm cursor-pointer shrink-0">
-              <svg class="sun-icon w-4 h-4 hidden text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+              <svg class="sun-icon w-4 h-4 hidden text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
               <svg class="moon-icon w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
             </button>
 
@@ -120,7 +120,7 @@
             </button>
 
             <!-- Book Inspection CTA Button -->
-            <button onclick="openBookingModal()" class="hidden sm:inline-flex h-8 xl:h-9 px-3.5 xl:px-5 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition items-center justify-center cursor-pointer shrink-0">
+            <button onclick="openBookingModal()" class="hidden sm:inline-flex h-8 xl:h-9 px-3.5 xl:px-5 rounded-full bg-gradient-to-r from-blue-500 via-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition items-center justify-center cursor-pointer shrink-0">
               <span>Book Inspection</span>
             </button>
 
@@ -137,68 +137,68 @@
     <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900 px-4 sm:px-6 py-4 sm:py-5 shadow-2xl">
       <div class="flex-1 overflow-y-auto space-y-2.5 sm:space-y-3 py-1 pr-0.5">
         <!-- 1. Home 1 (General) - Active -->
-        <a href="index.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border-2 border-amber-500 dark:border-amber-500 text-slate-900 dark:text-white font-extrabold text-[15px] sm:text-base shadow-sm">
+        <a href="index.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border-2 border-blue-500 dark:border-blue-500 text-slate-900 dark:text-white font-extrabold text-[15px] sm:text-base shadow-sm">
           <span>Home 1 (General)</span>
-          <svg class="w-5 h-5 text-amber-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+          <svg class="w-5 h-5 text-blue-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
         </a>
 
         <!-- 2. Home 2 (Commercial) -->
-        <a href="home2.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="home2.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>Home 2 (Commercial)</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
         </a>
 
         <!-- 3. About Us -->
-        <a href="about.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="about.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>About Us</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
         </a>
 
         <!-- 4. Services -->
-        <a href="services.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="services.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>Services</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
         </a>
 
         <!-- 5. Pricing -->
-        <a href="pricing.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="pricing.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>Pricing</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
         </a>
 
         <!-- 6. Gallery -->
-        <a href="gallery.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="gallery.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>Gallery</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
         </a>
 
         <!-- 7. Blog -->
-        <a href="blog.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="blog.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>Blog</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
         </a>
 
         <!-- 8. Contact Us -->
-        <a href="contact.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-amber-400 hover:text-amber-600 dark:hover:text-amber-400 hover:shadow-xs transition-all group">
+        <a href="contact.html" class="flex items-center justify-between w-full px-5 py-3.5 sm:py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-100 font-bold text-[15px] sm:text-base hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xs transition-all group">
           <span>Contact Us</span>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
         </a>
       </div>
 
       <div class="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-2.5 shrink-0 w-full mt-auto">
-        <button onclick="openBookingModal()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer transition">
+        <button onclick="openBookingModal()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-blue-500 via-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer transition">
           <svg class="w-4 h-4 shrink-0 -rotate-45" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
           <span>Book Inspection</span>
         </button>
 
         <div class="grid grid-cols-2 gap-2.5 pt-0.5">
           <button onclick="toggleTheme()" aria-label="Toggle theme" class="text-xs font-bold py-2.5 px-3 rounded-2xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition shadow-xs">
-            <svg class="sun-icon w-4 h-4 hidden text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="sun-icon w-4 h-4 hidden text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
             <svg class="moon-icon w-4 h-4 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
             <span class="theme-btn-text">Dark Mode</span>
           </button>
           <button onclick="toggleRTL()" dir="ltr" class="rtl-toggle-btn rtl-toggle-pill text-xs font-bold py-2.5 px-3 rounded-2xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700 transition shadow-xs">
-            <span class="rtl-text-ltr text-amber-500 dark:text-amber-400 font-extrabold">LTR</span>
+            <span class="rtl-text-ltr text-blue-500 dark:text-blue-400 font-extrabold">LTR</span>
             <span class="mx-1.5 text-slate-400 font-normal">⇄</span>
             <span class="rtl-text-rtl text-slate-500 dark:text-slate-400">RTL</span>
           </button>
@@ -219,14 +219,14 @@
               <span>🔥 NFPA 96 & Fire Safety Certified</span>
             </span>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-              Smoke-Free Kitchens & <span class="bg-gradient-to-r from-orange-400 to-amber-300 bg-clip-text text-transparent">Fire-Safe Exhausts</span>
+              Smoke-Free Kitchens & <span class="bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">Fire-Safe Exhausts</span>
             </h1>
             <p class="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0">
               Professional motorized chimney degreasing, commercial hood cleaning, and vertical riser duct maintenance for homes and commercial kitchens.
             </p>
 
             <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
-              <button onclick="openBookingModal()" class="px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-base shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1 cursor-pointer">
+              <button onclick="openBookingModal()" class="px-8 py-4 rounded-xl bg-blue-500 hover:bg-blue-600 text-white font-bold text-base shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1 cursor-pointer">
                 Book Instant Inspection
               </button>
               <a href="services.html" class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-base border border-white/20 backdrop-blur-md transition">
@@ -242,7 +242,7 @@
               <p class="text-[11px] sm:text-xs text-slate-400 leading-tight mt-1">Kitchens Cleaned</p>
             </div>
             <div class="min-w-0">
-              <p class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-orange-400 tracking-tight">100%</p>
+              <p class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-blue-400 tracking-tight">100%</p>
               <p class="text-[11px] sm:text-xs text-slate-400 leading-tight mt-1">Fire Code Compliant</p>
             </div>
             <div class="min-w-0">
@@ -254,7 +254,7 @@
 
         <!-- Hero Image Container (Relevant Kitchen Exhaust Cleaning Image) -->
         <div class="relative h-full flex flex-col min-h-[420px] lg:min-h-full">
-          <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+          <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
           <div class="relative w-full h-full min-h-[420px] lg:min-h-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group flex flex-col justify-end">
             <img src="assets/images/smoke-free-kitchen.png" alt="Smoke-Free Kitchens & Fire-Safe Exhausts Cleaning Service" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div class="relative z-10 m-4 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-white/10 flex items-center justify-between text-white shadow-lg">
@@ -315,7 +315,7 @@
           </div>
           <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400">
             <span>Airflow Velocity</span>
-            <span class="text-blue-600 dark:text-blue-400 font-extrabold">Optimal ⚡</span>
+            <span class="text-blue-600 dark:text-blue-400 font-extrabold">Optimal</span>
           </div>
         </div>
 
@@ -348,10 +348,7 @@
         <div class="group relative bg-white dark:bg-slate-800/90 rounded-3xl p-8 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden">
           <div class="absolute top-0 left-0 right-0 h-1.5 bg-blue-600 rounded-t-3xl"></div>
           <div class="space-y-5">
-            <div class="flex items-center justify-between">
-              <div class="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-3xl shadow-inner group-hover:scale-110 transition-transform duration-300">
-                ⚡
-              </div>
+            <div class="flex items-center justify-end">
               <span class="text-[10px] font-black tracking-wider uppercase text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/80 px-2.5 py-1 rounded-full border border-blue-200 dark:border-blue-800/60">
                 +45% Efficiency
               </span>
@@ -445,7 +442,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
         <div>
-          <span class="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Core Specializations</span>
+          <span class="text-blue-500 font-bold text-sm tracking-widest uppercase">Our Core Specializations</span>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
             Comprehensive Cleaning Solutions
           </h2>
@@ -480,7 +477,7 @@
         <div class="card-theme rounded-2xl overflow-hidden group">
           <div class="relative h-56 overflow-hidden">
             <img src="assets/images/exhaust-duct-cleaning.png" alt="Commercial Kitchen Exhaust Duct Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
-            <span class="absolute top-4 left-4 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Commercial</span>
+            <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Commercial</span>
           </div>
           <div class="p-6 space-y-4">
             <h3 class="text-xl font-bold text-slate-900 dark:text-white">Exhaust Duct Cleaning</h3>
@@ -498,7 +495,7 @@
         <div class="card-theme rounded-2xl overflow-hidden group">
           <div class="relative h-56 overflow-hidden">
             <img src="assets/images/home-filter-replacement-degreasing.png" alt="Filter Replacement & Degreasing" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
-            <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Maintenance</span>
+            <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Maintenance</span>
           </div>
           <div class="p-6 space-y-4">
             <h3 class="text-xl font-bold text-slate-900 dark:text-white">Filter Replacement & Degreasing</h3>
@@ -526,7 +523,7 @@
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
         <span class="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-extrabold uppercase tracking-widest border border-blue-500/20 shadow-sm">
-          <span>⚡ Guaranteed 4-Stage Bare-Metal Method</span>
+          <span>Guaranteed 4-Stage Bare-Metal Method</span>
         </span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
           How Our Cleaning Process Works
@@ -540,7 +537,7 @@
       <div class="relative">
         
         <!-- Connecting Progress Line (Desktop) -->
-        <div class="hidden lg:block absolute top-1/3 left-16 right-16 h-1 bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 rounded-full opacity-30 z-0"></div>
+        <div class="hidden lg:block absolute top-1/3 left-16 right-16 h-1 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-600 rounded-full opacity-30 z-0"></div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
           
@@ -857,13 +854,13 @@
   <section class="py-24 bg-white dark:bg-slate-900 relative overflow-hidden">
     <!-- Ambient Background Lights -->
     <div class="absolute top-1/2 left-1/3 -translate-y-1/2 w-96 h-96 bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute top-1/2 right-1/3 -translate-y-1/2 w-96 h-96 bg-orange-500/10 dark:bg-orange-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 right-1/3 -translate-y-1/2 w-96 h-96 bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-        <span class="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-extrabold uppercase tracking-widest border border-amber-500/20 shadow-sm">
+        <span class="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-extrabold uppercase tracking-widest border border-blue-500/20 shadow-sm">
           <span>⭐ Verified Client Reviews</span>
         </span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
@@ -879,7 +876,7 @@
         
         <!-- Card 1: Chef Giovanni Rossi -->
         <div class="group relative bg-slate-50 dark:bg-slate-800/90 rounded-3xl p-8 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden">
-          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-t-3xl"></div>
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-500 to-blue-500 rounded-t-3xl"></div>
           <!-- Decorative Quote Watermark -->
           <div class="absolute top-4 right-6 text-6xl font-serif text-slate-200 dark:text-slate-700/50 pointer-events-none group-hover:scale-110 transition-transform">“</div>
 
@@ -888,7 +885,7 @@
               <span class="text-[10px] font-black tracking-wider uppercase text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-950/80 px-3 py-1 rounded-full border border-blue-200 dark:border-blue-800/60">
                 🏢 Commercial Kitchen
               </span>
-              <div class="flex items-center space-x-1 text-amber-400 text-sm">
+              <div class="flex items-center space-x-1 text-blue-400 text-sm">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
             </div>
@@ -901,7 +898,7 @@
           <div class="pt-6 mt-6 border-t border-slate-200/80 dark:border-slate-700/60 flex items-center space-x-4 rtl:space-x-reverse relative z-10">
             <div class="relative">
               <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=160&q=80" alt="Chef Giovanni Rossi" class="w-12 h-12 rounded-2xl object-cover border-2 border-blue-500 shadow-md" />
-              <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 text-white rounded-full flex items-center justify-center text-[9px] font-bold shadow">✓</span>
+              <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-blue-500 text-white rounded-full flex items-center justify-center text-[9px] font-bold shadow">✓</span>
             </div>
             <div>
               <p class="text-sm font-extrabold text-slate-900 dark:text-white">Chef Giovanni Rossi</p>
@@ -912,16 +909,16 @@
 
         <!-- Card 2: Emily Martinez -->
         <div class="group relative bg-slate-50 dark:bg-slate-800/90 rounded-3xl p-8 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden">
-          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-orange-500 to-amber-500 rounded-t-3xl"></div>
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-500 to-blue-500 rounded-t-3xl"></div>
           <!-- Decorative Quote Watermark -->
           <div class="absolute top-4 right-6 text-6xl font-serif text-slate-200 dark:text-slate-700/50 pointer-events-none group-hover:scale-110 transition-transform">“</div>
 
           <div class="space-y-4 relative z-10">
             <div class="flex items-center justify-between">
-              <span class="text-[10px] font-black tracking-wider uppercase text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/80 px-3 py-1 rounded-full border border-orange-200 dark:border-orange-800/60">
+              <span class="text-[10px] font-black tracking-wider uppercase text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-950/80 px-3 py-1 rounded-full border border-blue-200 dark:border-blue-800/60">
                 🏠 Residential Chimney
               </span>
-              <div class="flex items-center space-x-1 text-amber-400 text-sm">
+              <div class="flex items-center space-x-1 text-blue-400 text-sm">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
             </div>
@@ -933,8 +930,8 @@
 
           <div class="pt-6 mt-6 border-t border-slate-200/80 dark:border-slate-700/60 flex items-center space-x-4 rtl:space-x-reverse relative z-10">
             <div class="relative">
-              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80" alt="Emily Martinez" class="w-12 h-12 rounded-2xl object-cover border-2 border-orange-500 shadow-md" />
-              <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 text-white rounded-full flex items-center justify-center text-[9px] font-bold shadow">✓</span>
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80" alt="Emily Martinez" class="w-12 h-12 rounded-2xl object-cover border-2 border-blue-500 shadow-md" />
+              <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-blue-500 text-white rounded-full flex items-center justify-center text-[9px] font-bold shadow">✓</span>
             </div>
             <div>
               <p class="text-sm font-extrabold text-slate-900 dark:text-white">Emily Martinez</p>
@@ -945,16 +942,16 @@
 
         <!-- Card 3: Ahmed Al-Mansoor -->
         <div class="group relative bg-slate-50 dark:bg-slate-800/90 rounded-3xl p-8 border border-slate-200/80 dark:border-slate-700/80 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden">
-          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-t-3xl"></div>
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-t-3xl"></div>
           <!-- Decorative Quote Watermark -->
           <div class="absolute top-4 right-6 text-6xl font-serif text-slate-200 dark:text-slate-700/50 pointer-events-none group-hover:scale-110 transition-transform">“</div>
 
           <div class="space-y-4 relative z-10">
             <div class="flex items-center justify-between">
-              <span class="text-[10px] font-black tracking-wider uppercase text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800/60">
+              <span class="text-[10px] font-black tracking-wider uppercase text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-950/80 px-3 py-1 rounded-full border border-blue-200 dark:border-blue-800/60">
                 🏨 Hotel & Resort SLA
               </span>
-              <div class="flex items-center space-x-1 text-amber-400 text-sm">
+              <div class="flex items-center space-x-1 text-blue-400 text-sm">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
             </div>
@@ -966,8 +963,8 @@
 
           <div class="pt-6 mt-6 border-t border-slate-200/80 dark:border-slate-700/60 flex items-center space-x-4 rtl:space-x-reverse relative z-10">
             <div class="relative">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" alt="Ahmed Al-Mansoor" class="w-12 h-12 rounded-2xl object-cover border-2 border-emerald-500 shadow-md" />
-              <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 text-white rounded-full flex items-center justify-center text-[9px] font-bold shadow">✓</span>
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" alt="Ahmed Al-Mansoor" class="w-12 h-12 rounded-2xl object-cover border-2 border-blue-500 shadow-md" />
+              <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-blue-500 text-white rounded-full flex items-center justify-center text-[9px] font-bold shadow">✓</span>
             </div>
             <div>
               <p class="text-sm font-extrabold text-slate-900 dark:text-white">Ahmed Al-Mansoor</p>
@@ -983,12 +980,12 @@
         <div class="flex items-center space-x-3 rtl:space-x-reverse">
           <span class="text-2xl font-black text-slate-900 dark:text-white">4.9 / 5</span>
           <div class="text-left rtl:text-right">
-            <div class="flex text-amber-400 text-xs">★★★★★</div>
+            <div class="flex text-blue-400 text-xs">★★★★★</div>
             <span class="text-xs text-slate-500">Overall Rating</span>
           </div>
         </div>
         <div class="flex items-center space-x-2 text-xs font-bold text-slate-600 dark:text-slate-400">
-          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span class="w-2 h-2 rounded-full bg-blue-500"></span>
           <span>1,200+ Verified Fire Code Audits</span>
         </div>
         <div class="flex items-center space-x-2 text-xs font-bold text-slate-600 dark:text-slate-400">
@@ -1104,7 +1101,7 @@
         <!-- FAQ 2 -->
         <div class="card-theme rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 transition duration-300">
           <button onclick="toggleFAQ('faq-2')" class="w-full p-6 text-left rtl:text-right flex items-center justify-between focus:outline-none group">
-            <span class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition">
+            <span class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-500 transition">
               Do you provide NFPA 96 compliance tags for commercial kitchens?
             </span>
             <div id="faq-2-icon" class="faq-icon w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center font-bold text-sm transition-transform duration-300 flex-shrink-0 ml-4 rtl:mr-4 rtl:ml-0">
@@ -1119,7 +1116,7 @@
         <!-- FAQ 3 -->
         <div class="card-theme rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 transition duration-300">
           <button onclick="toggleFAQ('faq-3')" class="w-full p-6 text-left rtl:text-right flex items-center justify-between focus:outline-none group">
-            <span class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-500 transition">
+            <span class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-500 transition">
               Will the cleaning process mess up my kitchen?
             </span>
             <div id="faq-3-icon" class="faq-icon w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center font-bold text-sm transition-transform duration-300 flex-shrink-0 ml-4 rtl:mr-4 rtl:ml-0">
@@ -1153,20 +1150,20 @@
   <!-- CONTACT / BOOKING CTA BANNER (ULTRA-UNIQUE GLASSMORPHIC BANNER) -->
   <section class="py-24 bg-slate-950 text-white relative overflow-hidden">
     <!-- Ambient Background Glows -->
-    <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+    <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
     <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-950/90 backdrop-blur-xl p-8 sm:p-14 rounded-3xl border border-white/10 shadow-2xl space-y-8 text-center relative overflow-hidden">
-        <div class="h-1 bg-gradient-to-r from-orange-500 via-amber-500 via-blue-500 to-emerald-500 absolute top-0 left-0 right-0"></div>
+        <div class="h-1 bg-gradient-to-r from-blue-500 via-blue-500 via-blue-500 to-blue-500 absolute top-0 left-0 right-0"></div>
 
         <!-- Live Status Pill Tag -->
         <div class="inline-flex items-center space-x-3 rtl:space-x-reverse px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700 shadow-inner">
           <span class="relative flex h-2.5 w-2.5">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
           </span>
-          <span class="text-xs font-extrabold tracking-wider uppercase text-emerald-400">24/7 Live Emergency Dispatch Active</span>
+          <span class="text-xs font-extrabold tracking-wider uppercase text-blue-400">24/7 Live Emergency Dispatch Active</span>
           <span class="text-slate-600 dark:text-slate-500">|</span>
           <span class="text-xs font-semibold text-slate-300">Same-Day Slots Available</span>
         </div>
@@ -1174,7 +1171,7 @@
         <!-- Headline & Description -->
         <div class="space-y-4 max-w-3xl mx-auto">
           <h2 class="text-3xl sm:text-5xl font-black leading-tight tracking-tight">
-            Ready for a <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-400 to-emerald-400">Smoke-Free & Fire-Safe</span> Kitchen?
+            Ready for a <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-400 to-blue-400">Smoke-Free & Fire-Safe</span> Kitchen?
           </h2>
           <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
             Eliminate grease fire risks, eliminate neighborhood smoke complaints, and guarantee a 100% municipal health inspection pass.
@@ -1183,14 +1180,14 @@
 
         <!-- Glowing Action CTA Buttons -->
         <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-          <button onclick="openBookingModal()" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold text-sm uppercase tracking-wider shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all flex items-center space-x-3 rtl:space-x-reverse group">
+          <button onclick="openBookingModal()" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-500 via-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-600 text-white font-extrabold text-sm uppercase tracking-wider shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all flex items-center space-x-3 rtl:space-x-reverse group">
             <span class="text-base group-hover:scale-125 transition-transform">🔥</span>
             <span>Book Free Inspection Now</span>
             <span class="text-xs font-black bg-white/20 px-2 py-0.5 rounded-md">Instant</span>
           </button>
           
           <a href="tel:8005553473" class="px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm backdrop-blur-md border border-white/20 shadow-lg hover:-translate-y-0.5 transition-all flex items-center space-x-2.5 rtl:space-x-reverse">
-            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             <span>Call Dispatch: (800) 555-FIRE</span>
           </a>
         </div>
@@ -1198,7 +1195,6 @@
         <!-- Trust Micro-Chips Row -->
         <div class="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-xs font-bold text-slate-400">
           <div class="flex items-center justify-center space-x-2 rtl:space-x-reverse bg-slate-800/40 py-2.5 px-4 rounded-xl border border-slate-700/50">
-            <span class="text-orange-400">⚡</span>
             <span>Same-Day Express Dispatch</span>
           </div>
           <div class="flex items-center justify-center space-x-2 rtl:space-x-reverse bg-slate-800/40 py-2.5 px-4 rounded-xl border border-slate-700/50">
@@ -1206,7 +1202,7 @@
             <span>NFPA 96 Official Certification</span>
           </div>
           <div class="flex items-center justify-center space-x-2 rtl:space-x-reverse bg-slate-800/40 py-2.5 px-4 rounded-xl border border-slate-700/50">
-            <span class="text-emerald-400">🛡️</span>
+            <span class="text-blue-400">🛡️</span>
             <span>100% Pass Audit Guarantee</span>
           </div>
         </div>
@@ -1227,7 +1223,7 @@
           <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3 rtl:space-x-reverse shrink-0 group hover:opacity-90 transition">
             <img src="assets/images/favicon.svg" alt="ProClean Exhaust Logo" class="w-10 h-10 sm:w-11 sm:h-11 object-contain filter drop-shadow-md group-hover:scale-105 transition-transform shrink-0" />
             <div>
-              <span class="text-lg sm:text-xl font-black text-white tracking-tight flex items-center">ProClean<span class="text-orange-500">.Exhaust</span></span>
+              <span class="text-lg sm:text-xl font-black text-white tracking-tight flex items-center">ProClean<span class="text-blue-500">.Exhaust</span></span>
               <span class="block text-[9px] font-extrabold text-slate-400 tracking-widest uppercase">Exhaust & Chimney Care</span>
             </div>
           </a>
@@ -1269,12 +1265,12 @@
         <div>
           <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">OUR SERVICES</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="service-details.html?service=chimney" class="text-slate-400 hover:text-orange-400 transition">Chimney Deep Cleaning</a></li>
-            <li><a href="service-details.html?service=exhaust-duct" class="text-slate-400 hover:text-orange-400 transition">Exhaust Duct Cleaning</a></li>
-            <li><a href="service-details.html?service=filter-replacement" class="text-slate-400 hover:text-orange-400 transition">Filter Replacement & Degreasing</a></li>
-            <li><a href="service-details.html?service=esp-unit" class="text-slate-400 hover:text-orange-400 transition">ESP Precipitator Unit Servicing</a></li>
-            <li><a href="service-details.html?service=commercial-hood" class="text-slate-400 hover:text-orange-400 transition">Commercial Hood Washing</a></li>
-            <li><a href="service-details.html?service=nfpa-inspection" class="text-slate-400 hover:text-orange-400 transition">NFPA 96 Safety Inspection</a></li>
+            <li><a href="service-details.html?service=chimney" class="text-slate-400 hover:text-blue-400 transition">Chimney Deep Cleaning</a></li>
+            <li><a href="service-details.html?service=exhaust-duct" class="text-slate-400 hover:text-blue-400 transition">Exhaust Duct Cleaning</a></li>
+            <li><a href="service-details.html?service=filter-replacement" class="text-slate-400 hover:text-blue-400 transition">Filter Replacement & Degreasing</a></li>
+            <li><a href="service-details.html?service=esp-unit" class="text-slate-400 hover:text-blue-400 transition">ESP Precipitator Unit Servicing</a></li>
+            <li><a href="service-details.html?service=commercial-hood" class="text-slate-400 hover:text-blue-400 transition">Commercial Hood Washing</a></li>
+            <li><a href="service-details.html?service=nfpa-inspection" class="text-slate-400 hover:text-blue-400 transition">NFPA 96 Safety Inspection</a></li>
           </ul>
         </div>
 
@@ -1283,16 +1279,17 @@
           <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4">EMERGENCY DISPATCH</h4>
           <div class="space-y-2 text-xs mb-5">
             <a href="mailto:dispatch@proclean-exhaust.com" class="flex items-center space-x-2 rtl:space-x-reverse text-slate-300 hover:text-white transition">
-              <svg class="w-4 h-4 text-orange-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <svg class="w-4 h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               <span class="truncate">dispatch@proclean-exhaust.com</span>
             </a>
             <a href="tel:8005553473" class="flex items-center space-x-2 rtl:space-x-reverse text-slate-300 hover:text-white transition">
-              <svg class="w-4 h-4 text-orange-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <svg class="w-4 h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
               <span>+1 (800) 555-FIRE</span>
             </a>
+            <div class="flex items-start space-x-2 rtl:space-x-reverse text-slate-300 leading-relaxed"><svg class="w-4 h-4 text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21s-6-4.35-6-11a6 6 0 1112 0c0 6.65-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg><span>742 Industrial Ventilation Blvd, Suite 400, Chicago, IL 60611</span></div>
           </div>
 
-          <button onclick="openBookingModal()" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold text-xs tracking-wide shadow-lg shadow-orange-500/20 transition">
+          <button onclick="openBookingModal()" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold text-xs tracking-wide shadow-lg shadow-blue-500/20 transition">
             Connect Dispatch Team
           </button>
         </div>
@@ -1355,7 +1352,7 @@
             </select>
           </div>
         </div>
-        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition cursor-pointer">Confirm Service Request</button>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-500 via-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold text-sm shadow-lg transition cursor-pointer">Confirm Service Request</button>
       </form>
     </div>
   </div>
