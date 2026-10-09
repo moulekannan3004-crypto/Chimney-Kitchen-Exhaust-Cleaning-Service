@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pricing & Packages | ProClean Chimney & Exhaust Services</title>
   <!-- Custom Favicon Icon Logo -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=2" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -55,6 +55,80 @@
   </script>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    #book-residential-sweep,
+    #book-residential-sweep:visited,
+    #book-residential-sweep:focus {
+      background-color: #2563eb !important;
+      color: #ffffff !important;
+    }
+    #book-residential-sweep:hover {
+      background-color: #1d4ed8 !important;
+      color: #ffffff !important;
+    }
+    #book-residential-sweep:active {
+      background-color: #1e40af !important;
+      color: #ffffff !important;
+    }
+    #book-residential-sweep:focus-visible {
+      outline: 3px solid #ffffff !important;
+      outline-offset: -5px;
+    }
+    #choose-annual-plan,
+    #choose-annual-plan:visited,
+    #choose-annual-plan:focus {
+      background-color: #2563eb !important;
+      color: #ffffff !important;
+    }
+    #choose-annual-plan:hover {
+      background-color: #1d4ed8 !important;
+      color: #ffffff !important;
+    }
+    #choose-annual-plan:active {
+      background-color: #1e40af !important;
+      color: #ffffff !important;
+    }
+    #choose-annual-plan:focus-visible {
+      outline: 3px solid #ffffff !important;
+      outline-offset: -5px;
+    }
+    #select-canopy-wash,
+    #select-canopy-wash:visited,
+    #select-canopy-wash:focus,
+    #select-duct-wash,
+    #select-duct-wash:visited,
+    #select-duct-wash:focus,
+    #book-esp-service,
+    #book-esp-service:visited,
+    #book-esp-service:focus,
+    #contact-enterprise-team,
+    #contact-enterprise-team:visited,
+    #contact-enterprise-team:focus {
+      background-color: #2563eb !important;
+      color: #ffffff !important;
+    }
+    #select-canopy-wash:hover,
+    #select-duct-wash:hover,
+    #book-esp-service:hover,
+    #contact-enterprise-team:hover {
+      background-color: #1d4ed8 !important;
+      color: #ffffff !important;
+    }
+    #select-canopy-wash:active,
+    #select-duct-wash:active,
+    #book-esp-service:active,
+    #contact-enterprise-team:active {
+      background-color: #1e40af !important;
+      color: #ffffff !important;
+    }
+    #select-canopy-wash:focus-visible,
+    #select-duct-wash:focus-visible,
+    #book-esp-service:focus-visible,
+    #contact-enterprise-team:focus-visible {
+      outline: 3px solid #ffffff !important;
+      outline-offset: -5px;
+    }
+  </style>
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200 antialiased min-h-screen flex flex-col">
 
@@ -233,7 +307,7 @@
             <div>
               <!-- Dedicated Image Slot -->
               <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
-                <img src="assets/images/pricing-residential-chimney-sweep.png" alt="Residential Chimney Sweep Technician Flue Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="assets/images/pricing-residential-chimney-sweep-reference.png" alt="Chimney sweep cleaning a residential rooftop chimney" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 rtl:left-auto rtl:right-3 px-3 py-1 rounded-full bg-slate-900/85 backdrop-blur-md text-white font-extrabold text-[10px] uppercase tracking-wider border border-white/20">
                   Standard Sweep
                 </span>
@@ -311,7 +385,7 @@
             </div>
 
             <div class="p-6 sm:p-7 pt-0 mt-4">
-              <button onclick="openBookingModal('Residential Chimney Sweep ($99)')" class="w-full py-3.5 rounded-xl border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-extrabold text-xs uppercase tracking-wider hover:bg-blue-600 hover:text-white transition shadow-sm cursor-pointer">
+              <button id="book-residential-sweep" onclick="openBookingModal('Residential Chimney Sweep ($99)')" class="w-full py-3.5 rounded-xl border-2 border-blue-600 bg-blue-600 text-white font-extrabold text-xs uppercase tracking-wider hover:bg-blue-700 active:bg-blue-800 focus:bg-blue-600 transition shadow-sm cursor-pointer">
                 Book Residential Sweep
               </button>
             </div>
@@ -326,7 +400,7 @@
             <div>
               <!-- Dedicated Image Slot -->
               <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
-                <img src="assets/images/pricing-motorized-deep-sanitization.png" alt="Motorized Deep Kitchen Sanitization and Surface Degreasing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="assets/images/pricing-motorized-deep-sanitization-reference.png" alt="Technician deep cleaning a residential kitchen range hood with an extractor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 rtl:left-auto rtl:right-3 px-3 py-1 rounded-full bg-slate-900/85 backdrop-blur-md text-white font-extrabold text-[10px] uppercase tracking-wider border border-white/20">
                   Full Motor Teardown
                 </span>
@@ -415,7 +489,7 @@
             <div>
               <!-- Dedicated Image Slot -->
               <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
-                <img src="assets/images/pricing-annual-care-contract.png" alt="Annual Chimney Care and Fireplace Safety Sweep" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="assets/images/pricing-annual-care-contract-reference.png" alt="Home service technician presenting a maintenance warranty on a clipboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 rtl:left-auto rtl:right-3 px-3 py-1 rounded-full bg-slate-900/85 backdrop-blur-md text-white font-extrabold text-[10px] uppercase tracking-wider border border-white/20">
                   Annual Subscription
                 </span>
@@ -489,7 +563,7 @@
             </div>
 
             <div class="p-6 sm:p-7 pt-0 mt-4">
-              <button onclick="openBookingModal('Annual Care & Safety Contract ($249)')" class="w-full py-3.5 rounded-xl border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-extrabold text-xs uppercase tracking-wider hover:bg-blue-600 hover:text-white transition shadow-sm cursor-pointer">
+              <button id="choose-annual-plan" onclick="openBookingModal('Annual Care & Safety Contract ($249)')" class="w-full py-3.5 rounded-xl border-2 border-blue-600 bg-blue-600 text-white font-extrabold text-xs uppercase tracking-wider hover:bg-blue-700 active:bg-blue-800 focus:bg-blue-600 transition shadow-sm cursor-pointer">
                 Choose Annual Plan
               </button>
             </div>
@@ -571,7 +645,7 @@
             </div>
 
             <div class="p-5 sm:p-6 pt-0 mt-3">
-              <button onclick="openBookingModal('Canopy Hood Wash ($299)')" class="w-full py-3 rounded-xl border-2 border-blue-500 text-blue-600 dark:text-blue-400 font-extrabold text-xs uppercase tracking-wider hover:bg-blue-500 hover:text-white transition shadow-sm cursor-pointer">
+              <button id="select-canopy-wash" onclick="openBookingModal('Canopy Hood Wash ($299)')" class="w-full py-3 rounded-xl border-2 border-blue-600 bg-blue-600 text-white font-extrabold text-xs uppercase tracking-wider hover:bg-blue-700 active:bg-blue-800 focus:bg-blue-600 transition shadow-sm cursor-pointer">
                 Select Canopy Wash
               </button>
             </div>
@@ -643,8 +717,8 @@
             </div>
 
             <div class="p-5 sm:p-6 pt-0 mt-3">
-              <button onclick="openBookingModal('Full Exhaust & Duct Jetting ($549)')" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs uppercase tracking-wider transition shadow-md hover:shadow-lg cursor-pointer">
-                Select Full System
+              <button id="select-duct-wash" onclick="openBookingModal('Full Exhaust & Duct Jetting ($549)')" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 focus:bg-blue-600 text-white font-extrabold text-xs uppercase tracking-wider transition shadow-md hover:shadow-lg cursor-pointer">
+                Select Duct Wash
               </button>
             </div>
           </div>
@@ -653,7 +727,7 @@
           <div class="card-theme rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-blue-500/60 transition-all duration-300 flex flex-col justify-between shadow-md hover:shadow-xl group">
             <div>
               <div class="relative h-44 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
-                <img src="assets/images/pricing-esp-fan-overhaul.jpg" alt="ESP Cell and Rooftop Fan Servicing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="assets/images/pricing-esp-fan-overhaul-reference.png" alt="Two professional kitchen cleaners cleaning a range hood and kitchen island" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 rtl:left-auto rtl:right-3 px-3 py-1 rounded-full bg-slate-900/85 backdrop-blur-md text-white font-extrabold text-[10px] uppercase tracking-wider border border-white/20">
                   ESP & Rooftop
                 </span>
@@ -707,7 +781,7 @@
             </div>
 
             <div class="p-5 sm:p-6 pt-0 mt-3">
-              <button onclick="openBookingModal('ESP & Fan Overhaul ($349)')" class="w-full py-3 rounded-xl border-2 border-blue-500 text-blue-600 dark:text-blue-400 font-extrabold text-xs uppercase tracking-wider hover:bg-blue-500 hover:text-white transition shadow-sm cursor-pointer">
+              <button id="book-esp-service" onclick="openBookingModal('ESP & Fan Overhaul ($349)')" class="w-full py-3 rounded-xl border-2 border-blue-600 bg-blue-600 text-white font-extrabold text-xs uppercase tracking-wider hover:bg-blue-700 active:bg-blue-800 focus:bg-blue-600 transition shadow-sm cursor-pointer">
                 Book ESP Service
               </button>
             </div>
@@ -717,7 +791,7 @@
           <div class="card-theme rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-blue-500/60 transition-all duration-300 flex flex-col justify-between shadow-md hover:shadow-xl group">
             <div>
               <div class="relative h-44 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
-                <img src="assets/images/bare-metal-kitchen-standards.jpg" alt="Enterprise Commercial Kitchen SLA" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="assets/images/pricing-enterprise-resort-contract-reference.png" alt="Resort housekeeping team with cleaning equipment in a hotel lobby" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 rtl:left-auto rtl:right-3 px-3 py-1 rounded-full bg-slate-900/85 backdrop-blur-md text-white font-extrabold text-[10px] uppercase tracking-wider border border-white/20">
                   Enterprise SLA
                 </span>
@@ -771,7 +845,7 @@
             </div>
 
             <div class="p-5 sm:p-6 pt-0 mt-3">
-              <a href="contact.html" class="block text-center py-3 rounded-xl border-2 border-blue-500 text-blue-600 dark:text-blue-400 font-extrabold text-xs uppercase tracking-wider hover:bg-blue-500 hover:text-white transition shadow-sm">
+              <a id="contact-enterprise-team" href="contact.html" class="block text-center py-3 rounded-xl border-2 border-blue-600 bg-blue-600 text-white font-extrabold text-xs uppercase tracking-wider hover:bg-blue-700 active:bg-blue-800 focus:bg-blue-600 transition shadow-sm">
                 Contact Enterprise Team
               </a>
             </div>

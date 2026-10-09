@@ -229,7 +229,7 @@ const initApp = () => {
         blogCatBtns.forEach(b => {
           const bCat = b.getAttribute('data-category') || 'All';
           const hColor = catHoverMap[bCat] || 'hover:bg-blue-600';
-          b.className = `blog-cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 ${hColor} hover:text-white transition cursor-pointer`;
+          b.className = `blog-cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 ${hColor} hover:text-white dark:hover:text-white transition cursor-pointer`;
         });
 
         const activeColor = catColorMap[category] || 'bg-blue-600 text-white shadow-md font-extrabold';
@@ -262,7 +262,7 @@ const initApp = () => {
           btn.className = `blog-cat-btn px-5 py-2.5 rounded-full text-xs ${activeColor} transition cursor-pointer`;
         } else {
           const hColor = catHoverMap[catAttr] || 'hover:bg-blue-600';
-          btn.className = `blog-cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 ${hColor} hover:text-white transition cursor-pointer`;
+          btn.className = `blog-cat-btn px-5 py-2.5 rounded-full text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 ${hColor} hover:text-white dark:hover:text-white transition cursor-pointer`;
         }
       });
 
