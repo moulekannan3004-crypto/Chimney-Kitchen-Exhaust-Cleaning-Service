@@ -586,7 +586,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   [class*="text-cyan-"], [class*="text-sky-"], [class*="text-teal-"],
   [class*="text-green-"], [class*="text-emerald-"], [class*="text-lime-"],
   [class*="text-yellow-"], [class*="text-fuchsia-"]
-) {
+):not([class*="text-white"]):not(.text-white):not([class*="hover:text-white"]:hover) {
   color: var(--primary-text) !important;
 }
 
